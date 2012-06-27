@@ -1,0 +1,94 @@
+<expt A>
+/ onexptbegin = [values.TaskNumber=1]
+/ blocks = [1=CubeFr; 2=CubeEng]
+</expt>
+
+<block CubeFr>
+/ skip = [trial.Language.response == "English"]
+/ trials = [1=CubeFr]
+</block>
+
+<trial CubeFr>
+/ stimulusframes = [1= TitleFr,CubeFr,1Cube,2Cube]
+/ validresponse = (1Cube,2Cube)
+/ inputdevice = mouse
+</trial>
+
+<block CubeEng>
+/ skip = [trial.Language.response == "French"]
+/ trials = [1=CubeEng]
+</block>
+
+<trial CubeEng>
+/ stimulusframes = [1= TitleEng,CubeEng,1Cube,2Cube]
+/ validresponse = (1Cube,2Cube)
+/ inputdevice = mouse
+</trial>
+
+
+********************
+Stimuli
+********************
+
+<text TitleEng>
+/ items = ("Please copy this drawing as accurately as you can on this piece of paper.")
+/ vposition = 25%
+/ hposition = 50%
+/ area = (800,100)
+/ fontstyle = ("Verdana",30,true)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<picture CubeEng>
+/ items = ("..\Cube\files\CubeE.bmp")
+/ position = (50,50)
+</picture>
+
+
+<text TitleFr>
+/ items = ("S'il vous plaît, copiez ce dessin le plus précisément possible sur la feuille de papier")
+/ vposition = 25%
+/ hposition = 50%
+/ area = (800,100)
+/ fontstyle = ("Verdana",30,true)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<picture CubeFr>
+/ items = ("..\Cube\files\CubeF.bmp")
+/ position = (50,50)
+</picture>
+
+<text 1Cube>
+/ items = ("1")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (45%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text 2Cube>
+/ items = ("2")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (55%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+********************
+
+
+
+
+
+
+

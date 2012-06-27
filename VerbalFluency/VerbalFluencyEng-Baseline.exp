@@ -1,0 +1,53 @@
+
+**********
+Stimuli
+**********
+<text TitleEngVFBaseline>
+/ items = ("Please give as many words as possible beginning with the letter 'F' ")
+/ fontstyle = ("Verdana",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+
+*****************************
+<expt R1>
+/ onexptbegin = [values.TaskNumber=20]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "Baseline"]
+/ blocks = [1=FASEngVFBaseline]
+</expt>
+
+<block FASEngVFBaseline>
+/ preinstructions = (InstrucEngVF)
+/ trials = [1=FASEngVFBaseline]
+</block>
+
+<trial FASEngVFBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleEngVFBaseline,StartEngVF]
+/ validresponse = (StartEngVF)
+/ branch = [if (trial.FASEngVFBaseline.response=="StartEngVF") trial.BlankEngVFBaseline]
+/ recorddata = false
+</trial>
+
+<trial BlankEngVFBaseline>
+/ stimulusframes = [1=BlankVF,Ding]
+/ timeout = 60000
+/ branch = [openended.StopEngVFBaseline]
+/ recorddata = false
+</trial>
+
+<openended StopEngVFBaseline>
+/ stimulusframes = [1=StopSign,Ding]
+/ position = (90,90)
+/ mouse = true
+/ buttonlabel = "Submit"
+</openended>
+
+
+
+

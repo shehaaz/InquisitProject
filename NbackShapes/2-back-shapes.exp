@@ -1,0 +1,529 @@
+*****************
+Practice Experiment
+******************
+<item practiceS>
+/1 = "..\NbackShapes\files\square.bmp"
+/2 = "..\NbackShapes\files\Hexagon.bmp"
+/3 = "..\NbackShapes\files\square.bmp"
+/4 = "..\NbackShapes\files\Heart.bmp"
+/5 = "..\NbackShapes\files\Star.bmp"
+/6 = "..\NbackShapes\files\thunder.bmp"
+/7 = "..\NbackShapes\files\Star.bmp"
+/8 = "..\NbackShapes\files\thunder.bmp"
+/9 = "..\NbackShapes\files\triangle.bmp"
+</item>
+
+<picture practiceS>
+/items = practiceS
+/select = sequence
+/position = (50,50)
+</picture>
+
+
+<trial NoS>
+/ stimulusframes = [1=practiceS]
+/ trialduration = 1500
+/ pretrialpause = 500
+/ responsetime = 0
+/ validresponse = (" ", noresponse)
+/ correctresponse = (noresponse)
+</trial>
+
+<trial YesS>
+/ stimulusframes = [1=practiceS]
+/ trialduration = 1500
+/ pretrialpause = 500
+/ responsetime = 0
+/ validresponse = (" ", noresponse)
+/ correctresponse = (" ")
+</trial>
+
+
+<block practiceEngS>
+/ preinstructions = (practiceEngS)
+/ skip = [trial.Language.response == "French"]
+/ trials = [1=sequence(NoS,NoS,YesS,NoS,NoS,NoS,YesS,YesS,NoS,PassPracticeEngS)]
+/ branch = [if (trial.PassPracticeEngS.response=="YesEngS") block.Trial2BackEngS else block.PracticeEngS]
+/ recorddata = false
+</block>
+
+<block practiceFrS>
+/ preinstructions = (practiceFrS)
+/ skip = [trial.Language.response == "English"]
+/ trials = [1=sequence(NoS,NoS,YesS,NoS,NoS,NoS,YesS,YesS,NoS,PassPracticeFrS)]
+/ branch = [if (trial.PassPracticeFrS.response=="YesFrS") block.Trial2BackFrS else block.PracticeFrS]
+/ recorddata = false
+</block>
+
+
+********************************
+PassPractice
+********************************
+
+*********************
+PassPractice Trial Elements
+*********************
+<trial PassPracticeEngS>
+/ stimulusframes = [1=ContinueEngS,YesEngS,NoEngS]
+/ validresponse = (YesEngS, NoEngS)
+/ inputdevice = mouse
+</trial>
+
+
+<trial PassPracticeFrS>
+/ stimulusframes = [1=ContinueFrS,YesFrS,NoFrS]
+/ validresponse = (YesFrS, NoFrS)
+/ inputdevice = mouse
+</trial>
+
+************
+Stimuli
+************
+<text ContinueEngS>
+/ items = ("Are you ready for the task?")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text YesEngS>
+/ items = ("Yes")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text NoEngS>
+/ items = ("No")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text ContinueFrS>
+/ items = ("Êtes-vous prêt pour la tâche?")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text YesFrS>
+/ items = ("Oui")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text NoFrS>
+/ items = ("Non")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+
+
+*****************
+Trial
+*****************
+
+*********
+2Back
+*********
+
+<item trial2BackS>
+/1 = "..\NbackShapes\files\square.bmp"
+/2 = "..\NbackShapes\files\Hexagon.bmp"
+/3 = "..\NbackShapes\files\blue mountains.bmp"
+/4 = "..\NbackShapes\files\Hexagon.bmp"
+/5 = "..\NbackShapes\files\circle.bmp"
+/6 = "..\NbackShapes\files\Star.bmp"
+/7 = "..\NbackShapes\files\Heart.bmp"
+/8 = "..\NbackShapes\files\Pentagon.bmp"
+/9 = "..\NbackShapes\files\Heart.bmp"
+/10 = "..\NbackShapes\files\Thunder.bmp"
+/11 = "..\NbackShapes\files\Triangle.bmp"
+/12 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/13 = "..\NbackShapes\files\FourPointStar.bmp"
+/14 = "..\NbackShapes\files\Lozenge.bmp"
+/15 = "..\NbackShapes\files\Polygon-1.bmp"
+/16 = "..\NbackShapes\files\Lozenge.bmp"
+/17 = "..\NbackShapes\files\Trapezoid.bmp"
+/18 = "..\NbackShapes\files\Cloud.bmp"
+/19 = "..\NbackShapes\files\Thunder.bmp"
+/20 = "..\NbackShapes\files\circle.bmp"
+/21 = "..\NbackShapes\files\Thunder.bmp"
+/22 = "..\NbackShapes\files\Heart.bmp"
+/23 = "..\NbackShapes\files\FourPointStar.bmp"
+/24 = "..\NbackShapes\files\blue mountains.bmp"
+/25 = "..\NbackShapes\files\FourPointStar.bmp"
+/26 = "..\NbackShapes\files\Heart.bmp"
+/27 = "..\NbackShapes\files\Cloud.bmp"
+/28 = "..\NbackShapes\files\Triangle.bmp"
+/29 = "..\NbackShapes\files\Thunder.bmp"
+/30 = "..\NbackShapes\files\Star.bmp"
+/31 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/32 = "..\NbackShapes\files\Star.bmp"
+/33 = "..\NbackShapes\files\square.bmp"
+/34 = "..\NbackShapes\files\Pentagon.bmp"
+/35 = "..\NbackShapes\files\Lozenge.bmp"
+/36 = "..\NbackShapes\files\Pentagon.bmp"
+/37 = "..\NbackShapes\files\Cloud.bmp"
+/38 = "..\NbackShapes\files\circle.bmp"
+/39 = "..\NbackShapes\files\Thunder.bmp"
+/40 = "..\NbackShapes\files\Heart.bmp"
+/41 = "..\NbackShapes\files\Polygon-1.bmp"
+/42 = "..\NbackShapes\files\Trapezoid.bmp"
+/43 = "..\NbackShapes\files\Hexagon.bmp"
+/44 = "..\NbackShapes\files\Trapezoid.bmp"
+/45 = "..\NbackShapes\files\blue mountains.bmp"
+/46 = "..\NbackShapes\files\Polygon-1.bmp"
+/47 = "..\NbackShapes\files\Thunder.bmp"
+/48 = "..\NbackShapes\files\Star.bmp"
+/49 = "..\NbackShapes\files\Thunder.bmp"
+/50 = "..\NbackShapes\files\Heart.bmp"
+/51 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/52 = "..\NbackShapes\files\Star.bmp"
+/53 = "..\NbackShapes\files\Lozenge.bmp"
+/54 = "..\NbackShapes\files\Polygon-1.bmp"
+/55 = "..\NbackShapes\files\square.bmp"
+/56 = "..\NbackShapes\files\Polygon-1.bmp"
+/57 = "..\NbackShapes\files\Lozenge.bmp"
+/58 = "..\NbackShapes\files\Cloud.bmp"
+/59 = "..\NbackShapes\files\Star.bmp"
+/60 = "..\NbackShapes\files\Trapezoid.bmp"
+/61 = "..\NbackShapes\files\Heart.bmp"
+/62 = "..\NbackShapes\files\blue mountains.bmp"
+/63 = "..\NbackShapes\files\Thunder.bmp"
+/64 = "..\NbackShapes\files\blue mountains.bmp"
+/65 = "..\NbackShapes\files\circle.bmp"
+/66 = "..\NbackShapes\files\FourPointStar.bmp"
+/67 = "..\NbackShapes\files\Lozenge.bmp"
+/68 = "..\NbackShapes\files\Polygon-1.bmp"
+/69 = "..\NbackShapes\files\Lozenge.bmp"
+/70 = "..\NbackShapes\files\Heart.bmp"
+/71 = "..\NbackShapes\files\Pentagon.bmp"
+/72 = "..\NbackShapes\files\Heart.bmp"
+/73 = "..\NbackShapes\files\Trapezoid.bmp"
+/74 = "..\NbackShapes\files\square.bmp"
+/75 = "..\NbackShapes\files\Lozenge.bmp"
+/76 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/77 = "..\NbackShapes\files\blue mountains.bmp"
+/78 = "..\NbackShapes\files\Triangle.bmp"
+/79 = "..\NbackShapes\files\blue mountains.bmp"
+/80 = "..\NbackShapes\files\Cloud.bmp"
+/81 = "..\NbackShapes\files\Thunder.bmp"
+/82 = "..\NbackShapes\files\Star.bmp"
+/83 = "..\NbackShapes\files\Trapezoid.bmp"
+/84 = "..\NbackShapes\files\Star.bmp"
+/85 = "..\NbackShapes\files\FourPointStar.bmp"
+/86 = "..\NbackShapes\files\Trapezoid.bmp"
+/87 = "..\NbackShapes\files\Polygon-1.bmp"
+/88 = "..\NbackShapes\files\Trapezoid.bmp"
+/89 = "..\NbackShapes\files\Lozenge.bmp"
+/90 = "..\NbackShapes\files\Thunder.bmp"
+/91 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/92 = "..\NbackShapes\files\Thunder.bmp"
+/93 = "..\NbackShapes\files\Heart.bmp"
+/94 = "..\NbackShapes\files\Pentagon.bmp"
+/95 = "..\NbackShapes\files\Star.bmp"
+/96 = "..\NbackShapes\files\blue mountains.bmp"
+/97 = "..\NbackShapes\files\Cloud.bmp"
+/98 = "..\NbackShapes\files\square.bmp"
+/99 = "..\NbackShapes\files\Triangle.bmp"
+/100 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/101 = "..\NbackShapes\files\Triangle.bmp"
+/102 = "..\NbackShapes\files\FourPointStar.bmp"
+/103 = "..\NbackShapes\files\cloud.bmp"
+/104 = "..\NbackShapes\files\Lozenge.bmp"
+/105 = "..\NbackShapes\files\square.bmp"
+/106 = "..\NbackShapes\files\circle.bmp"
+/107 = "..\NbackShapes\files\Pentagon.bmp"
+/108 = "..\NbackShapes\files\FourPointStar.bmp"
+/109 = "..\NbackShapes\files\Pentagon.bmp"
+/110 = "..\NbackShapes\files\blue mountains.bmp"
+/111 = "..\NbackShapes\files\polygon-1.bmp"
+/112 = "..\NbackShapes\files\square.bmp"
+/113 = "..\NbackShapes\files\Star.bmp"
+/114 = "..\NbackShapes\files\Cloud.bmp"
+/115 = "..\NbackShapes\files\Thunder.bmp"
+/116 = "..\NbackShapes\files\Triangle.bmp"
+/117 = "..\NbackShapes\files\Trapezoid.bmp"
+/118 = "..\NbackShapes\files\Heart.bmp"
+/119 = "..\NbackShapes\files\Trapezoid.bmp"
+/120 = "..\NbackShapes\files\FourPointStar.bmp"
+</item>
+
+<picture trial2BackS>
+/items = trial2BackS
+/select = sequence
+/position = (50,50)
+</picture>
+
+<trial NS>
+/ stimulusframes = [1=trial2BackS]
+/ trialduration = 1500
+/ pretrialpause = 500
+/ responsetime = 0
+/ validresponse = (" ", noresponse)
+/ correctresponse = (noresponse)
+/ ontrialend = [if(trial.NS.correct==1) values.ShapeScore2Back=values.ShapeScore2Back+1]
+/ ontrialend = [if(trial.NS.error==1) values.ShapeScoreCommission2Back=values.ShapeScoreCommission2Back+1]
+</trial>
+
+<trial YS>
+/ stimulusframes = [1=trial2BackS]
+/ trialduration = 1500
+/ pretrialpause = 500
+/ responsetime = 0
+/ validresponse = (" ", noresponse)
+/ correctresponse = (" ")
+/ ontrialend = [if(trial.YS.correct==1) values.ShapeScore2Back=values.ShapeScore2Back+1]
+/ ontrialend = [if(trial.YS.error==1) values.ShapeScoreOmission2Back=values.ShapeScoreOmission2Back+1]
+</trial>
+
+
+<block Trial2BackEngS>
+/ onblockbegin = [values.TaskNumber=17]
+/ trials = [1=sequence(NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,YS,NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,YS,NS,NS,NS,NS,NS,NS,YS,NS,
+NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,NS,NS,YS,NS)]
+/ branch = [if(trial.YS.percentcorrect >= 80) block.Trial3BackEngS]
+</block>
+
+<block Trial2BackFrS>
+/ onblockbegin = [values.TaskNumber=17]
+/ trials = [1=sequence(NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,YS,NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,YS,NS,NS,NS,NS,NS,NS,YS,NS,
+NS,NS,NS,YS,NS,NS,NS,NS,YS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,YS,NS,NS,NS,NS,NS,NS,NS,NS,NS,YS,NS)]
+/ branch = [if(trial.YS.percentcorrect >= 80) block.Trial3BackFrS]
+</block>
+
+******************
+3BackShape
+******************
+<item trial3BackS>
+/1 = "..\NbackShapes\files\thunder.bmp"
+/2 = "..\NbackShapes\files\square.bmp"
+/3 = "..\NbackShapes\files\Hexagon.bmp"
+/4 = "..\NbackShapes\files\thunder.bmp"
+/5 = "..\NbackShapes\files\Star.bmp"
+/6 = "..\NbackShapes\files\Cloud.bmp"
+/7 = "..\NbackShapes\files\triangle.bmp"
+/8 = "..\NbackShapes\files\Trapezoid.bmp"
+/9 = "..\NbackShapes\files\Cloud.bmp"
+/10 = "..\NbackShapes\files\Pentagon.bmp"
+/11 = "..\NbackShapes\files\Lozenge.bmp"
+/12 = "..\NbackShapes\files\FourPointStar.bmp"
+/13 = "..\NbackShapes\files\circle.bmp"
+/14 = "..\NbackShapes\files\Star.bmp"
+/15 = "..\NbackShapes\files\square.bmp"
+/16 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/17 = "..\NbackShapes\files\Star.bmp"
+/18 = "..\NbackShapes\files\Trapezoid.bmp"
+/19 = "..\NbackShapes\files\triangle.bmp"
+/20 = "..\NbackShapes\files\blue mountains.bmp"
+/21 = "..\NbackShapes\files\Cloud.bmp"
+/22 = "..\NbackShapes\files\square.bmp"
+/23 = "..\NbackShapes\files\blue mountains.bmp"
+/24 = "..\NbackShapes\files\Heart.bmp"
+/25 = "..\NbackShapes\files\Pentagon.bmp"
+/26 = "..\NbackShapes\files\Lozenge.bmp"
+/27 = "..\NbackShapes\files\Heart.bmp"
+/28 = "..\NbackShapes\files\FourPointStar.bmp"
+/29 = "..\NbackShapes\files\Trapezoid.bmp"
+/30 = "..\NbackShapes\files\triangle.bmp"
+/31 = "..\NbackShapes\files\FourPointStar.bmp"
+/32 = "..\NbackShapes\files\Pentagon.bmp"
+/33 = "..\NbackShapes\files\Lozenge.bmp"
+/34 = "..\NbackShapes\files\Hexagon.bmp"
+/35 = "..\NbackShapes\files\Heart.bmp"
+/36 = "..\NbackShapes\files\circle.bmp"
+/37 = "..\NbackShapes\files\Lozenge.bmp"
+/38 = "..\NbackShapes\files\Trapezoid.bmp"
+/39 = "..\NbackShapes\files\square.bmp"
+/40 = "..\NbackShapes\files\Pentagon.bmp"
+/41 = "..\NbackShapes\files\triangle.bmp"
+/42 = "..\NbackShapes\files\square.bmp"
+/43 = "..\NbackShapes\files\FourPointStar.bmp"
+/44 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/45 = "..\NbackShapes\files\Cloud.bmp"
+/46 = "..\NbackShapes\files\Lozenge.bmp"
+/47 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/48 = "..\NbackShapes\files\circle.bmp"
+/49 = "..\NbackShapes\files\Trapezoid.bmp"
+/50 =  "..\NbackShapes\files\Heart.bmp"
+/51 =  "..\NbackShapes\files\Star.bmp"
+/52 = "..\NbackShapes\files\thunder.bmp"
+/53 = "..\NbackShapes\files\Heart.bmp"
+/54 = "..\NbackShapes\files\blue mountains.bmp"
+/55 = "..\NbackShapes\files\FourPointStar.bmp"
+/56 = "..\NbackShapes\files\Cloud.bmp"
+/57 = "..\NbackShapes\files\Polygon-1.bmp"
+/58 = "..\NbackShapes\files\Lozenge.bmp"
+/59 = "..\NbackShapes\files\Trapezoid.bmp"
+/60 = "..\NbackShapes\files\Polygon-1.bmp"
+/61 = "..\NbackShapes\files\thunder.bmp"
+/62 = "..\NbackShapes\files\Pentagon.bmp"
+/63 = "..\NbackShapes\files\FourPointStar.bmp"
+/64 = "..\NbackShapes\files\thunder.bmp"
+/65 = "..\NbackShapes\files\Heart.bmp"
+/66 = "..\NbackShapes\files\square.bmp"
+/67 = "..\NbackShapes\files\circle.bmp"
+/68 = "..\NbackShapes\files\Lozenge.bmp"
+/69 = "..\NbackShapes\files\Trapezoid.bmp"
+/70 = "..\NbackShapes\files\Pentagon.bmp"
+/71 = "..\NbackShapes\files\blue mountains.bmp"
+/72 = "..\NbackShapes\files\FourPointStar.bmp"
+/73 = "..\NbackShapes\files\triangle.bmp"
+/74 = "..\NbackShapes\files\blue mountains.bmp"
+/75 = "..\NbackShapes\files\thunder.bmp"
+/76 = "..\NbackShapes\files\Polygon-1.bmp"
+/77 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/78 = "..\NbackShapes\files\thunder.bmp"
+/79 = "..\NbackShapes\files\Trapezoid.bmp"
+/80 = "..\NbackShapes\files\Pentagon.bmp"
+/81 = "..\NbackShapes\files\Lozenge.bmp"
+/82 = "..\NbackShapes\files\FourPointStar.bmp"
+/83 = "..\NbackShapes\files\triangle.bmp"
+/84 = "..\NbackShapes\files\Lozenge.bmp"
+/85 = "..\NbackShapes\files\Pentagon.bmp"
+/86 = "..\NbackShapes\files\Cloud.bmp"
+/87 = "..\NbackShapes\files\Heart.bmp"
+/88 = "..\NbackShapes\files\Polygon-1.bmp"
+/89 = "..\NbackShapes\files\thunder.bmp"
+/90 = "..\NbackShapes\files\Pentagon.bmp"
+/91 = "..\NbackShapes\files\Trapezoid.bmp"
+/92 = "..\NbackShapes\files\Lozenge.bmp"
+/93 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/94 = "..\NbackShapes\files\Trapezoid.bmp"
+/95 = "..\NbackShapes\files\thunder.bmp" 
+/96 = "..\NbackShapes\files\triangle.bmp"
+/97 = "..\NbackShapes\files\Polygon-1.bmp"
+/98 = "..\NbackShapes\files\Pentagon.bmp"
+/99 = "..\NbackShapes\files\Heart.bmp"
+/100 = "..\NbackShapes\files\Lozenge.bmp"
+/101 = "..\NbackShapes\files\FourPointStar.bmp"
+/102 = "..\NbackShapes\files\Cloud.bmp"
+/103 = "..\NbackShapes\files\Lozenge.bmp"
+/104 = "..\NbackShapes\files\circle.bmp"
+/105 = "..\NbackShapes\files\Star.bmp"
+/106 = "..\NbackShapes\files\Polygon-1.bmp"
+/107 = "..\NbackShapes\files\square.bmp"
+/108 = "..\NbackShapes\files\Star.bmp"
+/109 = "..\NbackShapes\files\Trapezoid.bmp"
+/110 = "..\NbackShapes\files\blue mountains.bmp"
+/111 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/112 = "..\NbackShapes\files\Trapezoid.bmp"
+/113 = "..\NbackShapes\files\thunder.bmp"
+/114 = "..\NbackShapes\files\Lozenge.bmp"
+/115 = "..\NbackShapes\files\FourPointStar.bmp"
+/116 = "..\NbackShapes\files\square.bmp"
+/117 = "..\NbackShapes\files\DoubleTriangle.bmp"
+/118 = "..\NbackShapes\files\FourPointStar.bmp"
+/119 = "..\NbackShapes\files\Cloud.bmp"
+/120 = "..\NbackShapes\files\Star.bmp"
+/121 = "..\NbackShapes\files\triangle.bmp"
+/122 = "..\NbackShapes\files\Cloud.bmp"
+</item>
+
+<picture trial3BackS>
+/items = trial3BackS
+/select = sequence
+/position = (50,50)
+</picture>
+
+
+<trial NNS>
+/ stimulusframes = [1=trial3BackS]
+/ trialduration = 1500
+/ pretrialpause = 500
+/ responsetime = 0
+/ validresponse = (" ", noresponse)
+/ correctresponse = (noresponse)
+/ ontrialend = [if(trial.NNS.correct==1) values.ShapeScore3Back=values.ShapeScore3Back+1]
+/ ontrialend = [if(trial.NNS.error==1) values.ShapeScoreCommission3Back=values.ShapeScoreCommission3Back+1]
+</trial>
+
+<trial YYS>
+/ stimulusframes = [1=trial3BackS]
+/ trialduration = 1500
+/ pretrialpause = 500
+/ responsetime = 0
+/ validresponse = (" ", noresponse)
+/ correctresponse = (" ")
+/ ontrialend = [if(trial.YYS.correct==1) values.ShapeScore3Back=values.ShapeScore3Back+1]
+/ ontrialend = [if(trial.YYS.error==1) values.ShapeScoreOmission3Back=values.ShapeScoreOmission3Back+1]
+</trial>
+
+
+<block Trial3BackFrS>
+/ onblockbegin = [values.TaskNumber=18]
+/ preinstructions = (Fr3BackShape)
+/ trials = [1=sequence(NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS)]
+</block>
+
+<block Trial3BackEngS>
+/ onblockbegin = [values.TaskNumber=18]
+/ preinstructions = (Eng3BackShape)
+/ trials = [1=sequence(NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,NNS,NNS,YYS,NNS,NNS,NNS,YYS)]
+</block>
+
+
+*********************
+The Experiment
+*********************
+<expt P>
+/blocks = [1=PracticeFrS;2=PracticeEngS]
+</expt>
+
+
+****************************************
+Instructions
+****************************************
+
+<page practiceEngS>
+^^Now, you will see one shape at a time in the middle of the screen.
+^^You must decide if this shape is the exact same shape you saw 2 shapes before.
+^^If the shape you see is the same as the shape you saw 2 shapes before, press the SPACE BAR as fast as you can.
+^^If the shape is not the same, do nothing.
+^^This test lasts less than 3 minutes
+^^Are you ready for a practice round?
+</page>
+
+
+<page practiceFrS>
+^^Maintenant, vous allez voir une forme à la fois s'afficher au centre de l'écran.
+^^Vous devez décider si cette forme est exactement la même forme que vous avez vu 2 formes avant.
+^^Si la forme que vous voyez est la même que la forme que vous avez vu 2 formes avant, appuyez sur la BARRE D'ESPACE le plus rapidement possible.
+^^Si la forme n'est pas la même, ne faites rien.
+^^Ce test dure moins de 3 minutes
+^^êtes-vous prêt pour la ronde de pratique?
+</page>
+
+
+<page Fr3BackShape>
+^^Voulez vous essayer quelque chose de plus difficile?  Si la forme que vous voyez est la m�me que la forme que vous avez vue 3 formes avant, appuyez sur la BARRE d'ESPACE le plus rapidement possible.
+^^Si la forme n'est pas la m�me, ne faites rien.
+</page>
+
+<page Eng3BackShape>
+^^Do you want to try harder?  If the shape you see is the same as the shape you saw 3 shapes before, press the SPACE BAR as fast as you can.
+^^If the shape is not the same, do nothing.
+</page>

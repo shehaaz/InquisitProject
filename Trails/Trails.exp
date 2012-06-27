@@ -1,0 +1,75 @@
+<expt G>
+/ onexptbegin = [values.TaskNumber=7]
+/ blocks = [1=TrailGate]
+</expt>
+
+<block TrailGate>
+/ branch = [if(trial.Language.response == "English") block.EngTrail else block.FrTrail]
+</block>
+
+
+************
+Stimuli
+************
+<text 1Trails>
+/ items = ("1")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (45%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text 2Trails>
+/ items = ("2")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (55%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+**************************
+
+<block EngTrail>
+/ preinstructions = (InstrucTrailEng)
+/ trials = [1=Trails]
+</block>
+
+<block FrTrail>
+/ preinstructions = (InstrucTrailFr)
+/ trials = [1=Trails]
+</block>
+
+<trial Trails>
+/ stimulusframes = [1= 1Trails,2Trails]
+/ validresponse = (1Trails,2Trails)
+/ inputdevice = mouse
+</trial>
+
+
+**************************
+Instructions
+**************************
+<page InstrucTrailEng>
+^^On this task, you have to draw a line between all the circles.
+^^In joining the circles, you have to alternate between a number and a letter.
+^^You also have to go in ascending order for the letters of the alphabet (a,b,c) and the numbers (1,2,3)
+^^The trick is, you also have to alternate between a number and a letter.
+^^Let’s start together.  Begin here.  Please draw a line, going from the first number, 1,  to the first  letter, A, and keep going in ascending order for letters and number, while alternating.
+^^End here (E).  
+</page>
+
+<page InstrucTrailFr>
+^^Dans cette tâche, il faut tracer une ligne entre tous les cercles. 
+^^En joignant les cercles, il faut alterner entre un chiffre et une lettre
+^^Vous devez aussi aller en ordre croissant pour les lettres de l’alphabet (a,b,c) et des chiffres (1,2,3).
+^^Le truc est que vous devez en plus alterner entre un chiffre et une lettre.
+^^Faisons le début ensemble.  Commencez ici.  S’il-vous-plaît tracez une ligne allant du premier chiffre, 1, à la première lettre, A, et continuez ainsi en ordre croissant des chiffres et des lettres tout en alternant. 
+^^Terminez ici (E)
+</page>

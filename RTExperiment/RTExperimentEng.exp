@@ -1,0 +1,118 @@
+********************** 
+Experiment
+**********************
+<expt B>
+/ onexptbegin = [values.TaskNumber=2]
+/blocks=[1=pm.simpleEngLeft;2=pm.simpleEngRight]
+</expt>
+
+**********************
+Block
+**********************
+
+<block pm.simpleEngLeft>
+/ skip = [trial.Language.response == "French"]
+/ skip = [trial.HandEng.response != "Left"]
+/preinstructions = (pm.simpleEngLeft)
+/ screencolor = white
+/trials=[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,
+39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79=blank.simpleEng;
+2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,
+48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80=pm.simpleEng]
+</block>
+
+<block pm.simpleEngRight>
+/ skip = [trial.Language.response == "French"]
+/ skip = [trial.HandEng.response != "Right"]
+/preinstructions = (pm.simpleEngRight)
+/ screencolor = white
+/trials=[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,
+39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79=blank.simpleEng;
+2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,
+48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80=pm.simpleEng]
+</block>
+
+**************
+Stimuli
+**************
+<text crossEng>
+/position=(50%, 50%)
+/items=("+")
+/fontstyle = ("Arial", 60pt, false)
+</text>
+
+<text error.toosoonEng>
+/position=(50%, 50%)
+/items=("PRESSED TOO SOON")
+/fontstyle = ("Arial", 30pt, false)
+/txcolor =(255,0,0)
+</text>
+
+<text error.wrongkeyEng>
+/position=(50%, 50%)
+/items=("WRONG KEY")
+/fontstyle = ("Arial", 30pt, false)
+/txcolor =(255,0,0)
+</text>
+
+# pm.simple
+<page pm.simpleEngLeft>
+^^Place the index finger of your LEFT hand on the middle of the SPACEBAR. 
+^^Your task is to press the space bar as quickly as possible after a RED SQUARE is flashed on the screen.
+^^At the start of each trial, focus your eyes on the cross that appears in the middle of the screen.
+^^It is an error if you press the SPACE BAR before the RED SQUARE appears.
+^^Try to respond as quickly as possible.
+^^^This test lasts 90 seconds
+</page>
+
+<page pm.simpleEngRight>
+^^Place the index finger of your RIGHT hand on the middle of the SPACEBAR. 
+^^Your task is to press the space bar as quickly as possible after a RED SQUARE is flashed on the screen.
+^^At the start of each trial, focus your eyes on the cross that appears in the middle of the screen.
+^^It is an error if you press the SPACE BAR before the RED SQUARE appears.
+^^Try to respond as quickly as possible.
+^^^This test lasts 90 seconds
+</page>
+
+*************
+Trial
+*************
+<trial blank.simpleEng>
+/ stimulustimes=[0=crossEng]
+/ trialduration = noreplace(1500, 1600, 1700, 1800, 1900, 2000, 2100, 2200,
+2300, 2400, 2500) / responsetrial = (" ", blank.simpleEng) 
+/ correctresponse = (noresponse)
+/ errormessage = (error.toosoonEng, 1000)
+/ validresponse=(noresponse, " ")
+</trial>
+
+<trial pm.simpleEng>
+/ stimulustimes = [0=pm.simple.startEng]
+/ validresponse = (" ")
+</trial>
+
+************************
+The Red Rectangle
+************************
+<shape pm.simple.startEng>
+/shape=rectangle
+/size= (150,150)
+/ color= (255,0,0)
+</shape>
+
+<text pm.simple.bgstimEng>
+/position=(50%, 10%)
+/items=("Focus on Cross & Press Space when Red Square appears")
+/fontstyle = ("Arial", 16pt, true)
+</text>
+
+***********************************************************************************************************************************************
+
+
+
+
+
+
+
+
+

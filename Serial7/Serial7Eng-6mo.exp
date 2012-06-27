@@ -1,0 +1,36 @@
+
+************************
+Instructions 
+************************
+
+<page InstrucS7Eng6mo>
+^^Now, I will ask you to count by subtracting seven from 80,
+^^and then, keep subtracting seven from your answer 
+^^until I tell you to stop.
+</page>
+
+
+
+************
+Recursive until user enters 5 values
+************
+<openended Serial7Eng6mo>
+/ position = (90,90)
+/ mouse = true
+/ buttonlabel = "submit"
+/ ontrialend = [if((values.InitialValueS76mo - openended.Serial7Eng6mo.response) == 7) values.ScoreS7=values.ScoreS7+1]
+/ ontrialend = [values.InitialValueS76mo = openended.Serial7Eng6mo.response;values.CounterS7=values.CounterS7+1]
+/ branch = [if (values.CounterS7 < 5) openended.Serial7Eng6mo]
+</openended>
+
+<block Serial7Eng6mo>
+/ trials = [1=Serial7Eng6mo]
+</block>
+
+<expt H3>
+/ onexptbegin = [values.TaskNumber=8]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "6mo"]
+/ preinstructions = (InstrucS7Eng6mo)
+/ blocks = [1=Serial7Eng6mo]
+</expt>

@@ -1,0 +1,228 @@
+
+*************************
+Trial Elements
+*************************
+**************************************************************************************************************
+	Get Sequence
+**************************************************************************************************************
+**************************************************************************************************************
+<trial getseqEngFwrd>
+/ stimulustimes = [0=board,getreadyCorsiEng; 1000=board,1,2,3,4,5,6,7,8,9]
+/ ontrialbegin = [values.seqlength=counter.seqlength.selectedvalue; 
+	values.seqnumber=counter.seqnumber.selectedvalue; values.tapcount=0; values.correct=0;
+	values.seqstring=""; values.respstring=""]
+/ ontrialend = [text.1.textbgcolor=values.blockcolor; text.2.textbgcolor=values.blockcolor; 
+	text.3.textbgcolor=values.blockcolor; text.4.textbgcolor=values.blockcolor; 
+	text.5.textbgcolor=values.blockcolor; text.6.textbgcolor=values.blockcolor;
+	text.7.textbgcolor=values.blockcolor; text.8.textbgcolor=values.blockcolor; 
+	text.9.textbgcolor=values.blockcolor]
+/ branch = [trial.showseqEngFwrd]
+/ validresponse = (noresponse)
+/ trialduration = 2000
+/ recorddata = false
+</trial>
+
+
+<trial getseq2EngFwrd>
+/ skip = [values.skiptrial==1]
+/ stimulustimes = [0=board,getreadyCorsiEng; 1000=board,1,2,3,4,5,6,7,8,9]
+/ ontrialbegin = [values.seqlength2=counter.seqlength2.selectedvalue; 
+	values.seqnumber=counter.seqnumber.selectedvalue; values.tapcount=0; values.correct=0;values.seqstring=""; values.respstring=""]
+/ ontrialend = [text.1.textbgcolor=values.blockcolor; text.2.textbgcolor=values.blockcolor; 
+	text.3.textbgcolor=values.blockcolor; text.4.textbgcolor=values.blockcolor; 
+	text.5.textbgcolor=values.blockcolor; text.6.textbgcolor=values.blockcolor;
+	text.7.textbgcolor=values.blockcolor; text.8.textbgcolor=values.blockcolor; 
+	text.9.textbgcolor=values.blockcolor]
+/ branch = [trial.showseq2EngFwrd]
+/ validresponse = (noresponse)
+/ trialduration = 2000
+/ recorddata = false
+</trial>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	Show Sequence
+**************************************************************************************************************
+**************************************************************************************************************
+<trial showseqEngFwrd>
+/ ontrialbegin = [values.showfeedback = true]
+/ ontrialbegin = [values.highlightedblock=counter.blockseq.selectedvalue;
+	values.tapcount=values.tapcount+1]
+/ ontrialbegin = [if(values.highlightedblock==1)text.1.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==2)text.2.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==3)text.3.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==4)text.4.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==5)text.5.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==6)text.6.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==7)text.7.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==8)text.8.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==9)text.9.textbgcolor=values.tapcolor]
+/ ontrialend = [text.1.textbgcolor=values.blockcolor]
+/ ontrialend = [text.2.textbgcolor=values.blockcolor]
+/ ontrialend = [text.3.textbgcolor=values.blockcolor]
+/ ontrialend = [text.4.textbgcolor=values.blockcolor]
+/ ontrialend = [text.5.textbgcolor=values.blockcolor]
+/ ontrialend = [text.6.textbgcolor=values.blockcolor]
+/ ontrialend = [text.7.textbgcolor=values.blockcolor]
+/ ontrialend = [text.8.textbgcolor=values.blockcolor]
+/ ontrialend = [text.9.textbgcolor=values.blockcolor]
+/ ontrialend = [values.seqstring=concat(values.seqstring,values.highlightedblock)]
+/ stimulusframes = [1=board,1,2,3,4,5,6,7,8,9]
+/ validresponse = (noresponse)
+/ trialduration = values.tapinterval
+/ posttrialpause = values.posttapinterval
+/ branch = [if(values.tapcount<values.seqlength)trial.showseqEngFwrd else trial.recallseqEngFwrd]
+/ recorddata = false
+</trial>
+
+
+<trial showseq2EngFwrd>
+/ ontrialbegin = [values.highlightedblock=counter.blockseq.selectedvalue;
+	values.tapcount=values.tapcount+1]
+/ ontrialbegin = [if(values.highlightedblock==1)text.1.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==2)text.2.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==3)text.3.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==4)text.4.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==5)text.5.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==6)text.6.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==7)text.7.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==8)text.8.textbgcolor=values.tapcolor]
+/ ontrialbegin = [if(values.highlightedblock==9)text.9.textbgcolor=values.tapcolor]
+/ ontrialend = [text.1.textbgcolor=values.blockcolor]
+/ ontrialend = [text.2.textbgcolor=values.blockcolor]
+/ ontrialend = [text.3.textbgcolor=values.blockcolor]
+/ ontrialend = [text.4.textbgcolor=values.blockcolor]
+/ ontrialend = [text.5.textbgcolor=values.blockcolor]
+/ ontrialend = [text.6.textbgcolor=values.blockcolor]
+/ ontrialend = [text.7.textbgcolor=values.blockcolor]
+/ ontrialend = [text.8.textbgcolor=values.blockcolor]
+/ ontrialend = [text.9.textbgcolor=values.blockcolor]
+/ ontrialend = [values.seqstring=concat(values.seqstring,values.highlightedblock)]
+/ ontrialend = [values.showfeedback = false]
+/ stimulusframes = [1=board,1,2,3,4,5,6,7,8,9]
+/ validresponse = (noresponse)
+/ trialduration = values.tapinterval
+/ posttrialpause = values.posttapinterval
+/ branch = [if(values.tapcount<values.seqlength2)trial.showseq2EngFwrd else trial.recallseqEngFwrd]
+/ recorddata = false
+</trial>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	Recall Sequence
+**************************************************************************************************************
+**************************************************************************************************************
+<trial recallseqEngFwrd>
+/ inputdevice = mouse
+/ stimulusframes = [1=board,1,2,3,4,5,6,7,8,9,resetCorsiEng,doneCorsiEng]
+/ validresponse = (1,2,3,4,5,6,7,8,9,resetCorsiEng,doneCorsiEng)
+
+/ ontrialbegin = [values.skiptrial=0]
+
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="1")
+	text.1.textbgcolor=values.tapcolor else text.1.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="2")
+	text.2.textbgcolor=values.tapcolor else text.2.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="3")
+	text.3.textbgcolor=values.tapcolor else text.3.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="4")
+	text.4.textbgcolor=values.tapcolor else text.4.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="5")
+	text.5.textbgcolor=values.tapcolor else text.5.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="6")
+	text.6.textbgcolor=values.tapcolor else text.6.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="7")
+	text.7.textbgcolor=values.tapcolor else text.7.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="8")
+	text.8.textbgcolor=values.tapcolor else text.8.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="9")
+	text.9.textbgcolor=values.tapcolor else text.9.textbgcolor=values.blockcolor]
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="resetCorsiEng"){values.respstring="";
+	text.1.textbgcolor=values.blockcolor; text.2.textbgcolor=values.blockcolor; 
+	text.3.textbgcolor=values.blockcolor; text.4.textbgcolor=values.blockcolor; 
+	text.5.textbgcolor=values.blockcolor; text.6.textbgcolor=values.blockcolor;
+	text.7.textbgcolor=values.blockcolor; text.8.textbgcolor=values.blockcolor;
+	text.9.textbgcolor=values.blockcolor}]
+
+/ ontrialend = [if(trial.recallseqEngFwrd.response!="resetCorsiEng" && trial.recallseqEngFwrd.response!="doneCorsiEng")
+	values.respstring=concat(values.respstring,trial.recallseqEngFwrd.response)]
+
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="doneCorsiEng" && values.respstring==values.seqstring){
+	values.correct=1; values.ncorrecttotal=values.ncorrecttotal+1; 
+	values.ncorrectinblock=values.ncorrectinblock+1;
+	values.corsiblockspanFwrd=values.seqlength;values.skiptrial=1}]
+
+/ ontrialend = [if(trial.recallseqEngFwrd.response=="doneCorsiEng")values.totalscore=values.corsiblockspanFwrd*values.ncorrecttotal]
+/ branch = [if(trial.recallseqEngFwrd.response!="doneCorsiEng")trial.recallseqEngFwrd else trial.showfeedbackEng]
+</trial>
+
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	Block Elements
+**************************************************************************************************************
+**************************************************************************************************************
+<block corsiblockEngFwrd>
+/ skip = [values.skipblock==1]
+/ onblockbegin = [values.ncorrectinblock=0]
+/ trials = [1=getseqEngFwrd; 2=getseq2EngFwrd]
+/ onblockend = [if(values.ncorrectinblock<=0)values.skipblock=1]
+</block>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	Experiment Elements
+**************************************************************************************************************
+**************************************************************************************************************
+<expt I3>
+/ onexptbegin = [values.TaskNumber=9]
+/ skip = [trial.Language.response=="French"]
+/ onexptbegin = [text.1.erasecolor=values.blockcolor; text.2.erasecolor=values.blockcolor; 
+	text.3.erasecolor=values.blockcolor; text.4.erasecolor=values.blockcolor; 
+	text.5.erasecolor=values.blockcolor; text.6.erasecolor=values.blockcolor; 
+	text.7.erasecolor=values.blockcolor; text.8.erasecolor=values.blockcolor; 
+	text.9.erasecolor=values.blockcolor]
+/ onexptbegin = [text.1.textbgcolor=values.blockcolor; text.2.textbgcolor=values.blockcolor; 
+	text.3.textbgcolor=values.blockcolor; text.4.textbgcolor=values.blockcolor; 
+	text.5.textbgcolor=values.blockcolor; text.6.textbgcolor=values.blockcolor; 
+	text.7.textbgcolor=values.blockcolor; text.8.textbgcolor=values.blockcolor; 
+	text.9.textbgcolor=values.blockcolor]
+/ onexptbegin = [shape.board.color=values.boardcolor]
+/ onexptbegin = [values.skipblock=0]
+/ blocks = [1=StartEngFwrd; 2-9=corsiblockEngFwrd]
+</expt>
+
+<block StartEngFwrd>
+/ preinstructions = (corsiinstructionsEngFwrd)
+/ recorddata = false
+</block>
+
+
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	Corsi Task Instructions
+**************************************************************************************************************
+**************************************************************************************************************
+<page corsiinstructionsEngFwrd>
+^^On this task, you will see 9 blocks on the screen.
+^On each trial, several blocks will light up, one at a time.
+^You must remember in which exact order they light up and repeat the same order by clicking on the blocks with the mouse.
+^When you are done, click done.
+^If you wish to correct your sequence, click reset to start over.
+^We will start with a sequence of 2 blocks.  Afterwards, the sequence may get longer
+^You will get 2 trials for each sequence length.
+^^Click CONTINUE when you are ready.
+^^Let’s begin
+</page>
+
+
+**************************************************************************************************************
+**************************************************************************************************************
+	End Of File
+**************************************************************************************************************
+**************************************************************************************************************

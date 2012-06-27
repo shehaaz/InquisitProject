@@ -1,0 +1,30 @@
+<expt S>
+/ blocks = [1=ClosingGate]
+/ timeout = 1
+</expt>
+
+<block ClosingGate>
+/ branch = [if(trial.Language.response == "English") block.EngClosing else block.FrClosing]
+</block>
+
+<block EngClosing>
+/ preinstructions = (InstrucClosingEng)
+/ timeout = 1
+</block>
+
+<block FrClosing>
+/ preinstructions = (InstrucClosingFr)
+/ timeout = 1
+</block>
+
+<page InstrucClosingEng>
+^^That's it for today.  Thank you very much for your participation.  Please do not share the content of this test; doing so may decrease its usefulness for others.
+^^Have a nice day!
+^^^^^^Thanks to Roger Bourassa and Jim Connell for lending us their voices!
+</page>
+
+<page InstrucClosingFr>
+^^Voilà , c'est tout pour aujourd'hui.  Merci beaucoup pour votre participation.  S'il-vous-plaît, ne partagez pas le contenu de ce test; ça le rendrait moins utile pour les autres 
+^^Bonne journée!
+^^^^^^Merci à  Denis Bernard et Jim Connell pour nous avoir prêté leurs voix!
+</page>

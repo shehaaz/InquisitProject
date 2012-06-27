@@ -1,0 +1,51 @@
+
+**********
+Stimuli
+**********
+<text TitleFrVF6mo>
+/ items = ("Donnez le plus possible de mots commençant avec lettre 'S'")
+/ fontstyle = ("Verdana",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+
+*****************************
+<expt R4>
+/ onexptbegin = [values.TaskNumber=20]
+/ skip = [trial.Language.response != "French"]
+/ skip = [trial.Session.response != "6mo"]
+/ blocks = [1=FASFrVF6mo]
+</expt>
+
+<block FASFrVF6mo>
+/ preinstructions = (InstrucFrVF)
+/ trials = [1=FASFrVF6mo]
+</block>
+
+<trial FASFrVF6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleFrVF6mo,StartFrVF]
+/ validresponse = (StartFrVF)
+/ branch = [if (trial.FASFrVF6mo.response=="StartFrVF") trial.BlankFrVF6mo]
+/ recorddata = false
+</trial>
+
+<trial BlankFrVF6mo>
+/ stimulusframes = [1=BlankVF,Ding]
+/ timeout = 60000
+/ branch = [openended.StopFrVF6mo]
+/ recorddata = false
+</trial>
+
+<openended StopFrVF6mo>
+/ stimulusframes = [1=StopSign,Ding]
+/ position = (90,90)
+/ mouse = true
+/ buttonlabel = "Submit"
+</openended>
+
+

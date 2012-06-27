@@ -1,0 +1,36 @@
+
+************************
+Instructions 
+************************
+
+<page InstrucS7Fr6mo>
+^^Maintenant je veux que vous soustrayiez 7 de 80, 
+^^et ensuite, continuez à soustraire 7 de votre réponse, 
+^^jusqu'à  ce que je vous dise d'arrêter
+</page>
+
+
+
+************
+Recursive until user enters 5 values
+************
+<openended Serial7Fr6mo>
+/ position = (90,90)
+/ mouse = true
+/ buttonlabel = "submit"
+/ ontrialend = [if((values.InitialValueS76mo - openended.Serial7Fr6mo.response) == 7) values.ScoreS7=values.ScoreS7+1]
+/ ontrialend = [values.InitialValueS76mo = openended.Serial7Fr6mo.response;values.CounterS7=values.CounterS7+1]
+/ branch = [if (values.CounterS7 < 5) openended.Serial7Fr6mo]
+</openended>
+
+<block Serial7Fr6mo>
+/ trials = [1=Serial7Fr6mo]
+</block>
+
+<expt H5>
+/ onexptbegin = [values.TaskNumber=8]
+/ skip = [trial.Language.response == "English"]
+/ skip = [trial.Session.response != "6mo"]
+/ preinstructions = (InstrucS7Fr6mo)
+/ blocks = [1=Serial7Fr6mo]
+</expt>

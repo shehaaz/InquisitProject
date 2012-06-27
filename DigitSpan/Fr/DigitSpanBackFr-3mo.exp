@@ -1,0 +1,430 @@
+
+*****************************
+Experiment
+*****************************
+
+<expt M4>
+/ onexptbegin = [values.TaskNumber=13]
+/ skip = [trial.Language.response != "French"]
+/ skip = [trial.Session.response != "3mo"]
+/ preInstructions = (InstrucDSFr3mo)
+/ blocks = [1=DigitSpanFr3mo]
+</expt>
+
+<block DigitSpanFr3mo>
+/ trials = [1=DS31Fr3mo]
+</block>
+
+<page InstrucDSFr3mo>
+^^L’ordinateur va vous dire une série de chiffres, et lorsqu’il a terminé, je veux que vous répétiez ces chiffres dans l’ordre inverse.  
+^^Par exemple, si l’ordinateur dit 1,2, vous dites 2,1.  Prêt?
+</page>
+
+
+
+**************************************************
+Trial Elements
+**************************************************
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS31Fr3mo>
+/ stimulusframes = [1=DS31Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score1Fr3mo]
+/ recorddata = false
+</trial>
+
+<trial Score1Fr3mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate1Fr3mo]
+/ ontrialend = [if(trial.Score1Fr3mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate1Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS41Fr3mo else trial.DS32Fr3mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 2]
+</trial>
+
+<trial DS32Fr3mo>
+/ stimulusframes = [1=DS32Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score11Fr3mo]
+</trial>
+
+<trial Score11Fr3mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate2Fr3mo]
+/ ontrialend = [if(trial.Score11Fr3mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate2Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS41Fr3mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 2]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<trial DS41Fr3mo>
+/ stimulusframes = [1=DS41Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score2Fr3mo]
+/ recorddata = false
+</trial>
+
+<trial Score2Fr3mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate3Fr3mo]
+/ ontrialend = [if(trial.Score2Fr3mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate3Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS51Fr3mo else trial.DS42Fr3mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 3]
+</trial>
+
+<trial DS42Fr3mo>
+/ stimulusframes = [1=DS42Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score22Fr3mo]
+</trial>
+
+<trial Score22Fr3mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate4Fr3mo]
+/ ontrialend = [if(trial.Score22Fr3mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate4Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS51Fr3mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 3]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS51Fr3mo>
+/ stimulusframes = [1=DS51Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score3Fr3mo]
+/ recorddata = false
+</trial>
+
+<trial Score3Fr3mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate5Fr3mo]
+/ ontrialend = [if(trial.Score3Fr3mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate5Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS61Fr3mo else trial.DS52Fr3mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 4]
+</trial>
+
+<trial DS52Fr3mo>
+/ stimulusframes = [1=DS52Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score33Fr3mo]
+</trial>
+
+<trial Score33Fr3mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate6Fr3mo]
+/ ontrialend = [if(trial.Score33Fr3mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate6Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS61Fr3mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 4]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<trial DS61Fr3mo>
+/ stimulusframes = [1=DS61Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score4Fr3mo]
+/ recorddata = false
+</trial>
+
+<trial Score4Fr3mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate7Fr3mo]
+/ ontrialend = [if(trial.Score4Fr3mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate7Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS71Fr3mo else trial.DS62Fr3mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 5]
+</trial>
+
+<trial DS62Fr3mo>
+/ stimulusframes = [1=DS62Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score44Fr3mo]
+</trial>
+
+<trial Score44Fr3mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate8Fr3mo]
+/ ontrialend = [if(trial.Score44Fr3mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate8Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS71Fr3mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 5]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS71Fr3mo>
+/ stimulusframes = [1=DS71Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score5Fr3mo]
+/ recorddata = false
+</trial>
+
+<trial Score5Fr3mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate9Fr3mo]
+/ ontrialend = [if(trial.Score5Fr3mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate9Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS81Fr3mo else trial.DS72Fr3mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 6]
+</trial>
+
+<trial DS72Fr3mo>
+/ stimulusframes = [1=DS72Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score55Fr3mo]
+</trial>
+
+<trial Score55Fr3mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate10Fr3mo]
+/ ontrialend = [if(trial.Score55Fr3mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate10Fr3mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS81Fr3mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 6]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS81Fr3mo>
+/ stimulusframes = [1=DS81Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score6Fr3mo]
+/ recorddata = false
+</trial>
+
+<trial Score6Fr3mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate11Fr3mo]
+/ ontrialend = [if(trial.Score6Fr3mo.response=="DS2") values.Fail = 1]
+/ ontrialend = [if(trial.Score6Fr3mo.response=="DS1") values.DigitSpanBack = 7]
+</trial>
+
+<trial Gate11Fr3mo>
+/ timeout = 1
+/ skip = [values.Fail == 0]
+/ branch = [if(values.Fail == 1) trial.DS82Fr3mo]
+</trial>
+
+<trial DS82Fr3mo>
+/ stimulusframes = [1=DS82Fr3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score66Fr3mo]
+</trial>
+
+<trial Score66Fr3mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate12Fr3mo]
+/ ontrialend = [if(trial.Score66Fr3mo.response=="DS2") values.Fail = 2]
+/ ontrialend = [if(trial.Score66Fr3mo.response=="DS1") values.DigitSpanBack = 7]
+</trial>
+
+<trial Gate12Fr3mo>
+/ timeout = 1
+/ skip = [1]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*************************************
+Stimuli
+*************************************
+<sound DS31Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\18.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS32Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\73.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS41Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\629.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS42Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\475.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS51Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\7286.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+
+<sound DS52Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\6439.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+
+<sound DS61Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\65843.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS62Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\15486.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS71Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\392487.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS72Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\619473.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS81Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\9437621.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS82Fr3mo>
+/ items = ("..\DigitSpan\Fr\files\7281564.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+******************************************************************************************************************************************************************************
+******************************************************************************************************************************************************************************

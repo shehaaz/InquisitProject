@@ -1,0 +1,145 @@
+
+
+******************************************************************************************************************************************
+Stimuli
+******************************************************************************************************************************************
+
+******************************************************************************************************************************************
+Trial Stimuli
+******************************************************************************************************************************************
+
+<text AbsEng6mo1>
+/ items = ("YELLOW  -  GREEN")
+/ fontstyle = ("Arial",27pt,true)
+/ size = (60%, 9%)
+/ position = (50%,50%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text AbsEng6mo2>	
+/ items = ("ANCHOR  -  FENCE")
+/ fontstyle = ("Arial",27pt,true)
+/ size = (60%, 9%)
+/ position = (50%,50%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text AbsEng6mo3>	
+/ items = ("ENEMY  -  FRIEND")
+/ fontstyle = ("Arial",27pt,true)
+/ size = (60%, 9%)
+/ position = (50%,50%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+
+***************************************************************************************************************************************
+Trial
+***************************************************************************************************************************************
+
+***************************************************************************************************************************************
+Practice Trial
+***************************************************************************************************************************************
+
+<trial PAbsEng6mo1>
+/ inputdevice = mouse
+/ stimulusframes = [1=APTitleEng1,Abs1,Abs2]
+/ validresponse = (Abs1,Abs2)
+/ branch = [if (trial.PAbsEng6mo1.response=="Abs1") trial.AbsEng6mo1]
+/ branch = [if (trial.PAbsEng6mo1.response=="Abs2") trial.PAbsEng6mo2]
+</trial>
+
+<trial PAbsEng6mo2>
+/ inputdevice = mouse
+/ stimulusframes = [1=APTitleEng2,Abs1,Abs2]
+/ validresponse = (Abs1,Abs2)
+/ branch = [if (trial.PAbsEng6mo2.response=="Abs1") trial.AbsEng6mo1]
+/ branch = [if (trial.PAbsEng6mo2.response=="Abs2") trial.PAbsEng6mo3]
+</trial>
+
+<trial PAbsEng6mo3>
+/ inputdevice = mouse
+/ stimulusframes = [1=APTitleEng3,AbsContinue]
+/ validresponse = (AbsContinue)
+/ branch = [if (trial.PAbsEng6mo3.response=="AbsContinue") trial.AbsEng6mo1]
+</trial>
+
+***************************************************************************************************************************************
+Experiment Trial
+***************************************************************************************************************************************
+<trial AbsEng6mo1>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleEngAbs,AbsEng6mo1,Abs1,Abs2]
+/ validresponse = (Abs1,Abs2)
+/ branch = [if (trial.AbsEng6mo1.response=="Abs1") trial.AbsEng6mo2]
+/ branch = [if (trial.AbsEng6mo1.response=="Abs2") trial.AbsEng6mo2]
+/ ontrialend = [if (trial.AbsEng6mo1.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
+</trial>
+
+<trial AbsEng6mo2>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleEngAbs,AbsEng6mo2,Abs1,Abs2]
+/ validresponse = (Abs1,Abs2)
+/ branch = [if (trial.AbsEng6mo2.response=="Abs1") trial.AbsEng6mo3]
+/ branch = [if (trial.AbsEng6mo2.response=="Abs2") trial.AbsEng6mo3]
+/ ontrialend = [if (trial.AbsEng6mo2.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
+</trial>
+
+<trial AbsEng6mo3>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleEngAbs,AbsEng6mo3,Abs1,Abs2]
+/ validresponse = (Abs1,Abs2)
+/ ontrialend = [if (trial.AbsEng6mo3.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
+</trial>
+---------------------------------------------------
+
+
+************************************************************************************************************************
+Blocks
+************************************************************************************************************************
+
+<block WordsAbsEng6mo>
+/ trials = [1=PAbsEng6mo1]
+</block>
+
+
+*************************************************************************************************************************
+Experiement
+*************************************************************************************************************************
+<expt O2>
+/ onexptbegin =  [values.TaskNumber=16]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "6mo"]
+/ preinstructions = (InstrucAbsEng)	
+/ blocks = [1=WordsAbsEng6mo]
+</expt>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

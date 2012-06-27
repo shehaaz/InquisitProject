@@ -1,0 +1,809 @@
+
+
+**************
+Stimuli
+**************
+-----------------------------
+<text WordsEng6mo>
+/ items = ("Words")
+/ fontstyle = ("",20,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (5,3)
+</text>
+
+
+<text 1Eng6mo>
+/ items = ("1")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,10)
+</text>
+
+<text 2Eng6mo>
+/ items = ("2")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,15)
+</text>
+
+<text 3Eng6mo>
+/ items = ("3")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,20)
+</text>
+
+<text 4Eng6mo>
+/ items = ("4")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,25)
+</text>
+
+<text 5Eng6mo>
+/ items = ("5")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,30)
+</text>
+
+<text 6Eng6mo>
+/ items = ("6")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,35)
+</text>
+
+<text 7Eng6mo>
+/ items = ("7")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,40)
+</text>
+
+<text 8Eng6mo>
+/ items = ("8")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,45)
+</text>
+
+<text DoneEng6mo>
+/ items = ("Done")
+/ position = (5,55)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+--------------------------------------
+
+<text CatEng6mo>
+/ items = ("Category")
+/ fontstyle = ("",40,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (35,3)
+</text>
+
+
+<text 11Eng6mo>
+/ items = ("Fruit")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,10)
+</text>
+
+<text R1Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,10)
+</text>
+
+<text W1Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,10)
+</text>
+
+<text 22Eng6mo>
+/ items = ("Clothing")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,15)
+</text>
+
+<text R2Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,15)
+</text>
+
+<text W2Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,15)
+</text>
+
+<text 33Eng6mo>
+/ items = ("Animal")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,20)
+</text>
+
+<text R3Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,20)
+</text>
+
+<text W3Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,20)
+</text>
+
+<text 44Eng6mo>
+/ items = ("---------")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,25)
+</text>
+
+<text R4Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,25)
+</text>
+
+<text W4Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,25)
+</text>
+
+<text 55Eng6mo>
+/ items = ("Furniture")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,30)
+</text>
+
+<text R5Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,30)
+</text>
+
+<text W5Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,30)
+</text>
+
+<text 66Eng6mo>
+/ items = ("--------")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,35)
+</text>
+
+<text R6Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,35)
+</text>
+
+<text W6Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,35)
+</text>
+
+<text 77Eng6mo>
+/ items = ("Profession")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,40)
+</text>
+
+<text R7Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,40)
+</text>
+
+<text W7Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,40)
+</text>
+
+<text 88Eng6mo>
+/ items = ("Music Instrument")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,45)
+</text>
+
+<text R8Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,45)
+</text>
+
+<text W8Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,45)
+</text>
+----------------------------
+
+<text ChEng6mo>
+/ items = ("Multiple Choice")
+/ fontstyle = ("",40,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (70,3)
+</text>
+
+
+<text 111Eng6mo>
+/ items = ("Orange -  Banana  -  Plum")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,10)
+</text>
+
+<text RR1Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,10)
+</text>
+
+<text WW1Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,10)
+</text>
+
+<text 222Eng6mo>
+/ items = ("Glove  - Scarf  -  Shoe")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,15)
+</text>
+
+<text RR2Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,15)
+</text>
+
+<text WW2Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,15)
+</text>
+
+<text 333Eng6mo>
+/ items = ("Camel - Dog - Elephant")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,20)
+</text>
+
+<text RR3Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,20)
+</text>
+
+<text WW3Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,20)
+</text>
+
+<text 444Eng6mo>
+/ items = ("Majority  -  Quality  -  Liberty")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,25)
+</text>
+
+<text RR4Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,25)
+</text>
+
+<text WW4Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,25)
+</text>
+
+<text 555Eng6mo>
+/ items = ("Table  -  Chair  -  Bed")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,30)
+</text>
+
+<text RR5Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,30)
+</text>
+
+<text WW5Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,30)
+</text>
+
+<text 666Eng6mo>
+/ items = ("Thought  -  Spirit  -  Trouble")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,35)
+</text>
+
+<text RR6Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,35)
+</text>
+
+<text WW6Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,35)
+</text>
+
+<text 777Eng6mo>
+/ items = ("Policeman  - Journalist  -  Gardener")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,40)
+</text>
+
+<text RR7Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,40)
+</text>
+
+<text WW7Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,40)
+</text>
+
+<text 888Eng6mo>
+/ items = ("Bango  - Harmonica  -  Trumpet")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,45)
+</text>
+
+<text RR8Eng6mo>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,45)
+</text>
+
+<text WW8Eng6mo>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,45)
+</text>
+
+
+*****************************************
+Words represented by numbers
+*****************************************
+<trial WordsEng6mo>
+
+
+/ inputdevice = mouse
+/ stimulusframes = [1=1Eng6mo,2Eng6mo,3Eng6mo,4Eng6mo,5Eng6mo,6Eng6mo,7Eng6mo,8Eng6mo,DoneEng6mo,WordsEng6mo]
+/ validresponse = (1Eng6mo,2Eng6mo,3Eng6mo,4Eng6mo,5Eng6mo,6Eng6mo,7Eng6mo,8Eng6mo,DoneEng6mo)
+/ branch = [if(trial.WordsEng6mo.response == "DoneEng6mo") trial.Blank1Eng6mo]
+/ branch = [if(trial.WordsEng6mo.response != "DoneEng6mo") trial.WordsEng6mo]
+
+/ ontrialbegin = [if (text.1Eng6mo.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.WordsEng6mo.response== "1Eng6mo") text.1Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "1Eng6mo") text.11Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "1Eng6mo") values.Word1=1]
+/ ontrialend = [if(trial.WordsEng6mo.response == "1Eng6mo" && values.switch1==1) text.1Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "1Eng6mo" && values.switch1==1) text.11Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.2Eng6mo.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="2Eng6mo") text.2Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "2Eng6mo") text.22Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "2Eng6mo") values.Word2=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="2Eng6mo" && values.switch2==1) text.2Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="2Eng6mo" && values.switch2==1) text.22Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.3Eng6mo.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="3Eng6mo") text.3Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "3Eng6mo") text.33Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "3Eng6mo") values.Word3=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="3Eng6mo" && values.switch3==1) text.3Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="3Eng6mo" && values.switch3==1) text.33Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.4Eng6mo.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="4Eng6mo") text.4Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "4Eng6mo") text.44Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "4Eng6mo") values.Word4=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="4Eng6mo" && values.switch4==1) text.4Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="4Eng6mo" && values.switch4==1) text.44Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.5Eng6mo.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="5Eng6mo") text.5Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "5Eng6mo") text.55Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "5Eng6mo") values.Word5=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="5Eng6mo" && values.switch5==1) text.5Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="5Eng6mo" && values.switch5==1) text.55Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.6Eng6mo.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="6Eng6mo") text.6Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "6Eng6mo") text.66Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "6Eng6mo") values.Word6=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="6Eng6mo" && values.switch6==1) text.6Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="6Eng6mo" && values.switch6==1) text.66Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.7Eng6mo.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="7Eng6mo") text.7Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "7Eng6mo") text.77Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "7Eng6mo") values.Word7=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="7Eng6mo" && values.switch7==1) text.7Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="7Eng6mo" && values.switch7==1) text.77Eng6mo.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.8Eng6mo.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.WordsEng6mo.response=="8Eng6mo") text.8Eng6mo.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEng6mo.response == "8Eng6mo") text.88Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response == "8Eng6mo") values.Word8=1]
+/ ontrialend = [if(trial.WordsEng6mo.response=="8Eng6mo" && values.switch8==1) text.8Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEng6mo.response=="8Eng6mo" && values.switch8==1) text.88Eng6mo.textbgcolor=yellow]
+
+
+</trial>
+---------------------------------
+**************************************************************************************
+Blank Elements are Gates deciding if Cat or Ch should be displayed
+**************************************************************************************
+<trial Blank1Eng6mo>
+/ timeout = 1
+/ branch = [if(text.11Eng6mo.textbgcolor == yellow) trial.Cat1Eng6mo else trial.Blank2Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Blank2Eng6mo>
+/ timeout = 1
+/ branch = [if(text.22Eng6mo.textbgcolor == yellow) trial.Cat2Eng6mo else trial.Blank3Eng6mo]
+/ recorddata = false
+</trial>
+
+
+<trial Blank3Eng6mo>
+/ timeout = 1
+/ branch = [if(text.33Eng6mo.textbgcolor == yellow) trial.Cat3Eng6mo else trial.Blank4Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Blank4Eng6mo>
+/ timeout = 1
+/ branch = [if(text.44Eng6mo.textbgcolor == yellow) trial.Cat4Eng6mo else trial.Blank5Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Blank5Eng6mo>
+/ timeout = 1
+/ branch = [if(text.55Eng6mo.textbgcolor == yellow) trial.Cat5Eng6mo else trial.Blank6Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Blank6Eng6mo>
+/ timeout = 1
+/ branch = [if(text.66Eng6mo.textbgcolor == yellow) trial.Cat6Eng6mo else trial.Blank7Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Blank7Eng6mo>
+/ timeout = 1
+/ branch = [if(text.77Eng6mo.textbgcolor == yellow) trial.Cat7Eng6mo else trial.Blank8Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Blank8Eng6mo>
+/ timeout = 1
+/ branch = [if(text.88Eng6mo.textbgcolor == yellow) trial.Cat8Eng6mo]
+/ recorddata = false
+</trial>
+
+*************************
+Category Elements
+*************************
+
+<trial Cat1Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEng6mo,R1Eng6mo,W1Eng6mo,11Eng6mo]
+/ validresponse = (R1Eng6mo,W1Eng6mo) 
+/ ontrialend = [if(trial.Cat1Eng6mo.response == "R1Eng6mo") values.Word1=2]
+/ branch = [if(trial.Cat1Eng6mo.response == "R1Eng6mo") trial.Blank2Eng6mo]
+/ branch = [if(trial.Cat1Eng6mo.response == "W1Eng6mo") trial.Ch1Eng6mo]
+</trial>
+
+<trial Cat2Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEng6mo,R2Eng6mo,W2Eng6mo,22Eng6mo]
+/ validresponse = (R2Eng6mo,W2Eng6mo) 
+/ ontrialend = [if(trial.Cat2Eng6mo.response == "R2Eng6mo") values.Word2=2]
+/ branch = [if(trial.Cat2Eng6mo.response == "R2Eng6mo") trial.Blank3Eng6mo]
+/ branch = [if(trial.Cat2Eng6mo.response == "W2Eng6mo") trial.Ch2Eng6mo]
+</trial>
+
+<trial Cat3Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEng6mo,R3Eng6mo,W3Eng6mo,33Eng6mo]
+/ validresponse = (R3Eng6mo,W3Eng6mo) 
+/ ontrialend = [if(trial.Cat3Eng6mo.response == "R3Eng6mo") values.Word3=2]
+/ branch = [if(trial.Cat3Eng6mo.response == "R3Eng6mo") trial.Blank4Eng6mo]
+/ branch = [if(trial.Cat3Eng6mo.response == "W3Eng6mo") trial.Ch3Eng6mo]
+</trial>
+
+<trial Cat4Eng6mo>
+/ branch = [trial.Ch4Eng6mo]
+/ timeout = 1
+</trial>
+
+<trial Cat5Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEng6mo,R5Eng6mo,W5Eng6mo,55Eng6mo]
+/ validresponse = (R5Eng6mo,W5Eng6mo) 
+/ ontrialend = [text.55Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.Cat5Eng6mo.response == "R5Eng6mo") values.Word5=2]
+/ branch = [if(trial.Cat5Eng6mo.response == "R5Eng6mo") trial.Blank6Eng6mo]
+/ branch = [if(trial.Cat5Eng6mo.response == "W5Eng6mo") trial.Ch5Eng6mo] 
+</trial>
+
+<trial Cat6Eng6mo>
+/ branch = [trial.Ch6Eng6mo]
+/ timeout = 1
+</trial>
+
+<trial Cat7Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEng6mo,R7Eng6mo,W7Eng6mo,77Eng6mo]
+/ validresponse = (R7Eng6mo,W7Eng6mo) 
+/ ontrialend = [text.77Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.Cat7Eng6mo.response == "R7Eng6mo") values.Word7=2]
+/ branch = [if(trial.Cat7Eng6mo.response == "R7Eng6mo") trial.Blank8Eng6mo]
+/ branch = [if(trial.Cat7Eng6mo.response == "W7Eng6mo") trial.Ch7Eng6mo] 
+</trial>
+
+<trial Cat8Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEng6mo,R8Eng6mo,W8Eng6mo,88Eng6mo]
+/ validresponse = (R8Eng6mo,W8Eng6mo) 
+/ ontrialend = [text.88Eng6mo.textbgcolor=black]
+/ ontrialend = [if(trial.Cat8Eng6mo.response == "R8Eng6mo") values.Word8=2]
+/ branch = [if(trial.Cat8Eng6mo.response == "W8Eng6mo") trial.Ch8Eng6mo] 
+</trial>
+
+********************
+Choice Trials
+********************
+<trial Ch1Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,111Eng6mo,RR1Eng6mo,WW1Eng6mo]
+/ validresponse = (RR1Eng6mo,WW1Eng6mo)
+/ ontrialend = [if(trial.Ch1Eng6mo.response == "RR1Eng6mo") values.Word1=3]
+/ branch = [if(trial.Ch1Eng6mo.response == "RR1Eng6mo") trial.Blank2Eng6mo]
+/ branch = [if(trial.Ch1Eng6mo.response == "WW1Eng6mo") trial.Blank2Eng6mo]
+</trial>
+
+<trial Ch2Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,222Eng6mo,RR2Eng6mo,WW2Eng6mo]
+/ validresponse = (RR2Eng6mo,WW2Eng6mo)
+/ ontrialend = [if(trial.Ch2Eng6mo.response == "RR2Eng6mo") values.Word2=3]
+/ branch = [if(trial.Ch2Eng6mo.response == "RR2Eng6mo") trial.Blank3Eng6mo]
+/ branch = [if(trial.Ch2Eng6mo.response == "WW2Eng6mo") trial.Blank3Eng6mo]
+</trial>
+
+<trial Ch3Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,333Eng6mo,RR3Eng6mo,WW3Eng6mo]
+/ validresponse = (RR3Eng6mo,WW3Eng6mo)
+/ ontrialend = [if(trial.Ch3Eng6mo.response == "RR3Eng6mo") values.Word3=3]
+/ branch = [if(trial.Ch3Eng6mo.response == "RR3Eng6mo") trial.Blank4Eng6mo]
+/ branch = [if(trial.Ch3Eng6mo.response == "WW3Eng6mo") trial.Blank4Eng6mo]
+</trial>
+
+<trial Ch4Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,444Eng6mo,RR4Eng6mo,WW4Eng6mo]
+/ validresponse = (RR4Eng6mo,WW4Eng6mo)
+/ ontrialend = [if(trial.Ch4Eng6mo.response == "RR4Eng6mo") values.Word4=3]
+/ branch = [if(trial.Ch4Eng6mo.response == "RR4Eng6mo") trial.Blank5Eng6mo]
+/ branch = [if(trial.Ch4Eng6mo.response == "WW4Eng6mo") trial.Blank5Eng6mo]
+</trial>
+
+<trial Ch5Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,555Eng6mo,RR5Eng6mo,WW5Eng6mo]
+/ validresponse = (RR5Eng6mo,WW5Eng6mo)
+/ ontrialend = [if(trial.Ch5Eng6mo.response == "RR5Eng6mo") values.Word5=3]
+/ branch = [if(trial.Ch5Eng6mo.response == "RR5Eng6mo") trial.Blank6Eng6mo]
+/ branch = [if(trial.Ch5Eng6mo.response == "WW5Eng6mo") trial.Blank6Eng6mo]
+</trial>
+
+<trial Ch6Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,666Eng6mo,RR6Eng6mo,WW6Eng6mo]
+/ validresponse = (RR6Eng6mo,WW6Eng6mo)
+/ ontrialend = [if(trial.Ch6Eng6mo.response == "RR6Eng6mo") values.Word6=3]
+/ branch = [if(trial.Ch6Eng6mo.response == "RR6Eng6mo") trial.Blank7Eng6mo]
+/ branch = [if(trial.Ch6Eng6mo.response == "WW6Eng6mo") trial.Blank7Eng6mo]
+</trial>
+
+<trial Ch7Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,777Eng6mo,RR7Eng6mo,WW7Eng6mo]
+/ validresponse = (RR7Eng6mo,WW7Eng6mo)
+/ ontrialend = [if(trial.Ch7Eng6mo.response == "RR7Eng6mo") values.Word7=3]
+/ branch = [if(trial.Ch7Eng6mo.response == "RR7Eng6mo") trial.Blank8Eng6mo]
+/ branch = [if(trial.Ch7Eng6mo.response == "WW7Eng6mo") trial.Blank8Eng6mo]
+</trial>
+
+<trial Ch8Eng6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEng6mo,888Eng6mo,RR8Eng6mo,WW8Eng6mo]
+/ validresponse = (RR8Eng6mo,WW8Eng6mo)
+/ ontrialend = [if(trial.Ch8Eng6mo.response == "RR8Eng6mo") values.Word8=3]
+/ skip = [trial.Ch8Eng6mo.response == "RR8Eng6mo"]
+/ skip = [trial.Ch8Eng6mo.response == "WW8Eng6mo"]
+</trial>
+
+
+---------------------------
+<block testEng6mo>
+/ trials = [1=WordsEng6mo]
+</block>
+
+<expt K2>
+/ onexptbegin = [values.TaskNumber=11]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "6mo"]
+/ preinstructions = (InstrucEng6mo)
+/ blocks = [1=testEng6mo]
+</expt>
+
+------------------------------
+
+
+
+<page InstrucEng6mo>
+^^The computer read some words to you earlier, which I asked you to remember.
+^^Tell me as many of those words as you can remember.
+</page>

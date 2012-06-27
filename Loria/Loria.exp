@@ -1,0 +1,280 @@
+
+**************
+Stimuli
+**************
+<video LoriaVideoLH>
+/ items = ("..\Loria\files\Luria left hand.wmv")
+/ playthrough = true
+/ position = (50,50)
+</video>
+
+<video LoriaVideoRH>
+/ items = ("..\Loria\files\Luria right hand.wmv")
+/ playthrough = true
+/ position = (50,50)
+</video>
+
+<text TitleLEng>
+/ items = ("Are You Ready?")
+/ fontstyle = ("Verdana",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text TitleLFR>
+/ items = ("Êtes-vous prêt?")
+/ fontstyle = ("Verdana",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text StartENG>
+/ items = ("Start")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (10%, 10%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text StartFR>
+/ items = ("Commence")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (10%, 10%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text Blank>
+/ items = ("")
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+-----------------------
+<expt F>
+/ onexptbegin = [values.TaskNumber=6]
+/ blocks = [1=LoriaEngLH1;2=LoriaEngRH1;3=LoriaFrLH1;4=LoriaFrRH1]
+</expt>
+
+*********************
+English LEFT
+*********************
+<block LoriaEngLH1>
+/ skip = [trial.Language.response == "French"]
+/ skip = [trial.HandEng.response != "Right"]
+/ preinstructions = (InstrucL1)
+/ trials = [1=LoriaVideoLH]
+/ branch = [block.LoriaEngLH2]
+</block>
+
+<block LoriaEngLH2>
+/ preinstructions = (InstrucL2)
+/ trials = [1=LoriaVideoLH]
+/ branch = [block.LoriaEngLH3]
+</block>
+
+<block LoriaEngLH3>
+/ preinstructions = (InstrucL3)
+/ trials = [1=Ready]
+</block>
+
+*****************************
+ENGLISH RIGHT
+*****************************
+
+<block LoriaEngRH1>
+/ skip = [trial.Language.response == "French"]
+/ skip = [trial.HandEng.response != "Left"]
+/ preinstructions = (InstrucR1)
+/ trials = [1=LoriaVideoRH]
+/ branch = [block.LoriaEngRH2]
+</block>
+
+<block LoriaEngRH2>
+/ preinstructions = (InstrucR2)
+/ trials = [1=LoriaVideoRH]
+/ branch = [block.LoriaEngRH3]
+</block>
+
+<block LoriaEngRH3>
+/ preinstructions = (InstrucR3)
+/ trials = [1=Ready]
+</block>
+
+***********************
+French LEFT
+***********************
+<block LoriaFrLH1>
+/ skip = [trial.Language.response == "English"]
+/ skip = [trial.HandFr.response != "RightFr"]
+/ preinstructions = (InstrucFL1)
+/ trials = [1=LoriaVideoLH]
+/ branch = [block.LoriaFrLH2]
+</block>
+
+<block LoriaFrLH2>
+/ preinstructions = (InstrucFL2)
+/ trials = [1=LoriaVideoLH]
+/ branch = [block.LoriaFrLH3]
+</block>
+
+<block LoriaFrLH3>
+/ preinstructions = (InstrucFL3)
+/ trials = [1=ReadyFr]
+</block>
+
+**********************
+FRENCH RIGHT
+**********************
+<block LoriaFrRH1>
+/ skip = [trial.Language.response == "English"]
+/ skip = [trial.HandFr.response != "LeftFr"]
+/ preinstructions = (InstrucFR1)
+/ trials = [1=LoriaVideoRH]
+/ branch = [block.LoriaFrRH2]
+</block>
+
+<block LoriaFrRH2>
+/ preinstructions = (InstrucFR2)
+/ trials = [1=LoriaVideoRH]
+/ branch = [block.LoriaFrRH3]
+</block>
+
+<block LoriaFrRH3>
+/ preinstructions = (InstrucFR3)
+/ trials = [1=ReadyFr]
+</block>
+
+
+**********************************************
+English and French Trial elements
+**********************************************
+**make the trial timeout after 1 second, but set the video to /playthrough=true**
+<trial LoriaVideoLH>
+/ stimulusframes = [1=LoriaVideoLH]
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+<trial LoriaVideoRH>
+/ stimulusframes = [1=LoriaVideoRH]
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+<trial Ready>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleLENG,StartENG]
+/ validresponse = (StartENG)
+/ branch = [if (trial.Ready.response=="StartENG") trial.Blank]
+/ recorddata = false
+</trial>
+
+<trial ReadyFr>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleLFR,StartFR]
+/ validresponse = (StartFR)
+/ branch = [if (trial.ReadyFr.response=="StartFR") trial.Blank]
+/ recorddata = false
+</trial>
+
+<trial Blank>
+/ stimulusframes = [1=Blank,Ding]
+/ timeout = 10000
+/ branch = [openended.Stop]
+/ recorddata = false
+</trial>
+
+<openended Stop>
+/ stimulusframes = [1=StopSign,Ding]
+/ position = (90,90)
+/ mouse = true
+/ buttonlabel = "Submit"
+</openended>
+-------------------------------
+
+
+*************************************
+English Instructions
+*************************************
+
+<page InstrucL1>
+^^Now, you are going to learn a hand sequence.
+^^Watch the hand sequence on the screen carefully.
+</page>
+
+<page InstrucL2>
+^^Now, you will see the sequence again. 
+^^Do the sequence at the same time with the LEFT Hand
+</page>
+
+<page InstrucL3>
+^^When I tell you to start, I want you to perform this sequence as quickly as possible, until I tell you to stop.
+</page>
+
+<page InstrucR1>
+^^Now, you are going to learn a hand sequence.
+^^Watch the hand sequence on the screen carefully.
+</page>
+
+<page InstrucR2>
+^^Now, you will see the sequence again. 
+^^Do the sequence at the same time with the RIGHT Hand
+</page>
+
+<page InstrucR3>
+^^When I tell you to start, I want you to perform this sequence as quickly as possible, until I tell you to stop.
+</page>
+
+******************************
+FRENCH INSTRUCTIONS
+******************************
+<page InstrucFL1>
+^^Maintenant, vous allez apprendre une séquence de mouvements des mains.
+^^Regardez attentivement la séquence de mouvements de la main à l'écran.  
+</page>
+
+<page InstrucFL2>
+^^Maintenant, vous allez voir la séquence encore une fois.  
+^^Faites les même mouvements en même temps avec la main GAUCHE
+</page>
+
+<page InstrucFL3>
+^^Quand je vais vous demander de commencer, je vous demande de faire cette séquence aussi rapidement que possible, jusqu'à ce que je vous dise d'arrêter.  
+</page>
+
+<page InstrucFR1>
+^^Maintenant, vous allez apprendre une séquence de mouvements des mains.
+^^Regardez attentivement la séquence de mouvements de la main à  l'écran.  
+</page>
+
+<page InstrucFR2>
+^^Maintenant, vous allez voir la séquence encore une fois.  
+^^Faites les même mouvements en même temps avec la main DROITE
+</page>
+
+<page InstrucFR3>
+^^Quand je vais vous demander de commencer, je vous demande de faire cette séquence aussi rapidement que possible, jusqu'à  ce que je vous dise d'arrêter.  
+</page>
+

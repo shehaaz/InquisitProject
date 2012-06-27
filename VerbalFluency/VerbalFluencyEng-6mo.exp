@@ -1,0 +1,51 @@
+
+**********
+Stimuli
+**********
+<text TitleEngVF6mo>
+/ items = ("Please give as many words as possible beginning with the letter 'S' ")
+/ fontstyle = ("Verdana",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+
+*****************************
+<expt R3>
+/ onexptbegin = [values.TaskNumber=20]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "6mo"]
+/ blocks = [1=FASEngVF6mo]
+</expt>
+
+<block FASEngVF6mo>
+/ preinstructions = (InstrucEngVF)
+/ trials = [1=FASEngVF6mo]
+</block>
+
+<trial FASEngVF6mo>
+/ inputdevice = mouse
+/ stimulusframes = [1=TitleEngVF6mo,StartEngVF]
+/ validresponse = (StartEngVF)
+/ branch = [if (trial.FASEngVF6mo.response=="StartEngVF") trial.BlankEngVF6mo]
+/ recorddata = false
+</trial>
+
+<trial BlankEngVF6mo>
+/ stimulusframes = [1=BlankVF,Ding]
+/ timeout = 60000
+/ branch = [openended.StopEngVF6mo]
+/ recorddata = false
+</trial>
+
+<openended StopEngVF6mo>
+/ stimulusframes = [1=StopSign,Ding]
+/ position = (90,90)
+/ mouse = true
+/ buttonlabel = "Submit"
+</openended>
+
+

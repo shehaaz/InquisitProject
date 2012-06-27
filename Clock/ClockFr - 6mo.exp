@@ -1,0 +1,66 @@
+<expt Q6>
+/ onexptbegin = [values.TaskNumber=19]
+/ skip = [trial.Language.response != "French"]
+/ skip = [trial.Session.response != "6mo"]
+/ blocks = [1=ClockFr6mo]
+</expt>
+
+<block ClockFr6mo>
+/ trials = [1=ClockFr6mo]
+</block>
+
+<trial ClockFr6mo>
+/ stimulusframes = [1= TitleCFr6mo,ClockC,Clock1,Clock2,ClockN,Clock11,Clock22,ClockH,Clock111,Clock222,ClockDone]
+/ validresponse = (Clock1,Clock2,Clock11,Clock22,Clock111,Clock222,ClockDone)
+
+/ ontrialbegin = [if (text.Clock1.textbgcolor == yellow) values.ClockSwitch1=1 else values.ClockSwitch1=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock1") values.Contour=1]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock1") text.Clock1.textbgcolor=yellow]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock1" && values.ClockSwitch1==1) text.Clock1.textbgcolor=grey]
+
+/ ontrialbegin = [if (text.Clock2.textbgcolor == yellow) values.ClockSwitch2=1 else values.ClockSwitch2=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock2") values.Contour=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock2") text.Clock2.textbgcolor=yellow]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock2" && values.ClockSwitch2==1) text.Clock2.textbgcolor=grey]
+
+/ ontrialbegin = [if (text.Clock11.textbgcolor == yellow) values.ClockSwitch3=1 else values.ClockSwitch3=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock11") values.Numbers=1]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock11") text.Clock11.textbgcolor=yellow]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock11" && values.ClockSwitch3==1) text.Clock11.textbgcolor=grey]
+
+
+/ ontrialbegin = [if (text.Clock22.textbgcolor == yellow) values.ClockSwitch4=1 else values.ClockSwitch4=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock22") values.Numbers=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock22") text.Clock22.textbgcolor=yellow]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock22" && values.ClockSwitch4==1) text.Clock22.textbgcolor=grey]
+
+
+/ ontrialbegin = [if (text.Clock111.textbgcolor == yellow) values.ClockSwitch5=1 else values.ClockSwitch5=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock111") values.Hands=1]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock111") text.Clock111.textbgcolor=yellow]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock111" && values.ClockSwitch5==1) text.Clock111.textbgcolor=grey]
+
+/ ontrialbegin = [if (text.Clock222.textbgcolor == yellow) values.ClockSwitch6=1 else values.ClockSwitch6=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock222") values.Hands=0]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock222") text.Clock222.textbgcolor=yellow]
+/ ontrialend = [if(trial.ClockFr6mo.response=="Clock222" && values.ClockSwitch6==1) text.Clock222.textbgcolor=grey]
+
+
+/ branch = [if(trial.ClockFr6mo.response != "ClockDone") trial.ClockFr6mo]
+/ inputdevice = mouse
+</trial>
+
+********************
+Stimuli
+********************
+<text TitleCFr6mo>
+/ items = ("Dessinez une horloge en plaçant tous les chiffres et indiquant l'heure à neuf heures et dix")
+/ position = (50,15)
+/ area = (900,100)
+/ fontstyle = ("Verdana",35,true)
+/ txcolor = yellow
+/ txbgcolor = black
+</text>
+********************
+
+

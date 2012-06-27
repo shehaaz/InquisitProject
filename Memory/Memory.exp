@@ -1,0 +1,884 @@
+****************************
+Screeen Instructions
+****************************
+-------------------------
+French
+-------------------------
+<page Instruc1Fr>
+^^Ceci est un test de mémoire. L’ordinateur va vous lire une liste de mots que vous aurez à retenir maintenant et plus tard
+^^Écoutez attentivement.  Quand l’ordinateur aura terminé, je veux que vous me redisiez le plus de mots possible dont vous pouvez vous  rappelez.  L’ordre dans lequel vous les répétez n’est pas important.
+^^Commençons.
+</page>
+
+<page Instruc2Fr>
+^^Maintenant l’ordinateur va lire la même liste de mots une deuxième fois. 
+^^Essayez de vous rappeler et de me répéter le plus grand nombre de mots possible, y compris ceux que vous avez répété la première fois.
+</page>
+
+<page Instruc3Fr>
+^^Même chose une troisième et dernière fois
+</page>
+
+<page Instruc4Fr>
+^^Je vais vous demander de vous rappeler de ces mots dans quelques minutes
+</page>
+
+---------------------
+English
+---------------------
+<page Instruc1>
+^^This is a memory test. The computer is going to read a list of words that you will have to remember now and later on.
+^^Listen carefully. When it is through, tell me as many words as you can remember. It doesn’t matter in what order you say
+them.
+^^Let’s start
+</page>
+
+<page Instruc2>
+^^Now, the computer is going to read the same list for a second time.
+^^Try to remember and tell me as many words as you can, including words you said the first time.
+</page>
+
+<page Instruc3>
+^^Same thing a third and last time
+</page>
+
+<page Instruc4>
+^^I will ask you to recall those words again in a few minutes
+</page>
+
+*****************
+Stimuli
+*****************
+------------------
+English Words
+------------------
+
+<item Words3mo>
+/1 = "..\Memory\files\Eng\Majority.wav"
+/2 = "..\Memory\files\Eng\Hat.wav"
+/3 = "..\Memory\files\Eng\Method.wav"
+/4 = "..\Memory\files\Eng\Flute.wav"
+/5 = "..\Memory\files\Eng\Table.wav"
+/6 = "..\Memory\files\Eng\Electrician.wav"
+/7 = "..\Memory\files\Eng\Cat.wav"
+/8 = "..\Memory\files\Eng\Orange.wav"
+</item>
+
+<sound Audio3mo>
+/ items = Words3mo
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+----------------------------------
+<item Words6mo>
+/1 = "..\Memory\files\Eng\Orange.wav"
+/2 = "..\Memory\files\Eng\Shoe.wav"
+/3 = "..\Memory\files\Eng\Dog.wav"
+/4 = "..\Memory\files\Eng\Majority.wav"
+/5 = "..\Memory\files\Eng\Table.wav"
+/6 = "..\Memory\files\Eng\Thought.wav"
+/7 = "..\Memory\files\Eng\Journalist.wav"
+/8 = "..\Memory\files\Eng\Trumpet.wav"
+</item>
+
+<sound Audio6mo>
+/ items = Words6mo
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+---------------------------------------------------------
+<item WordsBaseline>
+/1 = "..\Memory\files\Eng\Lemon.wav"
+/2 = "..\Memory\files\Eng\History.wav"
+/3 = "..\Memory\files\Eng\Sheep.wav"
+/4 = "..\Memory\files\Eng\Majority.wav"
+/5 = "..\Memory\files\Eng\Table.wav"
+/6 = "..\Memory\files\Eng\Dentist.wav"
+/7 = "..\Memory\files\Eng\Hat.wav"
+/8 = "..\Memory\files\Eng\Violin.wav"
+</item>
+
+<sound AudioBaseline>
+/ items = WordsBaseline
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+--------------------
+French Words
+--------------------
+
+<item Words3moFr>
+/1 = "..\Memory\files\Fr\Majorite.wav"
+/2 = "..\Memory\files\Fr\Chapeau.wav"
+/3 = "..\Memory\files\Fr\Methode.wav"
+/4 = "..\Memory\files\Fr\FluteFr.wav"
+/5 = "..\Memory\files\Fr\TableFr.wav"
+/6 = "..\Memory\files\Fr\Electricien.wav"
+/7 = "..\Memory\files\Fr\Chat.wav"
+/8 = "..\Memory\files\Fr\OrangeFr.wav"
+</item>
+
+<sound Audio3moFr>
+/ items = Words3moFr
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+------------------------------------------------------------------------------------------------------
+
+<item Words6moFr>
+/1 = "..\Memory\files\Fr\OrangeFr.wav"
+/2 = "..\Memory\files\Fr\Soulier.wav"
+/3 = "..\Memory\files\Fr\Chien.wav"
+/4 = "..\Memory\files\Fr\Majorite.wav"
+/5 = "..\Memory\files\Fr\TableFr.wav"
+/6 = "..\Memory\files\Fr\Pensee.wav"
+/7 = "..\Memory\files\Fr\Journaliste.wav"
+/8 = "..\Memory\files\Fr\Trompette.wav"
+</item>
+
+<sound Audio6moFr>
+/ items = Words6moFr
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+-----------------------------------------------------------------------------------------------------------------
+<item WordsBaselineFr>
+/1 = "..\Memory\files\Fr\Citron.wav"
+/2 = "..\Memory\files\Fr\Histoire.wav"
+/3 = "..\Memory\files\Fr\Mouton.wav"
+/4 = "..\Memory\files\Fr\Majorite.wav"
+/5 = "..\Memory\files\Fr\TableFr.wav"
+/6 = "..\Memory\files\Fr\Dentiste.wav"
+/7 = "..\Memory\files\Fr\Chapeau.wav"
+/8 = "..\Memory\files\Fr\Violon.wav"
+</item>
+
+<sound AudioBaselineFr>
+/ items = WordsBaselineFr
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+******************************************************
+******************************************************
+--------------------------------------
+Score Elements
+--------------------------------------
+<text Words>
+/ items = ("Words")
+/ fontstyle = ("",20,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (50,3)
+</text>
+
+<text Mots>
+/ items = ("Mots")
+/ fontstyle = ("",20,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (50,3)
+</text>
+
+<text Done>
+/ items = ("Done")
+/ position = (50%,55%)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+------------------------------------------------------------------
+<text M1>
+/ items = ("1")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,10)
+</text>
+
+<text M2>
+/ items = ("2")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,15)
+</text>
+
+<text M3>
+/ items = ("3")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,20)
+</text>
+
+<text M4>
+/ items = ("4")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,25)
+</text>
+
+<text M5>
+/ items = ("5")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,30)
+</text>
+
+<text M6>
+/ items = ("6")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,35)
+</text>
+
+<text M7>
+/ items = ("7")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,40)
+</text>
+
+<text M8>
+/ items = ("8")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,45)
+</text>
+---------------------------------------------------------------------------
+
+<text 11>
+/ items = ("1")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,10)
+</text>
+
+<text 22>
+/ items = ("2")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,15)
+</text>
+
+<text 33>
+/ items = ("3")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,20)
+</text>
+
+<text 44>
+/ items = ("4")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,25)
+</text>
+
+<text 55>
+/ items = ("5")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,30)
+</text>
+
+<text 66>
+/ items = ("6")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,35)
+</text>
+
+<text 77>
+/ items = ("7")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,40)
+</text>
+
+<text 88>
+/ items = ("8")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,45)
+</text>
+--------------------------------------------------------------
+
+<text 111>
+/ items = ("1")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,10)
+</text>
+
+<text 222>
+/ items = ("2")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,15)
+</text>
+
+<text 333>
+/ items = ("3")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,20)
+</text>
+
+<text 444>
+/ items = ("4")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,25)
+</text>
+
+<text 555>
+/ items = ("5")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,30)
+</text>
+
+<text 666>
+/ items = ("6")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,35)
+</text>
+
+<text 777>
+/ items = ("7")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,40)
+</text>
+
+<text 888>
+/ items = ("8")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (50,45)
+</text>
+
+***********************
+***********************
+
+<expt E>
+/ onexptbegin = [values.TaskNumber=5]
+/ blocks = [1=Memory1R3mo;2=Memory2R3mo;3=Memory3R3mo;4=Memory1R6mo;5=Memory2R6mo;6=Memory3R6mo;7=Memory1RBaseline;8=Memory2RBaseline;9=Memory3RBaseline;
+10=Memory1R3moFr;11=Memory2R3moFr;12=Memory3R3moFr;13=Memory1R6moFr;14=Memory2R6moFr;15=Memory3R6moFr;16=Memory1RBaselineFr;17=Memory2RBaselineFr;18=Memory3RBaselineFr]
+</expt>
+
+-------------------------------------------------------------------
+English Blocks
+-------------------------------------------------------------------
+<block Memory1RBaseline>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (Instruc1)
+/ trials = [1-8=MemoryBaseline;9=Score]
+</block>
+
+<block Memory2RBaseline>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (Instruc2)
+/ trials = [1-8=MemoryBaseline;9=Score2]
+</block>
+
+<block Memory3RBaseline>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (Instruc3)
+/ trials = [1-8=MemoryBaseline;9=Score3]
+/ postinstructions = (Instruc4)
+</block>
+-----------------------------------------------------------------------------
+<block Memory1R3mo>
+/ skip = [trial.Language.response == "French"]
+/ skip = [trial.Session.response != "3mo"]
+/ preinstructions = (Instruc1)
+/ trials = [1-8=Memory3mo;9=Score]
+</block>
+
+<block Memory2R3mo>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "3mo"]
+/ preinstructions = (Instruc2)
+/ trials = [1-8=Memory3mo;9=Score2]
+</block>
+
+<block Memory3R3mo>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "3mo"]
+/ preinstructions = (Instruc3)
+/ trials = [1-8=Memory3mo;9=Score3]
+/ postinstructions = (Instruc4)
+</block>
+---------------------------------------------------------------------------------
+<block Memory1R6mo>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "6mo"]
+/ preinstructions = (Instruc1)
+/ trials = [1-8=Memory6mo;9=Score]
+</block>
+
+<block Memory2R6mo>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "6mo"]
+/ preinstructions = (Instruc2)
+/ trials = [1-8=Memory6mo;9=Score2]
+</block>
+
+<block Memory3R6mo>
+/ skip = [trial.Language.response == "French"]
+/skip = [trial.Session.response != "6mo"]
+/ preinstructions = (Instruc3)
+/ trials = [1-8=Memory6mo;9=Score3]
+/ postinstructions = (Instruc4)
+</block>
+
+-----------------------------------------------------------------------------
+French Block
+-----------------------------------------------------------------------------
+<block Memory1R6moFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "6mo"]
+/ preinstructions = (Instruc1Fr)
+/ trials = [1-8=Memory6moFr;9=ScoreFr]
+</block>
+
+<block Memory2R6moFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "6mo"]
+/ preinstructions = (Instruc2Fr)
+/ trials = [1-8=Memory6moFr;9=ScoreFr2]
+</block>
+
+<block Memory3R6moFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "6mo"]
+/ preinstructions = (Instruc3Fr)
+/ trials = [1-8=Memory6moFr;9=ScoreFr3]
+/ postinstructions = (Instruc4Fr)
+</block>
+----------------------------------------------------------------------------------------------------------------------
+<block Memory1R3moFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "3mo"]
+/ preinstructions = (Instruc1Fr)
+/ trials = [1-8=Memory3moFr;9=ScoreFr]
+</block>
+
+<block Memory2R3moFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "3mo"]
+/ preinstructions = (Instruc2Fr)
+/ trials = [1-8=Memory3moFr;9=ScoreFr2]
+</block>
+
+<block Memory3R3moFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "3mo"]
+/ preinstructions = (Instruc3Fr)
+/ trials = [1-8=Memory3moFr;9=ScoreFr3]
+/ postinstructions = (Instruc4Fr)
+</block>
+---------------------------------------------------------------------------------------------------------------------
+<block Memory1RBaselineFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (Instruc1Fr)
+/ trials = [1-8=MemoryBaselineFr;9=ScoreFr]
+</block>
+
+<block Memory2RBaselineFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (Instruc2Fr)
+/ trials = [1-8=MemoryBaselineFr;9=ScoreFr2]
+</block>
+
+<block Memory3RBaselineFr>
+/ skip = [trial.Language.response == "English"]
+/skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (Instruc3Fr)
+/ trials = [1-8=MemoryBaselineFr;9=ScoreFr3]
+/ postinstructions = (Instruc4Fr)
+</block>
+********************************************************************************************
+**make the trial timeout after 1 second, but set audio to /playthrough=true**
+
+<trial MemoryBaseline>
+/ stimulusframes = [1=AudioBaseline] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+<trial Memory3mo>
+/ stimulusframes = [1=Audio3mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+
+<trial Memory6mo>
+/ stimulusframes = [1=Audio6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+<trial MemoryBaselineFr>
+/ stimulusframes = [1=AudioBaselineFr] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+<trial Memory3moFr>
+/ stimulusframes = [1=Audio3moFr] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+
+
+<trial Memory6moFr>
+/ stimulusframes = [1=Audio6moFr] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+</trial>
+**************************************************************************************************
+-------------------------------------------
+English Score
+-------------------------------------------
+
+<trial Score>
+/ stimulusframes = [1=Done,M1,M2,M3,M4,M5,M6,M7,M8,Words]
+/ validresponse = (M1,M2,M3,M4,M5,M6,M7,M8,Done)
+/ branch = [if(trial.Score.response != "Done") trial.Score]
+/ skip = [trial.Score.response == "Done"]
+/ inputdevice = mouse
+
+/ ontrialbegin = [if (text.M1.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.Score.response=="M1") text.M1.textbgcolor=yellow;values.Word1=1]
+/ ontrialend = [if(trial.Score.response== "M1" && values.switch1==1) text.M1.textbgcolor=black;values.Word1=0]
+
+/ ontrialbegin = [if (text.M2.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.Score.response=="M2") text.M2.textbgcolor=yellow;text.M2.textcolor=black;values.Word2=001]
+/ ontrialend = [if(trial.Score.response == "M2" && values.switch2==1) text.M2.textbgcolor=black;text.M2.textcolor=yellow;values.Word2=000]
+
+/ ontrialbegin = [if (text.M3.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.Score.response=="M3") text.M3.textbgcolor=yellow;text.M3.textcolor=black;values.Word3=001]
+/ ontrialend = [if(trial.Score.response == "M3" && values.switch3==1) text.M3.textbgcolor=black;text.M3.textcolor=yellow;values.Word3=000]
+
+/ ontrialbegin = [if (text.M4.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.Score.response=="M4") text.M4.textbgcolor=yellow;text.M4.textcolor=black;values.Word4=001]
+/ ontrialend = [if(trial.Score.response == "M4" && values.switch4==1) text.M4.textbgcolor=black;text.M4.textcolor=yellow;values.Word4=000]
+
+/ ontrialbegin = [if (text.M5.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.Score.response=="M5") text.M5.textbgcolor=yellow;text.M5.textcolor=black;values.Word5=001]
+/ ontrialend = [if(trial.Score.response == "M5" && values.switch5==1) text.M5.textbgcolor=black;text.M5.textcolor=yellow;values.Word5=000]
+
+/ ontrialbegin = [if (text.M6.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.Score.response=="M6") text.M6.textbgcolor=yellow;text.M6.textcolor=black;values.Word6=001]
+/ ontrialend = [if(trial.Score.response == "M6" && values.switch6==1) text.M6.textbgcolor=black;text.M6.textcolor=yellow;values.Word6=000]
+
+/ ontrialbegin = [if (text.M7.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.Score.response=="M7") text.M7.textbgcolor=yellow;text.M7.textcolor=black;values.Word7=001]
+/ ontrialend = [if(trial.Score.response == "M7" && values.switch7==1) text.M7.textbgcolor=black;text.M7.textcolor=yellow;values.Word7=000]
+
+/ ontrialbegin = [if (text.M8.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.Score.response=="M8") text.M8.textbgcolor=yellow;text.M8.textcolor=black;values.Word8=001]
+/ ontrialend = [if(trial.Score.response == "M8" && values.switch8==1) text.M8.textbgcolor=black;text.M8.textcolor=yellow;values.Word8=000]
+
+
+</trial>
+--------------------------------------------------------------------------------------------------
+<trial Score2>
+/ stimulusframes = [1=Done,11,22,33,44,55,66,77,88,Words]
+/ validresponse = (11,22,33,44,55,66,77,88,Done)
+/ branch = [if(trial.Score2.response != "Done") trial.Score2]
+/ skip = [trial.Score2.response == "Done"]
+/ inputdevice = mouse
+
+/ ontrialbegin = [if (text.11.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.Score2.response=="11") text.11.textbgcolor=yellow; values.Word1=001]
+/ ontrialend = [if(trial.Score2.response== "11" && values.switch1==1) text.11.textbgcolor=black;values.Word1=000]
+
+/ ontrialbegin = [if (text.22.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.Score2.response=="22") text.22.textbgcolor=yellow;text.22.textcolor=black;values.Word2=001]
+/ ontrialend = [if(trial.Score2.response == "22" && values.switch2==1) text.22.textbgcolor=black;text.22.textcolor=yellow;values.Word2=000]
+
+/ ontrialbegin = [if (text.33.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.Score2.response=="33") text.33.textbgcolor=yellow;text.33.textcolor=black;values.Word3=001]
+/ ontrialend = [if(trial.Score2.response == "33" && values.switch3==1) text.33.textbgcolor=black;text.33.textcolor=yellow;values.Word3=000]
+
+/ ontrialbegin = [if (text.44.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.Score2.response=="44") text.44.textbgcolor=yellow;text.44.textcolor=black;values.Word4=001]
+/ ontrialend = [if(trial.Score2.response == "44" && values.switch4==1) text.44.textbgcolor=black;text.44.textcolor=yellow;values.Word4=000]
+
+/ ontrialbegin = [if (text.55.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.Score2.response=="55") text.55.textbgcolor=yellow;text.55.textcolor=black;values.Word5=001]
+/ ontrialend = [if(trial.Score2.response == "55" && values.switch5==1) text.55.textbgcolor=black;text.55.textcolor=yellow;values.Word5=000]
+
+/ ontrialbegin = [if (text.66.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.Score2.response=="66") text.66.textbgcolor=yellow;text.66.textcolor=black;values.Word6=001]
+/ ontrialend = [if(trial.Score2.response == "66" && values.switch6==1) text.66.textbgcolor=black;text.66.textcolor=yellow;values.Word6=000]
+
+/ ontrialbegin = [if (text.77.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.Score2.response=="77") text.77.textbgcolor=yellow;text.77.textcolor=black;values.Word7=001]
+/ ontrialend = [if(trial.Score2.response == "77" && values.switch7==1) text.77.textbgcolor=black;text.77.textcolor=yellow;values.Word7=000]
+
+/ ontrialbegin = [if (text.88.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.Score2.response=="88") text.88.textbgcolor=yellow;text.88.textcolor=black;values.Word8=001]
+/ ontrialend = [if(trial.Score2.response == "88" && values.switch8==1) text.88.textbgcolor=black;text.88.textcolor=yellow;values.Word8=000]
+
+
+</trial>
+--------------------------------------------------------------------------------------
+<trial Score3>
+/ stimulusframes = [1=Done,111,222,333,444,555,666,777,888,Words]
+/ validresponse = (111,222,333,444,555,666,777,888,Done)
+/ branch = [if(trial.Score3.response != "Done") trial.Score3]
+/ skip = [trial.Score3.response == "Done"]
+/ inputdevice = mouse
+
+/ ontrialbegin = [if (text.111.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.Score3.response=="111") text.111.textbgcolor=yellow;values.Word1=1]
+/ ontrialend = [if(trial.Score3.response== "111" && values.switch1==1) text.111.textbgcolor=black;values.Word1=0]
+
+/ ontrialbegin = [if (text.222.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.Score3.response=="222") text.222.textbgcolor=yellow;text.222.textcolor=black;values.Word2=001]
+/ ontrialend = [if(trial.Score3.response == "222" && values.switch2==1) text.222.textbgcolor=black;text.222.textcolor=yellow;values.Word2=000]
+
+/ ontrialbegin = [if (text.333.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.Score3.response=="333") text.333.textbgcolor=yellow;text.333.textcolor=black;values.Word3=001]
+/ ontrialend = [if(trial.Score3.response == "333" && values.switch3==1) text.333.textbgcolor=black;text.333.textcolor=yellow;values.Word3=000]
+
+/ ontrialbegin = [if (text.444.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.Score3.response=="444") text.444.textbgcolor=yellow;text.444.textcolor=black;values.Word4=001]
+/ ontrialend = [if(trial.Score3.response == "444" && values.switch4==1) text.444.textbgcolor=black;text.444.textcolor=yellow;values.Word4=000]
+
+/ ontrialbegin = [if (text.555.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.Score3.response=="555") text.555.textbgcolor=yellow;text.555.textcolor=black;values.Word5=001]
+/ ontrialend = [if(trial.Score3.response == "555" && values.switch5==1) text.555.textbgcolor=black;text.555.textcolor=yellow;values.Word5=000]
+
+/ ontrialbegin = [if (text.666.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.Score3.response=="666") text.666.textbgcolor=yellow;text.666.textcolor=black;values.Word6=001]
+/ ontrialend = [if(trial.Score3.response == "666" && values.switch6==1) text.666.textbgcolor=black;text.666.textcolor=yellow;values.Word6=000]
+
+/ ontrialbegin = [if (text.777.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.Score3.response=="777") text.777.textbgcolor=yellow;text.777.textcolor=black;values.Word7=001]
+/ ontrialend = [if(trial.Score3.response == "777" && values.switch7==1) text.777.textbgcolor=black;text.777.textcolor=yellow;values.Word7=000]
+
+/ ontrialbegin = [if (text.888.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.Score3.response=="888") text.888.textbgcolor=yellow;text.888.textcolor=black;values.Word8=001]
+/ ontrialend = [if(trial.Score3.response == "888" && values.switch8==1) text.888.textbgcolor=black;text.888.textcolor=yellow;values.Word8=000]
+
+
+</trial>
+
+------------------------
+French Score
+------------------------
+
+<trial ScoreFr>
+/ stimulusframes = [1=Done,M1,M2,M3,M4,M5,M6,M7,M8,Mots]
+/ validresponse = (M1,M2,M3,M4,M5,M6,M7,M8,Done)
+/ branch = [if(trial.ScoreFr.response != "Done") trial.ScoreFr]
+/ skip = [trial.ScoreFr.response == "Done"]
+/ inputdevice = mouse
+
+/ ontrialbegin = [if (text.M1.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M1") text.M1.textbgcolor=yellow;values.Word1=1]
+/ ontrialend = [if(trial.ScoreFr.response== "M1" && values.switch1==1) text.M1.textbgcolor=black;values.Word1=0]
+
+/ ontrialbegin = [if (text.M2.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M2") text.M2.textbgcolor=yellow;text.M2.textcolor=black;values.Word2=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M2" && values.switch2==1) text.M2.textbgcolor=black;text.M2.textcolor=yellow;values.Word2=000]
+
+/ ontrialbegin = [if (text.M3.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M3") text.M3.textbgcolor=yellow;text.M3.textcolor=black;values.Word3=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M3" && values.switch3==1) text.M3.textbgcolor=black;text.M3.textcolor=yellow;values.Word3=000]
+
+/ ontrialbegin = [if (text.M4.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M4") text.M4.textbgcolor=yellow;text.M4.textcolor=black;values.Word4=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M4" && values.switch4==1) text.M4.textbgcolor=black;text.M4.textcolor=yellow;values.Word4=000]
+
+/ ontrialbegin = [if (text.M5.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M5") text.M5.textbgcolor=yellow;text.M5.textcolor=black;values.Word5=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M5" && values.switch5==1) text.M5.textbgcolor=black;text.M5.textcolor=yellow;values.Word5=000]
+
+/ ontrialbegin = [if (text.M6.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M6") text.M6.textbgcolor=yellow;text.M6.textcolor=black;values.Word6=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M6" && values.switch6==1) text.M6.textbgcolor=black;text.M6.textcolor=yellow;values.Word6=000]
+
+/ ontrialbegin = [if (text.M7.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M7") text.M7.textbgcolor=yellow;text.M7.textcolor=black;values.Word7=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M7" && values.switch7==1) text.M7.textbgcolor=black;text.M7.textcolor=yellow;values.Word7=000]
+
+/ ontrialbegin = [if (text.M8.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.ScoreFr.response=="M8") text.M8.textbgcolor=yellow;text.M8.textcolor=black;values.Word8=001]
+/ ontrialend = [if(trial.ScoreFr.response == "M8" && values.switch8==1) text.M8.textbgcolor=black;text.M8.textcolor=yellow;values.Word8=000]
+
+
+</trial>
+--------------------------------------------------------------------------------------------------
+<trial ScoreFr2>
+/ stimulusframes = [1=Done,11,22,33,44,55,66,77,88,Mots]
+/ validresponse = (11,22,33,44,55,66,77,88,Done)
+/ branch = [if(trial.ScoreFr2.response != "Done") trial.ScoreFr2]
+/ skip = [trial.ScoreFr2.response == "Done"]
+/ inputdevice = mouse
+
+/ ontrialbegin = [if (text.11.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="11") text.11.textbgcolor=yellow; values.Word1=001]
+/ ontrialend = [if(trial.ScoreFr2.response== "11" && values.switch1==1) text.11.textbgcolor=black;values.Word1=000]
+
+/ ontrialbegin = [if (text.22.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="22") text.22.textbgcolor=yellow;text.22.textcolor=black;values.Word2=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "22" && values.switch2==1) text.22.textbgcolor=black;text.22.textcolor=yellow;values.Word2=000]
+
+/ ontrialbegin = [if (text.33.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="33") text.33.textbgcolor=yellow;text.33.textcolor=black;values.Word3=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "33" && values.switch3==1) text.33.textbgcolor=black;text.33.textcolor=yellow;values.Word3=000]
+
+/ ontrialbegin = [if (text.44.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="44") text.44.textbgcolor=yellow;text.44.textcolor=black;values.Word4=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "44" && values.switch4==1) text.44.textbgcolor=black;text.44.textcolor=yellow;values.Word4=000]
+
+/ ontrialbegin = [if (text.55.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="55") text.55.textbgcolor=yellow;text.55.textcolor=black;values.Word5=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "55" && values.switch5==1) text.55.textbgcolor=black;text.55.textcolor=yellow;values.Word5=000]
+
+/ ontrialbegin = [if (text.66.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="66") text.66.textbgcolor=yellow;text.66.textcolor=black;values.Word6=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "66" && values.switch6==1) text.66.textbgcolor=black;text.66.textcolor=yellow;values.Word6=000]
+
+/ ontrialbegin = [if (text.77.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="77") text.77.textbgcolor=yellow;text.77.textcolor=black;values.Word7=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "77" && values.switch7==1) text.77.textbgcolor=black;text.77.textcolor=yellow;values.Word7=000]
+
+/ ontrialbegin = [if (text.88.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.ScoreFr2.response=="88") text.88.textbgcolor=yellow;text.88.textcolor=black;values.Word8=001]
+/ ontrialend = [if(trial.ScoreFr2.response == "88" && values.switch8==1) text.88.textbgcolor=black;text.88.textcolor=yellow;values.Word8=000]
+
+
+</trial>
+--------------------------------------------------------------------------------------
+<trial ScoreFr3>
+/ stimulusframes = [1=Done,111,222,333,444,555,666,777,888,Mots]
+/ validresponse = (111,222,333,444,555,666,777,888,Done)
+/ branch = [if(trial.ScoreFr3.response != "Done") trial.ScoreFr3]
+/ skip = [trial.ScoreFr3.response == "Done"]
+/ inputdevice = mouse
+
+/ ontrialbegin = [if (text.111.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="111") text.111.textbgcolor=yellow;values.Word1=1]
+/ ontrialend = [if(trial.ScoreFr3.response== "111" && values.switch1==1) text.111.textbgcolor=black;values.Word1=0]
+
+/ ontrialbegin = [if (text.222.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="222") text.222.textbgcolor=yellow;text.222.textcolor=black;values.Word2=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "222" && values.switch2==1) text.222.textbgcolor=black;text.222.textcolor=yellow;values.Word2=000]
+
+/ ontrialbegin = [if (text.333.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="333") text.333.textbgcolor=yellow;text.333.textcolor=black;values.Word3=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "333" && values.switch3==1) text.333.textbgcolor=black;text.333.textcolor=yellow;values.Word3=000]
+
+/ ontrialbegin = [if (text.444.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="444") text.444.textbgcolor=yellow;text.444.textcolor=black;values.Word4=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "444" && values.switch4==1) text.444.textbgcolor=black;text.444.textcolor=yellow;values.Word4=000]
+
+/ ontrialbegin = [if (text.555.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="555") text.555.textbgcolor=yellow;text.555.textcolor=black;values.Word5=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "555" && values.switch5==1) text.555.textbgcolor=black;text.555.textcolor=yellow;values.Word5=000]
+
+/ ontrialbegin = [if (text.666.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="666") text.666.textbgcolor=yellow;text.666.textcolor=black;values.Word6=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "666" && values.switch6==1) text.666.textbgcolor=black;text.666.textcolor=yellow;values.Word6=000]
+
+/ ontrialbegin = [if (text.777.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="777") text.777.textbgcolor=yellow;text.777.textcolor=black;values.Word7=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "777" && values.switch7==1) text.777.textbgcolor=black;text.777.textcolor=yellow;values.Word7=000]
+
+/ ontrialbegin = [if (text.888.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.ScoreFr3.response=="888") text.888.textbgcolor=yellow;text.888.textcolor=black;values.Word8=001]
+/ ontrialend = [if(trial.ScoreFr3.response == "888" && values.switch8==1) text.888.textbgcolor=black;text.888.textcolor=yellow;values.Word8=000]
+
+
+</trial>
+
+*************************
+
+
+
+
+

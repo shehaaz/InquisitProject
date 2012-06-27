@@ -1,0 +1,809 @@
+
+
+**************
+Stimuli
+**************
+-----------------------------
+<text WordsEngBaseline>
+/ items = ("Words")
+/ fontstyle = ("",20,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (5,3)
+</text>
+
+
+<text 1EngBaseline>
+/ items = ("1")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,10)
+</text>
+
+<text 2EngBaseline>
+/ items = ("2")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,15)
+</text>
+
+<text 3EngBaseline>
+/ items = ("3")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,20)
+</text>
+
+<text 4EngBaseline>
+/ items = ("4")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,25)
+</text>
+
+<text 5EngBaseline>
+/ items = ("5")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,30)
+</text>
+
+<text 6EngBaseline>
+/ items = ("6")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,35)
+</text>
+
+<text 7EngBaseline>
+/ items = ("7")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,40)
+</text>
+
+<text 8EngBaseline>
+/ items = ("8")
+/ fontstyle = ("",30)
+/ size = (9%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (5,45)
+</text>
+
+<text DoneEngBaseline>
+/ items = ("Done")
+/ position = (5,55)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+--------------------------------------
+
+<text CatEngBaseline>
+/ items = ("Category")
+/ fontstyle = ("",40,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (35,3)
+</text>
+
+
+<text 11EngBaseline>
+/ items = ("Fruit")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,10)
+</text>
+
+<text R1EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,10)
+</text>
+
+<text W1EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,10)
+</text>
+
+<text 22EngBaseline>
+/ items = ("--------")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,15)
+</text>
+
+<text R2EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,15)
+</text>
+
+<text W2EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,15)
+</text>
+
+<text 33EngBaseline>
+/ items = ("Animal")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,20)
+</text>
+
+<text R3EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,20)
+</text>
+
+<text W3EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,20)
+</text>
+
+<text 44EngBaseline>
+/ items = ("---------")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,25)
+</text>
+
+<text R4EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,25)
+</text>
+
+<text W4EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,25)
+</text>
+
+<text 55EngBaseline>
+/ items = ("Furniture")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,30)
+</text>
+
+<text R5EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,30)
+</text>
+
+<text W5EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,30)
+</text>
+
+<text 66EngBaseline>
+/ items = ("Profession")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,35)
+</text>
+
+<text R6EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,35)
+</text>
+
+<text W6EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,35)
+</text>
+
+<text 77EngBaseline>
+/ items = ("Clothing")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,40)
+</text>
+
+<text R7EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,40)
+</text>
+
+<text W7EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,40)
+</text>
+
+<text 88EngBaseline>
+/ items = ("Music Instrument")
+/ fontstyle = ("",30)
+/ size = (25%, 4%)
+/ txcolor = black
+/ txbgcolor = yellow
+/ position = (35,45)
+</text>
+
+<text R8EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (49,45)
+</text>
+
+<text W8EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (51,45)
+</text>
+----------------------------
+
+<text ChEngBaseline>
+/ items = ("Multiple Choice")
+/ fontstyle = ("",40,true)
+/ txcolor = (135,206,250)
+/ txbgcolor = black
+/ position = (70,3)
+</text>
+
+
+<text 111EngBaseline>
+/ items = ("Lemon - Apple  - Cherry")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,10)
+</text>
+
+<text RR1EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,10)
+</text>
+
+<text WW1EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,10)
+</text>
+
+<text 222EngBaseline>
+/ items = ("Opinion  - History  - Justice")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,15)
+</text>
+
+<text RR2EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,15)
+</text>
+
+<text WW2EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,15)
+</text>
+
+<text 333EngBaseline>
+/ items = ("Rat - Sheep - Cow")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,20)
+</text>
+
+<text RR3EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,20)
+</text>
+
+<text WW3EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,20)
+</text>
+
+<text 444EngBaseline>
+/ items = ("Majority  -  Quality  -  Liberty")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,25)
+</text>
+
+<text RR4EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,25)
+</text>
+
+<text WW4EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,25)
+</text>
+
+<text 555EngBaseline>
+/ items = ("Table  -  Chair  -  Bed")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,30)
+</text>
+
+<text RR5EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,30)
+</text>
+
+<text WW5EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,30)
+</text>
+
+<text 666EngBaseline>
+/ items = ("Florist  -  Dentist  - Plumber")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,35)
+</text>
+
+<text RR6EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,35)
+</text>
+
+<text WW6EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,35)
+</text>
+
+<text 777EngBaseline>
+/ items = ("Coat  - Shirt  - Hat")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,40)
+</text>
+
+<text RR7EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,40)
+</text>
+
+<text WW7EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,40)
+</text>
+
+<text 888EngBaseline>
+/ items = ("Guitar  - Piano  - Violin")
+/ fontstyle = ("",30)
+/ size = (28%, 4%)
+/ txcolor = yellow
+/ txbgcolor = black
+/ position = (70,45)
+</text>
+
+<text RR8EngBaseline>
+/ items = ("1")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (84,45)
+</text>
+
+<text WW8EngBaseline>
+/ items = ("2")
+/ txbgcolor = grey
+/ txcolor = Black
+/ size = (1%,2%)
+/ position = (86,45)
+</text>
+
+
+*****************************************
+Words represented by numbers
+*****************************************
+<trial WordsEngBaseline>
+
+
+/ inputdevice = mouse
+/ stimulusframes = [1=1EngBaseline,2EngBaseline,3EngBaseline,4EngBaseline,5EngBaseline,6EngBaseline,7EngBaseline,8EngBaseline,DoneEngBaseline,WordsEngBaseline]
+/ validresponse = (1EngBaseline,2EngBaseline,3EngBaseline,4EngBaseline,5EngBaseline,6EngBaseline,7EngBaseline,8EngBaseline,DoneEngBaseline)
+/ branch = [if(trial.WordsEngBaseline.response == "DoneEngBaseline") trial.Blank1EngBaseline]
+/ branch = [if(trial.WordsEngBaseline.response != "DoneEngBaseline") trial.WordsEngBaseline]
+
+/ ontrialbegin = [if (text.1EngBaseline.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response== "1EngBaseline") text.1EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "1EngBaseline") text.11EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "1EngBaseline") values.Word1=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "1EngBaseline" && values.switch1==1) text.1EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "1EngBaseline" && values.switch1==1) text.11EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.2EngBaseline.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="2EngBaseline") text.2EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "2EngBaseline") text.22EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "2EngBaseline") values.Word2=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="2EngBaseline" && values.switch2==1) text.2EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="2EngBaseline" && values.switch2==1) text.22EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.3EngBaseline.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="3EngBaseline") text.3EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "3EngBaseline") text.33EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "3EngBaseline") values.Word3=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="3EngBaseline" && values.switch3==1) text.3EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="3EngBaseline" && values.switch3==1) text.33EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.4EngBaseline.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="4EngBaseline") text.4EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "4EngBaseline") text.44EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "4EngBaseline") values.Word4=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="4EngBaseline" && values.switch4==1) text.4EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="4EngBaseline" && values.switch4==1) text.44EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.5EngBaseline.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="5EngBaseline") text.5EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "5EngBaseline") text.55EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "5EngBaseline") values.Word5=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="5EngBaseline" && values.switch5==1) text.5EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="5EngBaseline" && values.switch5==1) text.55EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.6EngBaseline.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="6EngBaseline") text.6EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "6EngBaseline") text.66EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "6EngBaseline") values.Word6=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="6EngBaseline" && values.switch6==1) text.6EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="6EngBaseline" && values.switch6==1) text.66EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.7EngBaseline.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="7EngBaseline") text.7EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "7EngBaseline") text.77EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "7EngBaseline") values.Word7=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="7EngBaseline" && values.switch7==1) text.7EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="7EngBaseline" && values.switch7==1) text.77EngBaseline.textbgcolor=yellow]
+
+/ ontrialbegin = [if (text.8EngBaseline.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="8EngBaseline") text.8EngBaseline.textbgcolor=yellow]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "8EngBaseline") text.88EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response == "8EngBaseline") values.Word8=1]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="8EngBaseline" && values.switch8==1) text.8EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.WordsEngBaseline.response=="8EngBaseline" && values.switch8==1) text.88EngBaseline.textbgcolor=yellow]
+
+
+</trial>
+---------------------------------
+**************************************************************************************
+Blank Elements are Gates deciding if Cat or Ch should be displayed
+**************************************************************************************
+<trial Blank1EngBaseline>
+/ timeout = 1
+/ branch = [if(text.11EngBaseline.textbgcolor == yellow) trial.Cat1EngBaseline else trial.Blank2EngBaseline]
+/ recorddata = false
+</trial>
+
+<trial Blank2EngBaseline>
+/ timeout = 1
+/ branch = [if(text.22EngBaseline.textbgcolor == yellow) trial.Cat2EngBaseline else trial.Blank3EngBaseline]
+/ recorddata = false
+</trial>
+
+
+<trial Blank3EngBaseline>
+/ timeout = 1
+/ branch = [if(text.33EngBaseline.textbgcolor == yellow) trial.Cat3EngBaseline else trial.Blank4EngBaseline]
+/ recorddata = false
+</trial>
+
+<trial Blank4EngBaseline>
+/ timeout = 1
+/ branch = [if(text.44EngBaseline.textbgcolor == yellow) trial.Cat4EngBaseline else trial.Blank5EngBaseline]
+/ recorddata = false
+</trial>
+
+<trial Blank5EngBaseline>
+/ timeout = 1
+/ branch = [if(text.55EngBaseline.textbgcolor == yellow) trial.Cat5EngBaseline else trial.Blank6EngBaseline]
+/ recorddata = false
+</trial>
+
+<trial Blank6EngBaseline>
+/ timeout = 1
+/ branch = [if(text.66EngBaseline.textbgcolor == yellow) trial.Cat6EngBaseline else trial.Blank7EngBaseline]
+/ recorddata = false
+</trial>
+
+<trial Blank7EngBaseline>
+/ timeout = 1
+/ branch = [if(text.77EngBaseline.textbgcolor == yellow) trial.Cat7EngBaseline else trial.Blank8EngBaseline]
+/ recorddata = false
+</trial>
+
+<trial Blank8EngBaseline>
+/ timeout = 1
+/ branch = [if(text.88EngBaseline.textbgcolor == yellow) trial.Cat8EngBaseline]
+/ recorddata = false
+</trial>
+
+*************************
+Category Elements
+*************************
+
+<trial Cat1EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEngBaseline,R1EngBaseline,W1EngBaseline,11EngBaseline]
+/ validresponse = (R1EngBaseline,W1EngBaseline) 
+/ ontrialend = [if(trial.Cat1EngBaseline.response == "R1EngBaseline") values.Word1=2]
+/ branch = [if(trial.Cat1EngBaseline.response == "R1EngBaseline") trial.Blank2EngBaseline]
+/ branch = [if(trial.Cat1EngBaseline.response == "W1EngBaseline") trial.Ch1EngBaseline]
+</trial>
+
+<trial Cat2EngBaseline>
+/ branch = [trial.Ch2EngBaseline]
+/ timeout = 1
+</trial>
+
+<trial Cat3EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEngBaseline,R3EngBaseline,W3EngBaseline,33EngBaseline]
+/ validresponse = (R3EngBaseline,W3EngBaseline) 
+/ ontrialend = [if(trial.Cat3EngBaseline.response == "R3EngBaseline") values.Word3=2]
+/ branch = [if(trial.Cat3EngBaseline.response == "R3EngBaseline") trial.Blank4EngBaseline]
+/ branch = [if(trial.Cat3EngBaseline.response == "W3EngBaseline") trial.Ch3EngBaseline]
+</trial>
+
+<trial Cat4EngBaseline>
+/ branch = [trial.Ch4EngBaseline]
+/ timeout = 1
+</trial>
+
+<trial Cat5EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEngBaseline,R5EngBaseline,W5EngBaseline,55EngBaseline]
+/ validresponse = (R5EngBaseline,W5EngBaseline) 
+/ ontrialend = [text.55EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.Cat5EngBaseline.response == "R5EngBaseline") values.Word5=2]
+/ branch = [if(trial.Cat5EngBaseline.response == "R5EngBaseline") trial.Blank6EngBaseline]
+/ branch = [if(trial.Cat5EngBaseline.response == "W5EngBaseline") trial.Ch5EngBaseline] 
+</trial>
+
+<trial Cat6EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEngBaseline,R6EngBaseline,W6EngBaseline,66EngBaseline]
+/ validresponse = (R6EngBaseline,W6EngBaseline) 
+/ ontrialend = [text.66EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.Cat6EngBaseline.response == "R6EngBaseline") values.Word6=2]
+/ branch = [if(trial.Cat6EngBaseline.response == "R6EngBaseline") trial.Blank7EngBaseline]
+/ branch = [if(trial.Cat6EngBaseline.response == "W6EngBaseline") trial.Ch6EngBaseline] 
+</trial>
+
+<trial Cat7EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEngBaseline,R7EngBaseline,W7EngBaseline,77EngBaseline]
+/ validresponse = (R7EngBaseline,W7EngBaseline) 
+/ ontrialend = [text.77EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.Cat7EngBaseline.response == "R7EngBaseline") values.Word7=2]
+/ branch = [if(trial.Cat7EngBaseline.response == "R7EngBaseline") trial.Blank8EngBaseline]
+/ branch = [if(trial.Cat7EngBaseline.response == "W7EngBaseline") trial.Ch7EngBaseline] 
+</trial>
+
+<trial Cat8EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=CatEngBaseline,R8EngBaseline,W8EngBaseline,88EngBaseline]
+/ validresponse = (R8EngBaseline,W8EngBaseline) 
+/ ontrialend = [text.88EngBaseline.textbgcolor=black]
+/ ontrialend = [if(trial.Cat8EngBaseline.response == "R8EngBaseline") values.Word8=2]
+/ branch = [if(trial.Cat8EngBaseline.response == "W8EngBaseline") trial.Ch8EngBaseline] 
+</trial>
+
+********************
+Choice Trials
+********************
+<trial Ch1EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,111EngBaseline,RR1EngBaseline,WW1EngBaseline]
+/ validresponse = (RR1EngBaseline,WW1EngBaseline)
+/ ontrialend = [if(trial.Ch1EngBaseline.response == "RR1EngBaseline") values.Word1=3]
+/ branch = [if(trial.Ch1EngBaseline.response == "RR1EngBaseline") trial.Blank2EngBaseline]
+/ branch = [if(trial.Ch1EngBaseline.response == "WW1EngBaseline") trial.Blank2EngBaseline]
+</trial>
+
+<trial Ch2EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,222EngBaseline,RR2EngBaseline,WW2EngBaseline]
+/ validresponse = (RR2EngBaseline,WW2EngBaseline)
+/ ontrialend = [if(trial.Ch2EngBaseline.response == "RR2EngBaseline") values.Word2=3]
+/ branch = [if(trial.Ch2EngBaseline.response == "RR2EngBaseline") trial.Blank3EngBaseline]
+/ branch = [if(trial.Ch2EngBaseline.response == "WW2EngBaseline") trial.Blank3EngBaseline]
+</trial>
+
+<trial Ch3EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,333EngBaseline,RR3EngBaseline,WW3EngBaseline]
+/ validresponse = (RR3EngBaseline,WW3EngBaseline)
+/ ontrialend = [if(trial.Ch3EngBaseline.response == "RR3EngBaseline") values.Word3=3]
+/ branch = [if(trial.Ch3EngBaseline.response == "RR3EngBaseline") trial.Blank4EngBaseline]
+/ branch = [if(trial.Ch3EngBaseline.response == "WW3EngBaseline") trial.Blank4EngBaseline]
+</trial>
+
+<trial Ch4EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,444EngBaseline,RR4EngBaseline,WW4EngBaseline]
+/ validresponse = (RR4EngBaseline,WW4EngBaseline)
+/ ontrialend = [if(trial.Ch4EngBaseline.response == "RR4EngBaseline") values.Word4=3]
+/ branch = [if(trial.Ch4EngBaseline.response == "RR4EngBaseline") trial.Blank5EngBaseline]
+/ branch = [if(trial.Ch4EngBaseline.response == "WW4EngBaseline") trial.Blank5EngBaseline]
+</trial>
+
+<trial Ch5EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,555EngBaseline,RR5EngBaseline,WW5EngBaseline]
+/ validresponse = (RR5EngBaseline,WW5EngBaseline)
+/ ontrialend = [if(trial.Ch5EngBaseline.response == "RR5EngBaseline") values.Word5=3]
+/ branch = [if(trial.Ch5EngBaseline.response == "RR5EngBaseline") trial.Blank6EngBaseline]
+/ branch = [if(trial.Ch5EngBaseline.response == "WW5EngBaseline") trial.Blank6EngBaseline]
+</trial>
+
+<trial Ch6EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,666EngBaseline,RR6EngBaseline,WW6EngBaseline]
+/ validresponse = (RR6EngBaseline,WW6EngBaseline)
+/ ontrialend = [if(trial.Ch6EngBaseline.response == "RR6EngBaseline") values.Word6=3]
+/ branch = [if(trial.Ch6EngBaseline.response == "RR6EngBaseline") trial.Blank7EngBaseline]
+/ branch = [if(trial.Ch6EngBaseline.response == "WW6EngBaseline") trial.Blank7EngBaseline]
+</trial>
+
+<trial Ch7EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,777EngBaseline,RR7EngBaseline,WW7EngBaseline]
+/ validresponse = (RR7EngBaseline,WW7EngBaseline)
+/ ontrialend = [if(trial.Ch7EngBaseline.response == "RR7EngBaseline") values.Word7=3]
+/ branch = [if(trial.Ch7EngBaseline.response == "RR7EngBaseline") trial.Blank8EngBaseline]
+/ branch = [if(trial.Ch7EngBaseline.response == "WW7EngBaseline") trial.Blank8EngBaseline]
+</trial>
+
+<trial Ch8EngBaseline>
+/ inputdevice = mouse
+/ stimulusframes = [1=ChEngBaseline,888EngBaseline,RR8EngBaseline,WW8EngBaseline]
+/ validresponse = (RR8EngBaseline,WW8EngBaseline)
+/ ontrialend = [if(trial.Ch8EngBaseline.response == "RR8EngBaseline") values.Word8=3]
+/ skip = [trial.Ch8EngBaseline.response == "RR8EngBaseline"]
+/ skip = [trial.Ch8EngBaseline.response == "WW8EngBaseline"]
+</trial>
+
+
+---------------------------
+<block testEngBaseline>
+/ trials = [1=WordsEngBaseline]
+</block>
+
+<expt K3>
+/ onexptbegin = [values.TaskNumber=11]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "Baseline"]
+/ preinstructions = (InstrucEngBaseline)
+/ blocks = [1=testEngBaseline]
+</expt>
+
+------------------------------
+
+
+<page InstrucEngBaseline>
+^^The computer read some words to you earlier, which I asked you to remember.
+^^Tell me as many of those words as you can remember.
+</page>

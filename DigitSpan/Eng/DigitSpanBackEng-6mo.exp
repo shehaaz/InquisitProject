@@ -1,0 +1,431 @@
+
+*****************************
+Experiment
+*****************************
+
+<expt M2>
+/ onexptbegin = [values.TaskNumber=13]
+/ skip = [trial.Language.response != "English"]
+/ skip = [trial.Session.response != "6mo"]
+/ preInstructions = (InstrucDSEng6mo)
+/ blocks = [1=DigitSpanEng6mo]
+</expt>
+
+<block DigitSpanEng6mo>
+/ trials = [1=DS31Eng6mo]
+</block>
+
+<page InstrucDSEng6mo>
+^^Now, the computer will say some more numbers, but when it is through, you must repeat them in the backwards order.
+^^For example, if the computer says 1,2, you say 2,1.  Ready?
+</page>
+
+
+
+**************************************************
+Trial Elements
+**************************************************
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS31Eng6mo>
+/ stimulusframes = [1=DS31Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score1Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Score1Eng6mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate1Eng6mo]
+/ ontrialend = [if(trial.Score1Eng6mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate1Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS41Eng6mo else trial.DS32Eng6mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 2]
+</trial>
+
+<trial DS32Eng6mo>
+/ stimulusframes = [1=DS32Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score11Eng6mo]
+</trial>
+
+<trial Score11Eng6mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate2Eng6mo]
+/ ontrialend = [if(trial.Score11Eng6mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate2Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS41Eng6mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 2]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<trial DS41Eng6mo>
+/ stimulusframes = [1=DS41Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score2Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Score2Eng6mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate3Eng6mo]
+/ ontrialend = [if(trial.Score2Eng6mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate3Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS51Eng6mo else trial.DS42Eng6mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 3]
+</trial>
+
+<trial DS42Eng6mo>
+/ stimulusframes = [1=DS42Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score22Eng6mo]
+</trial>
+
+<trial Score22Eng6mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate4Eng6mo]
+/ ontrialend = [if(trial.Score22Eng6mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate4Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS51Eng6mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 3]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS51Eng6mo>
+/ stimulusframes = [1=DS51Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score3Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Score3Eng6mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate5Eng6mo]
+/ ontrialend = [if(trial.Score3Eng6mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate5Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS61Eng6mo else trial.DS52Eng6mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 4]
+</trial>
+
+<trial DS52Eng6mo>
+/ stimulusframes = [1=DS52Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score33Eng6mo]
+</trial>
+
+<trial Score33Eng6mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate6Eng6mo]
+/ ontrialend = [if(trial.Score33Eng6mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate6Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS61Eng6mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 4]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<trial DS61Eng6mo>
+/ stimulusframes = [1=DS61Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score4Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Score4Eng6mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate7Eng6mo]
+/ ontrialend = [if(trial.Score4Eng6mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate7Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS71Eng6mo else trial.DS62Eng6mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 5]
+</trial>
+
+<trial DS62Eng6mo>
+/ stimulusframes = [1=DS62Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score44Eng6mo]
+</trial>
+
+<trial Score44Eng6mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate8Eng6mo]
+/ ontrialend = [if(trial.Score44Eng6mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate8Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS71Eng6mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 5]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS71Eng6mo>
+/ stimulusframes = [1=DS71Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score5Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Score5Eng6mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate9Eng6mo]
+/ ontrialend = [if(trial.Score5Eng6mo.response=="DS2") values.Fail = 1]
+</trial>
+
+<trial Gate9Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail == 0) trial.DS81Eng6mo else trial.DS72Eng6mo]
+/ ontrialend = [if(values.Fail == 0) values.DigitSpanBack = 6]
+</trial>
+
+<trial DS72Eng6mo>
+/ stimulusframes = [1=DS72Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score55Eng6mo]
+</trial>
+
+<trial Score55Eng6mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate10Eng6mo]
+/ ontrialend = [if(trial.Score55Eng6mo.response=="DS2") values.Fail = 2]
+</trial>
+
+<trial Gate10Eng6mo>
+/ timeout = 1
+/ branch = [if(values.Fail < 2) trial.DS81Eng6mo]
+/ skip = [values.Fail==2]
+/ ontrialend = [values.DigitSpanBack = 6]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<trial DS81Eng6mo>
+/ stimulusframes = [1=DS81Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.Score6Eng6mo]
+/ recorddata = false
+</trial>
+
+<trial Score6Eng6mo>
+/ ontrialbegin = [values.Fail=0]
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate11Eng6mo]
+/ ontrialend = [if(trial.Score6Eng6mo.response=="DS2") values.Fail = 1]
+/ ontrialend = [if(trial.Score6Eng6mo.response=="DS1") values.DigitSpanBack = 7]
+</trial>
+
+<trial Gate11Eng6mo>
+/ timeout = 1
+/ skip = [values.Fail == 0]
+/ branch = [if(values.Fail == 1) trial.DS82Eng6mo]
+</trial>
+
+<trial DS82Eng6mo>
+/ stimulusframes = [1=DS82Eng6mo] 
+/ pretrialpause = 1000
+/ response = noresponse
+/ timeout = 1
+/ recorddata = false
+/ branch = [trial.Score66Eng6mo]
+</trial>
+
+<trial Score66Eng6mo>
+/ stimulusframes = [1=DS1,DS2]
+/ validresponse = (DS1,DS2)
+/ inputdevice = mouse
+/ branch = [trial.Gate12Eng6mo]
+/ ontrialend = [if(trial.Score66Eng6mo.response=="DS2") values.Fail = 2]
+/ ontrialend = [if(trial.Score66Eng6mo.response=="DS1") values.DigitSpanBack = 7]
+</trial>
+
+<trial Gate12Eng6mo>
+/ timeout = 1
+/ skip = [1]
+</trial>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+*************************************
+Stimuli
+*************************************
+<sound DS31Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\52.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS32Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\38.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS41Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\629.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS42Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\475.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS51Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\7286.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+
+<sound DS52Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\6439.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+
+<sound DS61Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\42731.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS62Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\75836.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS71Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\621894.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS72Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\564372.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS81Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\9437621.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound DS82Eng6mo>
+/ items = ("..\DigitSpan\Eng\files\7281564.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+******************************************************************************************************************************************************************************
+******************************************************************************************************************************************************************************
