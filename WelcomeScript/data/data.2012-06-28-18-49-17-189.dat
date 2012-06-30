@@ -1,0 +1,12 @@
+date	time	subject	blockcode	trialcode	values.TaskNumber	response	latency	correct	values.Score	script.starttime	script.elapsedtime	values.ScoreS7	values.Word1	values.Word2	values.Word3	values.Word4	values.Word5	values.Word6	values.Word7	values.Word8	values.DigitSpanFwrd	values.DigitSpanBack	values.ScoreAbs	values.Contour	values.Numbers	values.Hands	values.corsiblockspanFwrd	values.corsiblockspanRev
+062812	18:49:12	99999	Language	Language	0	French	33954	0	0	18:49:12	34253	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	Session	Session	0	Baseline	1977	0	0	18:49:12	36304	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	HandFr	HandFr	0	LeftFr	1626	0	0	18:49:12	38011	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	58178	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	101265	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	105225	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	109374	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	130134	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	134384	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	AudioCheckFr	WordsFr	0	0	0	0	0	18:49:12	281561	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+062812	18:49:12	99999	CubeFr	CubeFr	1	1Cube	2248	0	0	18:49:12	287121	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
