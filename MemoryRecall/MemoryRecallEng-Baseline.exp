@@ -1,5 +1,4 @@
 
-
 **************
 Stimuli
 **************
@@ -520,6 +519,10 @@ Stimuli
 *****************************************
 Words represented by numbers
 *****************************************
+*************************
+Spontaneous Elements
+*************************
+
 <trial WordsEngBaseline>
 
 
@@ -589,7 +592,7 @@ Words represented by numbers
 </trial>
 ---------------------------------
 **************************************************************************************
-Blank Elements are Gates deciding if Cat or Ch should be displayed
+Blank Elements are Gates deciding if Cat(Category) or Ch(Choice) should be displayed
 **************************************************************************************
 <trial Blank1EngBaseline>
 / timeout = 1
