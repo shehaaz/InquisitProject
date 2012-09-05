@@ -34,6 +34,14 @@ Stimuli
 / position = (50%,50%)
 </picture>
 
+**************
+Red Cross
+**************
+<text Fcross>
+/position=(50%, 50%)
+/items=("+")
+/fontstyle = ("Arial", 60pt, false)
+</text>
 
 *******************
 Trials
@@ -47,7 +55,8 @@ Trials
 / validresponse = (203, 205, noresponse)
 / correctresponse = (205)
 / trialduration = 1000
-/ pretrialpause = 250
+/ posttrialpause = 800
+/ branch = [trial.Fcross]
 </trial>
 
 <trial IncongruentLeft>
@@ -56,7 +65,8 @@ Trials
 / validresponse = (203, 205, noresponse)
 / correctresponse = (203)
 / trialduration = 1000
-/ pretrialpause = 250
+/ posttrialpause = 800
+/ branch = [trial.Fcross]
 </trial>
 
 <trial CongruentRight>
@@ -65,7 +75,8 @@ Trials
 / validresponse = (203, 205, noresponse)
 / correctresponse = (205)
 / trialduration = 1000
-/ pretrialpause = 250
+/ posttrialpause = 800
+/ branch = [trial.Fcross]
 </trial>
 
 <trial CongruentLeft>
@@ -74,8 +85,23 @@ Trials
 / validresponse = (203, 205, noresponse)
 / correctresponse = (203)
 / trialduration = 1000
-/ pretrialpause = 250
+/ posttrialpause = 800
+/ branch = [trial.Fcross]
 </trial>
+
+
+
+**********************************
+Red Cross
+**********************************
+
+<trial Fcross>
+ / inputdevice=keyboard
+/ stimulusframes = [1= Fcross]
+/ trialduration = 300
+/ recorddata = false
+</trial>
+
 
 **********************************
 750ms
