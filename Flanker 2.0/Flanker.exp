@@ -1,0 +1,307 @@
+
+*************************
+Language selection
+*************************
+
+<block FlankerLanguage>
+/ branch = [if (trial.Language.response=="English") block.PracticeEng else block.PracticeFr]
+/ recorddata = false
+</block>
+
+
+
+**************************
+Stimuli
+**************************
+
+<picture IncongruentRight>
+/ items = ("..\Flanker\files\IncongruentRight.bmp")
+/ position = (50%, 50%)
+</picture>
+
+<picture IncongruentLeft>
+/ items = ("..\Flanker\files\IncongruentLeft.bmp")
+/ position = (50%,50%)
+</picture>
+
+<picture CongruentRight>
+/ items = ("..\Flanker\files\CongruentRight.bmp")
+/ position = (50%,50%) 
+</picture>
+
+<picture CongruentLeft>
+/ items = ("..\Flanker\files\CongruentLeft.bmp")
+/ position = (50%,50%)
+</picture>
+
+
+*******************
+Trials
+*******************
+*******************************
+1000ms
+*******************************
+<trial IncongruentRight>
+ / inputdevice=keyboard
+/ stimulusframes = [1=IncongruentRight]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (205)
+/ trialduration = 1000
+/ pretrialpause = 250
+</trial>
+
+<trial IncongruentLeft>
+ / inputdevice=keyboard
+/ stimulusframes = [1=IncongruentLeft]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (203)
+/ trialduration = 1000
+/ pretrialpause = 250
+</trial>
+
+<trial CongruentRight>
+ / inputdevice=keyboard
+/ stimulusframes = [1= CongruentRight]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (205)
+/ trialduration = 1000
+/ pretrialpause = 250
+</trial>
+
+<trial CongruentLeft>
+ / inputdevice=keyboard
+/ stimulusframes = [1= CongruentLeft]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (203)
+/ trialduration = 1000
+/ pretrialpause = 250
+</trial>
+
+**********************************
+750ms
+**********************************
+
+<trial IncongruentRight750>
+ / inputdevice=keyboard
+/ stimulusframes = [1=IncongruentRight]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (205)
+/ trialduration = 750
+/ pretrialpause = 250
+</trial>
+
+<trial IncongruentLeft750>
+ / inputdevice=keyboard
+/ stimulusframes = [1=IncongruentLeft]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (203)
+/ trialduration = 750
+/ pretrialpause = 250
+</trial>
+
+<trial CongruentRight750>
+ / inputdevice=keyboard
+/ stimulusframes = [1= CongruentRight]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (205)
+/ trialduration = 750
+/ pretrialpause = 250
+</trial>
+
+<trial CongruentLeft750>
+ / inputdevice=keyboard
+/ stimulusframes = [1= CongruentLeft]
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (203)
+/ trialduration = 750
+/ pretrialpause = 250
+</trial>
+
+
+*********************
+Blocks
+*********************
+
+<block PracticeEng>
+/ preinstructions = (TrainingEng1,TrainingEng2)
+/ trials = [1,4,7=IncongruentRight; 2,9=IncongruentLeft; 3,6=CongruentRight; 5,8=CongruentLeft; 10=PassPracticeEng]
+/ branch = [if (trial.PassPracticeEng.response=="YesEng") block.Trial else block.PracticeEng]
+/ recorddata = false
+</block>
+
+<block PracticeFr>
+/ preinstructions = (TrainingFr1,TrainingFr2)
+/ trials = [1,4,7=IncongruentRight; 2,9=IncongruentLeft; 3,6=CongruentRight; 5,8=CongruentLeft; 10=PassPracticeFr]
+/ branch = [if (trial.PassPracticeFr.response=="YesFr") block.Trial else block.PracticeFr]
+/ recorddata = false
+</block>
+
+******************
+PassPractice
+******************
+<text ContinueEng>
+/ items = ("Are you ready for the task?")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text YesEng>
+/ items = ("Yes")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text NoEng>
+/ items = ("No")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<trial PassPracticeEng>
+/ stimulusframes = [1=ContinueEng,YesEng,NoEng]
+/ validresponse = (YesEng, NoEng)
+/ inputdevice = mouse
+</trial>
+
+<text ContinueFr>
+/ items = ("Êtes-vous prêt pour la tâche?")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text YesFr>
+/ items = ("Oui")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text NoFr>
+/ items = ("Non")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<trial PassPracticeFr>
+/ stimulusframes = [1=ContinueFr,YesFr,NoFr]
+/ validresponse = (YesFr, NoFr)
+/ inputdevice = mouse
+</trial>
+
+*************************************
+****Try to put a gate to speed up the flanker---check for the percentange**** 
+<block Trial>
+/ onblockbegin = [values.TaskNumber=14]
+/ trials = [1,4,7,12,16,20,26,29,31,37,38,43,48,52,54,61,67,69,77,81,87,91,97=IncongruentRight; 
+			2,9,10,15,21,22,25,30,33,36,40,45,47,53,57,64,65,71,74,79,82,85,89,92,94,100=IncongruentLeft; 
+			3,6,11,14,17,19,24,27,32,35,41,44,49,55,56,59,62,66,70,73,75,76,83,88,95,99=CongruentRight; 
+			5,8,13,18,23,28,34,39,42,46,50,51,58,60,63,68,72,78,80,84,86,90,93,96,98=CongruentLeft]
+/ branch = [if(((trial.IncongruentRight.percentcorrect + trial.IncongruentLeft.percentcorrect + trial.CongruentRight.percentcorrect + trial.CongruentLeft.percentcorrect)/4)>=80) block.Trial750]
+</block>
+
+<block Trial750>
+/ onblockbegin = [values.TaskNumber=15]
+/ branch = [if (trial.Language.response=="English") block.Trial750Eng else block.Trial750Fr]
+/ recorddata = false
+</block>
+
+<block Trial750Eng>
+/ preinstructions = (TrainingEng3)
+/ trials = [1,4,7,12,16,20,26,29,31,37,38,43,48,52,54,61,67,69,77,81,87,91,97=IncongruentRight750; 
+			2,9,10,15,21,22,25,30,33,36,40,45,47,53,57,64,65,71,74,79,82,85,89,92,94,100=IncongruentLeft750; 
+			3,6,11,14,17,19,24,27,32,35,41,44,49,55,56,59,62,66,70,73,75,76,83,88,95,99=CongruentRight750; 
+			5,8,13,18,23,28,34,39,42,46,50,51,58,60,63,68,72,78,80,84,86,90,93,96,98=CongruentLeft750]
+</block>
+
+<block Trial750Fr>
+/ preinstructions = (TrainingFr3)
+/ trials = [1,4,7,12,16,20,26,29,31,37,38,43,48,52,54,61,67,69,77,81,87,91,97=IncongruentRight750; 
+			2,9,10,15,21,22,25,30,33,36,40,45,47,53,57,64,65,71,74,79,82,85,89,92,94,100=IncongruentLeft750; 
+			3,6,11,14,17,19,24,27,32,35,41,44,49,55,56,59,62,66,70,73,75,76,83,88,95,99=CongruentRight750; 
+			5,8,13,18,23,28,34,39,42,46,50,51,58,60,63,68,72,78,80,84,86,90,93,96,98=CongruentLeft750]
+</block>
+
+************
+Experiement
+************
+<expt N>	
+/ blocks = [1=FlankerLanguage]
+</expt>
+
+
+************************
+Instructions
+************************
+
+********************************
+<page TrainingEng2>
+^^You will see 5 arrows appear on the screen.
+^^You must decide if the MIDDLE arrow points to the left or to the right.
+^^If the MIDDLE arrow points to the left, press the LEFT ARROW KEY as fast as you can.
+^^If the MIDDLE arrow points to the right, press the RIGHT ARROW KEY as fast as you can.
+^^This test lasts less than 3 minutes
+^^You will get a practice round 
+</page>
+
+<htmlpage TrainingEng1>
+/ file = "..\Flanker\files\TrainingImageEng.html"
+</htmlpage>
+
+<page PracticeRoundEng>
+^^^^^^                Are you ready for the practice round?
+</page>
+
+<page TrainingEng3>
+^^Now, I'll make it harder. Let's see if you can handle this!
+</page>
+*******************************
+<page TrainingFr2>
+^^Vous allez voir 5 flèches apparaître à l'écran.
+^^Vous devez décider si la flèche du MILIEU pointe vers la gauche ou la droite.
+^^Si la flèche du MILIEU pointe vers la gauche, appuyez sur la TOUCHE FLÈCHE GAUCHE le plus rapidement possible.
+^^Si la flèche du MILIEU pointe vers la droite, appuyez sur la TOUCHE FLÈCHE DROITE le plus rapidement possible.
+^^Ce test dure 3 minutes
+^^Êtes-vous prêt pour la ronde de pratique
+</page>
+
+<htmlpage TrainingFr1>
+/ file = "..\Flanker\files\TrainingImageFr.html"
+</htmlpage>
+
+<page PracticeRoundFr>
+^^^^^^             Êtes vous prêt pour une ronde de pratique?
+</page>
+
+<page TrainingFr3>
+^^Maintenant, je vais rendre le test plus rapide. Voyons ce que vous pouvez faire!
+</page>
+******************************
+******************************
+
+
+
+
+
