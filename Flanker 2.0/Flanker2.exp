@@ -1,0 +1,318 @@
+*************************
+Language selection
+*************************
+
+<block FlankerLanguage>
+/ branch = [if (trial.Language.response=="English") block.PracticeEng else block.PracticeFr]
+/ recorddata = false
+</block>
+
+**************************
+Stimuli
+**************************
+
+<picture IncongruentRight>
+/ items = ("..\Flanker 2.0\files\IncongruentRight.bmp")
+/ position = (50%, 50%)
+</picture>
+
+<picture IncongruentLeft>
+/ items = ("..\Flanker 2.0\files\IncongruentLeft.bmp")
+/ position = (50%,50%)
+</picture>
+
+<picture CongruentRight>
+/ items = ("..\Flanker 2.0\files\CongruentRight.bmp")
+/ position = (50%,50%) 
+</picture>
+
+<picture CongruentLeft>
+/ items = ("..\Flanker 2.0\files\CongruentLeft.bmp")
+/ position = (50%,50%)
+</picture>
+
+**************
+Red Cross
+**************
+<text Fcross>
+/txbgcolor = black
+/txcolor = (255,255,255) 
+/position=(50%, 50%)
+/items=("+")
+/fontstyle = ("Arial", 60pt, false)
+</text>
+
+<text Flankerblank>
+/txbgcolor = black
+/txcolor = (255,255,255) 
+/position=(50%, 50%)
+/items=("")
+/fontstyle = ("Arial", 60pt, false)
+</text>
+
+
+<text correctm>
+/txbgcolor = black
+/txcolor = (255,255,255) 
+/position=(50%, 50%)
+/items=("correct")
+/fontstyle = ("Arial", 60pt, false)
+</text>
+*******************
+Trials
+*******************
+*******************************
+Stimuli
+*******************************
+<trial ResponseIR>
+/ stimulusframes = [1=IncongruentRight]
+/ trialduration = 175
+/ branch = [trial.IncongruentRight]
+</trial>
+
+<trial ResponseIL>
+/ stimulusframes = [1=IncongruentLeft]
+/ trialduration = 175
+/ branch = [trial.IncongruentLeft]
+</trial>
+
+<trial ResponseCR>
+/ stimulusframes = [1= CongruentRight]
+/ trialduration = 175
+/ branch = [trial.CongruentRight]
+</trial>
+
+<trial ResponseCL>
+/ stimulusframes = [1= CongruentLeft]
+/ trialduration = 175
+/ branch = [trial.CongruentLeft]
+</trial>
+
+*******************************
+Response (1000ms)
+*******************************
+<trial IncongruentRight>
+ / inputdevice=keyboard
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (205)
+/ stimulusframes = [1=Flankerblank]
+/ trialduration = 1000
+/ branch = [trial.Fcross]
+</trial>
+
+<trial IncongruentLeft>
+ / inputdevice=keyboard
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (203)
+/ stimulusframes = [1=Flankerblank]
+/ trialduration = 1000
+/ branch = [trial.Fcross]
+</trial>
+
+<trial CongruentRight>
+ / inputdevice=keyboard
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (205)
+/ stimulusframes = [1=Flankerblank]
+/ trialduration = 1000
+/ branch = [trial.Fcross]
+</trial>
+
+<trial CongruentLeft>
+ / inputdevice=keyboard
+/ validresponse = (203, 205, noresponse)
+/ correctresponse = (203)
+/ stimulusframes = [1=Flankerblank]
+/ trialduration = 1000
+/ branch = [trial.Fcross]
+</trial>
+
+**********************************
+Buffer Red Cross
+**********************************
+
+<trial Fcross>
+/ stimulusframes = [1= Fcross]
+/ trialduration = 500
+/ recorddata = false
+</trial>
+
+<trial FcrossLong>
+/ stimulusframes = [1= Fcross]
+/ trialduration = 2000
+/ recorddata = false
+</trial>
+
+*********************
+Blocks
+*********************
+
+<block PracticeEng>
+/ preinstructions = (TrainingEng1,TrainingEng2)
+/ trials = [1=FcrossLong; 4,7=ResponseIR; 2,9=ResponseIL; 3,6=ResponseCR; 5,8=ResponseCL; 10=PassPracticeEng]
+/ branch = [if (trial.PassPracticeEng.response=="YesEng") block.Trial else block.PracticeEng]
+/ recorddata = false
+</block>
+
+<block PracticeFr>
+/ preinstructions = (TrainingFr1,TrainingFr2)
+/ trials = [1=FcrossLong; 4,7=ResponseIR; 2,9=ResponseIL; 3,6=ResponseCR; 5,8=ResponseCL; 10=PassPracticeFr]
+/ branch = [if (trial.PassPracticeFr.response=="YesFr") block.Trial else block.PracticeFr]
+/ recorddata = false
+</block>
+
+******************
+PassPractice
+******************
+<text ContinueEng>
+/ items = ("Are you ready for the task?")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text YesEng>
+/ items = ("Yes")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text NoEng>
+/ items = ("No")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<trial PassPracticeEng>
+/ stimulusframes = [1=ContinueEng,YesEng,NoEng]
+/ validresponse = (YesEng, NoEng)
+/ inputdevice = mouse
+</trial>
+
+<text ContinueFr>
+/ items = ("Etes-vous pret pour la tache?")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text YesFr>
+/ items = ("Oui")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text NoFr>
+/ items = ("Non")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<trial PassPracticeFr>
+/ stimulusframes = [1=ContinueFr,YesFr,NoFr]
+/ validresponse = (YesFr, NoFr)
+/ inputdevice = mouse
+</trial>
+
+*************************************
+****Try to put a gate to speed up the flanker---check for the percentange**** 
+<block Trial>
+/ onblockbegin = [values.TaskNumber=14]
+/ trials = [1=FcrossLong;
+			4,7,12,16,20,26,29,31,37,38,43,48,52,54,61,67,69,77,81,87,91,97=ResponseIR; 
+			2,9,10,15,21,22,25,30,33,36,40,45,47,53,57,64,65,71,74,79,82,85,89,92,94,100=ResponseIL; 
+			3,6,11,14,17,19,24,27,32,35,41,44,49,55,56,59,62,66,70,73,75,76,83,88,95,99=ResponseCR; 
+			5,8,13,18,23,28,34,39,42,46,50,51,58,60,63,68,72,78,80,84,86,90,93,96,98=ResponseCL]
+**/ branch = [if(((trial.IncongruentRight.percentcorrect + trial.IncongruentLeft.percentcorrect + trial.CongruentRight.percentcorrect + trial.CongruentLeft.percentcorrect)/4)>=80)]**
+</block>
+
+
+
+
+************
+Experiement
+************
+<expt N>	
+/ blocks = [1=FlankerLanguage]
+</expt>
+
+
+
+********************************
+<htmlpage TrainingEng1>
+/ file = "http://www.millisecond.com/myaccount/scripts/como/Flanker2/TrainingImageEng.html"
+</htmlpage>
+
+<page TrainingEng2>
+^^You will see 5 arrows appear on the screen.
+^^You must decide if the MIDDLE arrow points to the left or to the right.
+^^If the MIDDLE arrow points to the left, press the LEFT ARROW KEY.
+^^If the MIDDLE arrow points to the right, press the RIGHT ARROW KEY.
+^^It is IMPORTANT to press the key as FAST AS YOU CAN
+^^At the start of each trial, focus your eyes on the cross that appears in the middle of the screen.
+^^This test lasts less than 3 minutes
+^^You will get a practice round 
+^^Good Luck!
+</page>
+
+<page PracticeRoundEng>
+^^^^^^                Are you ready for the practice round?
+</page>
+
+<page TrainingEng3>
+^^Now, I'll make it harder. Let's see if you can handle this!
+</page>
+*******************************
+<page TrainingFr2>
+^^Vous allez voir 5 flèches apparaitre à  l'écran.
+^^Vous devez décider si la flèche du MILIEU pointe vers la gauche ou la droite.
+^^Si la flèche du MILIEU pointe vers la gauche, appuyez sur la TOUCHE FLECHE GAUCHE.
+^^Si la flèche du MILIEU pointe vers la droite, appuyez sur la TOUCHE FLECHE DROITE.
+^^C'est IMPORTANT d'appuyer sur la flèche le plus RAPIDEMENT POSSIBLE
+^^Au début de chaque essai, focusez vos yeux sur la croix qui apparaît au milieu de l'écran.
+^^Ce test dure 3 minutes
+^^Etes-vous pret pour la ronde de pratique
+^^Bonne Chance!
+</page>
+
+<htmlpage TrainingFr1>
+/ file = "http://www.millisecond.com/myaccount/scripts/como/Flanker2/TrainingImageFr.html"
+</htmlpage>
+
+<page PracticeRoundFr>
+^^^^^^             Etes-vous pret pour une ronde de pratique?
+</page>
+
+<page TrainingFr3>
+^^Maintenant, je vais rendre le test plus rapide. Voyons ce que vous pouvez faire!
+</page>
+******************************
+******************************
+
+
+
+
+
+

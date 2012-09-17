@@ -98,7 +98,7 @@ Stimuli
 --------------------------------------
 
 <text CatFr6mo>
-/ items = ("Categorie")
+/ items = ("Catégorie")
 / fontstyle = ("",40,true)
 / txcolor = (135,206,250)
 / txbgcolor = black
