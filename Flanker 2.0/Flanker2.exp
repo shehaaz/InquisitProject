@@ -262,7 +262,7 @@ Experiement
 
 ********************************
 <htmlpage TrainingEng1>
-/ file = "http://www.millisecond.com/myaccount/scripts/como/Flanker2/TrainingImageEng.html"
+/ file = "..\Flanker 2.0\files\TrainingImageEng.html"
 </htmlpage>
 
 <page TrainingEng2>
@@ -286,19 +286,19 @@ Experiement
 </page>
 *******************************
 <page TrainingFr2>
-^^Vous allez voir 5 flèches apparaitre à  l'écran.
-^^Vous devez décider si la flèche du MILIEU pointe vers la gauche ou la droite.
-^^Si la flèche du MILIEU pointe vers la gauche, appuyez sur la TOUCHE FLECHE GAUCHE.
-^^Si la flèche du MILIEU pointe vers la droite, appuyez sur la TOUCHE FLECHE DROITE.
-^^C'est IMPORTANT d'appuyer sur la flèche le plus RAPIDEMENT POSSIBLE
-^^Au début de chaque essai, focusez vos yeux sur la croix qui apparaît au milieu de l'écran.
+^^Vous allez voir 5 flÃ¨ches apparaitre Ã Â  l'Ã©cran.
+^^Vous devez dÃ©cider si la flÃ¨che du MILIEU pointe vers la gauche ou la droite.
+^^Si la flÃ¨che du MILIEU pointe vers la gauche, appuyez sur la TOUCHE FLECHE GAUCHE.
+^^Si la flÃ¨che du MILIEU pointe vers la droite, appuyez sur la TOUCHE FLECHE DROITE.
+^^C'est IMPORTANT d'appuyer sur la flÃ¨che le plus RAPIDEMENT POSSIBLE
+^^Au dÃ©but de chaque essai, focusez vos yeux sur la croix qui apparaÃ®t au milieu de l'Ã©cran.
 ^^Ce test dure 3 minutes
 ^^Etes-vous pret pour la ronde de pratique
 ^^Bonne Chance!
 </page>
 
 <htmlpage TrainingFr1>
-/ file = "http://www.millisecond.com/myaccount/scripts/como/Flanker2/TrainingImageFr.html"
+/ file = "..\Flanker 2.0\files\TrainingImageFr.html"
 </htmlpage>
 
 <page PracticeRoundFr>
