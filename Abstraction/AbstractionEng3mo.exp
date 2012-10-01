@@ -47,55 +47,55 @@ Trial
 Practice Trial
 ***************************************************************************************************************************************
 
-<trial PAbsEng3mo1>
+<trial PAbsEngThreemo1>
 / inputdevice = mouse
 / stimulusframes = [1=APTitleEng1,Abs1,Abs2]
 / validresponse = (Abs1,Abs2)
-/ branch = [if (trial.PAbsEng3mo1.response=="Abs1") trial.AbsEng3mo1]
-/ branch = [if (trial.PAbsEng3mo1.response=="Abs2") trial.PAbsEng3mo2]
+/ branch = [if (trial.PAbsEngThreemo1.response=="Abs1") trial.AbsEngThreemo1]
+/ branch = [if (trial.PAbsEngThreemo1.response=="Abs2") trial.PAbsEngThreemo2]
 </trial>
 
-<trial PAbsEng3mo2>
+<trial PAbsEngThreemo2>
 / inputdevice = mouse
 / stimulusframes = [1=APTitleEng2,Abs1,Abs2]
 / validresponse = (Abs1,Abs2)
-/ branch = [if (trial.PAbsEng3mo2.response=="Abs1") trial.AbsEng3mo1]
-/ branch = [if (trial.PAbsEng3mo2.response=="Abs2") trial.PAbsEng3mo3]
+/ branch = [if (trial.PAbsEngThreemo2.response=="Abs1") trial.AbsEngThreemo1]
+/ branch = [if (trial.PAbsEngThreemo2.response=="Abs2") trial.PAbsEngThreemo3]
 </trial>
 
-<trial PAbsEng3mo3>
+<trial PAbsEngThreemo3>
 / inputdevice = mouse
 / stimulusframes = [1=APTitleEng3,AbsContinue]
 / validresponse = (AbsContinue)
-/ branch = [if (trial.PAbsEng3mo3.response=="AbsContinue") trial.AbsEng3mo1]
+/ branch = [if (trial.PAbsEngThreemo3.response=="AbsContinue") trial.AbsEngThreemo1]
 </trial>
 
 ***************************************************************************************************************************************
 Experiment Trial
 ***************************************************************************************************************************************
-<trial AbsEng3mo1>
+<trial AbsEngThreemo1>
 / inputdevice = mouse
 / stimulusframes = [1=TitleEngAbs,AbsEng3mo1,Abs1,Abs2]
 / validresponse = (Abs1,Abs2)
-/ branch = [if (trial.AbsEng3mo1.response=="Abs1") trial.AbsEng3mo2]
-/ branch = [if (trial.AbsEng3mo1.response=="Abs2") trial.AbsEng3mo2]
-/ ontrialend = [if (trial.AbsEng3mo1.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
+/ branch = [if (trial.AbsEngThreemo1.response=="Abs1") trial.AbsEngThreemo2]
+/ branch = [if (trial.AbsEngThreemo1.response=="Abs2") trial.AbsEngThreemo2]
+/ ontrialend = [if (trial.AbsEngThreemo1.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
 </trial>
 
-<trial AbsEng3mo2>
+<trial AbsEngThreemo2>
 / inputdevice = mouse
 / stimulusframes = [1=TitleEngAbs,AbsEng3mo2,Abs1,Abs2]
 / validresponse = (Abs1,Abs2)
-/ branch = [if (trial.AbsEng3mo2.response=="Abs1") trial.AbsEng3mo3]
-/ branch = [if (trial.AbsEng3mo2.response=="Abs2") trial.AbsEng3mo3]
-/ ontrialend = [if (trial.AbsEng3mo2.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
+/ branch = [if (trial.AbsEngThreemo2.response=="Abs1") trial.AbsEngThreemo3]
+/ branch = [if (trial.AbsEngThreemo2.response=="Abs2") trial.AbsEngThreemo3]
+/ ontrialend = [if (trial.AbsEngThreemo2.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
 </trial>
 
-<trial AbsEng3mo3>
+<trial AbsEngThreemo3>
 / inputdevice = mouse
 / stimulusframes = [1=TitleEngAbs,AbsEng3mo3,Abs1,Abs2]
 / validresponse = (Abs1,Abs2)
-/ ontrialend = [if (trial.AbsEng3mo3.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
+/ ontrialend = [if (trial.AbsEngThreemo3.response=="Abs1") values.ScoreAbs=values.ScoreAbs+1]
 </trial>
 ---------------------------------------------------
 
@@ -104,8 +104,8 @@ Experiment Trial
 Blocks
 ************************************************************************************************************************
 
-<block WordsAbsEng3mo>
-/ trials = [1=PAbsEng3mo1]
+<block WordsAbsEngThreemo>
+/ trials = [1=PAbsEngThreemo1]
 </block>
 
 
@@ -117,7 +117,7 @@ Experiement
 / skip = [trial.Language.response != "English"]
 / skip = [trial.Session.response != "3mo"]
 / preinstructions = (InstrucAbsEng)	
-/ blocks = [1=WordsAbsEng3mo]
+/ blocks = [1=WordsAbsEngThreemo]
 </expt>
 
 

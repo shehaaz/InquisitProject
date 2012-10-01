@@ -532,56 +532,56 @@ Words represented by numbers
 / ontrialbegin = [if (text.1Fr3mo.textbgcolor == yellow) values.switch1=1 else values.switch1=0]
 / ontrialend = [if(trial.WordsFr3mo.response== "1Fr3mo") text.1Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "1Fr3mo") text.11Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "1Fr3mo") values.Word1=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "1Fr3mo") values.Word1=3]
 / ontrialend = [if(trial.WordsFr3mo.response == "1Fr3mo" && values.switch1==1) text.1Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response == "1Fr3mo" && values.switch1==1) text.11Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.2Fr3mo.textbgcolor == yellow) values.switch2=1 else values.switch2=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="2Fr3mo") text.2Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "2Fr3mo") text.22Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "2Fr3mo") values.Word2=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "2Fr3mo") values.Word2=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="2Fr3mo" && values.switch2==1) text.2Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="2Fr3mo" && values.switch2==1) text.22Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.3Fr3mo.textbgcolor == yellow) values.switch3=1 else values.switch3=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="3Fr3mo") text.3Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "3Fr3mo") text.33Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "3Fr3mo") values.Word3=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "3Fr3mo") values.Word3=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="3Fr3mo" && values.switch3==1) text.3Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="3Fr3mo" && values.switch3==1) text.33Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.4Fr3mo.textbgcolor == yellow) values.switch4=1 else values.switch4=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="4Fr3mo") text.4Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "4Fr3mo") text.44Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "4Fr3mo") values.Word4=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "4Fr3mo") values.Word4=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="4Fr3mo" && values.switch4==1) text.4Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="4Fr3mo" && values.switch4==1) text.44Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.5Fr3mo.textbgcolor == yellow) values.switch5=1 else values.switch5=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="5Fr3mo") text.5Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "5Fr3mo") text.55Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "5Fr3mo") values.Word5=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "5Fr3mo") values.Word5=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="5Fr3mo" && values.switch5==1) text.5Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="5Fr3mo" && values.switch5==1) text.55Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.6Fr3mo.textbgcolor == yellow) values.switch6=1 else values.switch6=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="6Fr3mo") text.6Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "6Fr3mo") text.66Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "6Fr3mo") values.Word6=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "6Fr3mo") values.Word6=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="6Fr3mo" && values.switch6==1) text.6Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="6Fr3mo" && values.switch6==1) text.66Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.7Fr3mo.textbgcolor == yellow) values.switch7=1 else values.switch7=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="7Fr3mo") text.7Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "7Fr3mo") text.77Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "7Fr3mo") values.Word7=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "7Fr3mo") values.Word7=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="7Fr3mo" && values.switch7==1) text.7Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="7Fr3mo" && values.switch7==1) text.77Fr3mo.textbgcolor=yellow]
 
 / ontrialbegin = [if (text.8Fr3mo.textbgcolor == yellow) values.switch8=1 else values.switch8=0]
 / ontrialend = [if(trial.WordsFr3mo.response=="8Fr3mo") text.8Fr3mo.textbgcolor=yellow]
 / ontrialend = [if(trial.WordsFr3mo.response == "8Fr3mo") text.88Fr3mo.textbgcolor=black]
-/ ontrialend = [if(trial.WordsFr3mo.response == "8Fr3mo") values.Word8=1]
+/ ontrialend = [if(trial.WordsFr3mo.response == "8Fr3mo") values.Word8=3]
 / ontrialend = [if(trial.WordsFr3mo.response=="8Fr3mo" && values.switch8==1) text.8Fr3mo.textbgcolor=black]
 / ontrialend = [if(trial.WordsFr3mo.response=="8Fr3mo" && values.switch8==1) text.88Fr3mo.textbgcolor=yellow]
 
@@ -718,7 +718,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,111Fr3mo,RR1Fr3mo,WW1Fr3mo]
 / validresponse = (RR1Fr3mo,WW1Fr3mo)
-/ ontrialend = [if(trial.Ch1Fr3mo.response == "RR1Fr3mo") values.Word1=3]
+/ ontrialend = [if(trial.Ch1Fr3mo.response == "RR1Fr3mo") values.Word1=1]
 / branch = [if(trial.Ch1Fr3mo.response == "RR1Fr3mo") trial.Blank2Fr3mo]
 / branch = [if(trial.Ch1Fr3mo.response == "WW1Fr3mo") trial.Blank2Fr3mo]
 </trial>
@@ -727,7 +727,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,222Fr3mo,RR2Fr3mo,WW2Fr3mo]
 / validresponse = (RR2Fr3mo,WW2Fr3mo)
-/ ontrialend = [if(trial.Ch2Fr3mo.response == "RR2Fr3mo") values.Word2=3]
+/ ontrialend = [if(trial.Ch2Fr3mo.response == "RR2Fr3mo") values.Word2=1]
 / branch = [if(trial.Ch2Fr3mo.response == "RR2Fr3mo") trial.Blank3Fr3mo]
 / branch = [if(trial.Ch2Fr3mo.response == "WW2Fr3mo") trial.Blank3Fr3mo]
 </trial>
@@ -736,7 +736,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,333Fr3mo,RR3Fr3mo,WW3Fr3mo]
 / validresponse = (RR3Fr3mo,WW3Fr3mo)
-/ ontrialend = [if(trial.Ch3Fr3mo.response == "RR3Fr3mo") values.Word3=3]
+/ ontrialend = [if(trial.Ch3Fr3mo.response == "RR3Fr3mo") values.Word3=1]
 / branch = [if(trial.Ch3Fr3mo.response == "RR3Fr3mo") trial.Blank4Fr3mo]
 / branch = [if(trial.Ch3Fr3mo.response == "WW3Fr3mo") trial.Blank4Fr3mo]
 </trial>
@@ -745,7 +745,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,444Fr3mo,RR4Fr3mo,WW4Fr3mo]
 / validresponse = (RR4Fr3mo,WW4Fr3mo)
-/ ontrialend = [if(trial.Ch4Fr3mo.response == "RR4Fr3mo") values.Word4=3]
+/ ontrialend = [if(trial.Ch4Fr3mo.response == "RR4Fr3mo") values.Word4=1]
 / branch = [if(trial.Ch4Fr3mo.response == "RR4Fr3mo") trial.Blank5Fr3mo]
 / branch = [if(trial.Ch4Fr3mo.response == "WW4Fr3mo") trial.Blank5Fr3mo]
 </trial>
@@ -754,7 +754,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,555Fr3mo,RR5Fr3mo,WW5Fr3mo]
 / validresponse = (RR5Fr3mo,WW5Fr3mo)
-/ ontrialend = [if(trial.Ch5Fr3mo.response == "RR5Fr3mo") values.Word5=3]
+/ ontrialend = [if(trial.Ch5Fr3mo.response == "RR5Fr3mo") values.Word5=1]
 / branch = [if(trial.Ch5Fr3mo.response == "RR5Fr3mo") trial.Blank6Fr3mo]
 / branch = [if(trial.Ch5Fr3mo.response == "WW5Fr3mo") trial.Blank6Fr3mo]
 </trial>
@@ -763,7 +763,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,666Fr3mo,RR6Fr3mo,WW6Fr3mo]
 / validresponse = (RR6Fr3mo,WW6Fr3mo)
-/ ontrialend = [if(trial.Ch6Fr3mo.response == "RR6Fr3mo") values.Word6=3]
+/ ontrialend = [if(trial.Ch6Fr3mo.response == "RR6Fr3mo") values.Word6=1]
 / branch = [if(trial.Ch6Fr3mo.response == "RR6Fr3mo") trial.Blank7Fr3mo]
 / branch = [if(trial.Ch6Fr3mo.response == "WW6Fr3mo") trial.Blank7Fr3mo]
 </trial>
@@ -772,7 +772,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,777Fr3mo,RR7Fr3mo,WW7Fr3mo]
 / validresponse = (RR7Fr3mo,WW7Fr3mo)
-/ ontrialend = [if(trial.Ch7Fr3mo.response == "RR7Fr3mo") values.Word7=3]
+/ ontrialend = [if(trial.Ch7Fr3mo.response == "RR7Fr3mo") values.Word7=1]
 / branch = [if(trial.Ch7Fr3mo.response == "RR7Fr3mo") trial.Blank8Fr3mo]
 / branch = [if(trial.Ch7Fr3mo.response == "WW7Fr3mo") trial.Blank8Fr3mo]
 </trial>
@@ -781,7 +781,7 @@ Choice Trials
 / inputdevice = mouse
 / stimulusframes = [1=ChFr3mo,888Fr3mo,RR8Fr3mo,WW8Fr3mo]
 / validresponse = (RR8Fr3mo,WW8Fr3mo)
-/ ontrialend = [if(trial.Ch8Fr3mo.response == "RR8Fr3mo") values.Word8=3]
+/ ontrialend = [if(trial.Ch8Fr3mo.response == "RR8Fr3mo") values.Word8=1]
 / skip = [trial.Ch8Fr3mo.response == "RR8Fr3mo"]
 / skip = [trial.Ch8Fr3mo.response == "WW8Fr3mo"]
 </trial>
