@@ -1,0 +1,5 @@
+date	time	subject	trialcode	latency	response	values.problemnumber	values.subjectattempts	values.targetmoves	values.subjectmoves	expressions.excessmoves	values.movestring	expressions.targetachieved	values.problemscore	values.totalscore	expressions.firstmovetime	expressions.executiontime	expressions.solutiontime	values.t_choicestart	values.t_choiceend
+110212	21:02:59	1	choice	2372	R	0	1	2	0	-2	R	0	0	0	2484	0	0	10718	13202
+110212	21:02:59	1	choice	1036	G	0	1	2	1	-1	R2G	0	0	0	2484	0	0	18355	19482
+110212	21:02:59	1	choice	1196	nextround	0	1	2	2	0	R2G3nextround	0	0	0	2484	0	0	21963	23492
+110212	21:02:59	1	choice	3307	0	1	1	2	0	-2	0	0	0	0	3396	0	0	26790	30186
