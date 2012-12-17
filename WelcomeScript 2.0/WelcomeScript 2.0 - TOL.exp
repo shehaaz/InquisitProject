@@ -1349,7 +1349,7 @@ TOWER OF LONDON
 / ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h3)
 	values.n_in_c=values.n_in_c-1]
 / ontrialend = [values.movestring=concat(values.movestring, trial.choice.response)]
-/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+/ stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
 	R,G,B,resetround,nextround]
 / validresponse = (R,G,B,resetround,nextround)
 / isvalidresponse = [trial.choice.response==expressions.top_in_a || 
@@ -1390,7 +1390,7 @@ TOWER OF LONDON
 	values.in=2]
 / ontrialend = [if(expressions.x>65 && expressions.x<95 && expressions.available_c_slots>0)
 	values.in=3]
-/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+/ stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
 	R,G,B]
 / numframes = 1
 / inputdevice = mousekey
@@ -1444,7 +1444,7 @@ TOWER OF LONDON
 / ontrialbegin = [if(expressions.excessmoves==0)
 	values.problemscore=values.maxattempts-(values.subjectattempts-1)]
 / ontrialbegin = [values.totalscoreTOL=values.totalscoreTOL+values.problemscore]
-/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+/ stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
 	R,G,B,feedbackmsg]
 / validresponse = (anyresponse)
 / trialduration = values.feedbackdurationTOL
