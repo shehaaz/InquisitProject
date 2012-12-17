@@ -1350,8 +1350,8 @@ TOWER OF LONDON
 	values.n_in_c=values.n_in_c-1]
 / ontrialend = [values.movestring=concat(values.movestring, trial.choice.response)]
 / stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
-	R,G,B,resetround,nextround]
-/ validresponse = (R,G,B,resetround,nextround)
+	R,G,B,nextround]
+/ validresponse = (R,G,B,nextround)
 / isvalidresponse = [trial.choice.response==expressions.top_in_a || 
 	trial.choice.response==expressions.top_in_b ||
 	trial.choice.response==expressions.top_in_c ||
@@ -1577,7 +1577,7 @@ Performed moves: <%values.subjectmoves%>")
 / txcolor = (black)
 / txbgcolor = (white)
 / size = (20%,4%)
-/ position = (65%,98%)
+/ position = (50%,98%)
 / valign = bottom
 / erase = false
 </text>
@@ -1589,7 +1589,7 @@ Performed moves: <%values.subjectmoves%>")
 / txcolor = (white)
 / txbgcolor = (black)
 / size = (20%,4%)
-/ position = (65%,98%)
+/ position = (50%,98%)
 / valign = bottom
 / erase = false
 </text>
