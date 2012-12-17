@@ -102,7 +102,60 @@
 											additional measures during data analysis (e.g. mean move time).
 *****************************************************************************************************************
 *****************************************************************************************************************
-
+<values>
+/ maxattempts = 3
+/ npracticeproblems = 1
+/ n_a_slots = 3
+/ n_b_slots = 2
+/ n_c_slots = 1
+/ intertrialinterval = 1000
+/ feedbackduration = 2000
+/ h1 = 20%
+/ h2 = 50%
+/ h3 = 80%
+/ v1 = 80%
+/ v2 = 65%
+/ v3 = 50%
+/ r_hstart = values.h1
+/ r_vstart = values.v2
+/ g_hstart = values.h1
+/ g_vstart = values.v1
+/ b_hstart = values.h2
+/ b_vstart = values.v1
+/ r_hcurrent = 0
+/ r_vcurrent = 0
+/ g_hcurrent = 0
+/ g_vcurrent = 0
+/ b_hcurrent = 0
+/ b_vcurrent = 0
+/ r_htarget = 0
+/ r_vtarget = 0
+/ g_htarget = 0
+/ g_vtarget = 0
+/ b_htarget = 0
+/ b_vtarget = 0
+/ n_in_a = 0
+/ n_in_b = 0
+/ n_in_c = 0
+/ problemnumber = 0
+/ targetmoves = 0
+/ subjectmoves = 0
+/ subjectattempts = 0
+/ problemscore = 0
+/ totalscore = 0
+/ movestring = ""
+/ stopblock = 0
+/ t_roundstart = 0
+/ t_firstmove = 0
+/ t_solution = 0
+/ in = 0
+/ ritem = 1
+/ gitem = 1
+/ bitem = 1
+/ choicecount = 0
+/ t_choicestart = 0
+/ t_choiceend = 0
+</values>
 
 *****************************************************************************************************************
 *****************************************************************************************************************
@@ -197,22 +250,28 @@
 	Task Instructions
 *****************************************************************************************************************
 *****************************************************************************************************************
-
+<instruct>
+/ windowsize = (80%,80%)
+/ inputdevice = mouse
+/ lastlabel = "Next >>"
+/ nextlabel = "Next >>"
+/ prevlabel = "<< Back"
+</instruct>
 
 <htmlpage intro>
-/ file = "..\TowerofLondon\intro.html"
+/ file = "intro.html"
 </htmlpage>
 
 <htmlpage practice>
-/ file = "..\TowerofLondon\practice.html"
+/ file = "practice.html"
 </htmlpage>
 
 <htmlpage test>
-/ file = "..\TowerofLondon\test.html"
+/ file = "test.html"
 </htmlpage>
 
 <htmlpage end>
-/ file = "..\TowerofLondon\end.html"
+/ file = "end.html"
 </htmlpage>
 
 *****************************************************************************************************************
@@ -240,8 +299,628 @@
 
 <block test>
 / preinstructions = (test)
-/ onblockbegin = [values.totalscoreTOL=0]
+/ onblockbegin = [values.totalscore=0]
 / stop = [values.stopblock==1]
 / trials = [1=newround]
 </block>
 
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Trial Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Start Round / Get Problem
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial newround>
+/ ontrialbegin = [values.t_roundstart=0; values.t_firstmove=0; values.t_solution=0;
+	values.subjectattempts=1; values.subjectmoves=0; values.problemscore=0; values.movestring="";
+	values.choicecount=0]
+/ ontrialbegin = [values.problemnumber=counter.problemnumber.selectedvalue; values.targetmoves=counter.targetmoves.selectedvalue; 
+	values.r_htarget=counter.r_htarget.selectedvalue; values.r_vtarget=counter.r_vtarget.selectedvalue;
+	values.g_htarget=counter.g_htarget.selectedvalue; values.g_vtarget=counter.g_vtarget.selectedvalue;
+	values.b_htarget=counter.b_htarget.selectedvalue; values.b_vtarget=counter.b_vtarget.selectedvalue;
+	values.r_hcurrent=values.r_hstart; values.r_vcurrent=values.r_vstart; 
+	values.g_hcurrent=values.g_hstart; values.g_vcurrent=values.g_vstart; 
+	values.b_hcurrent=values.b_hstart; values.b_vcurrent=values.b_vstart]
+/ stimulusframes = [1=background,startmsg]
+/ validresponse = (anyresponse)
+/ trialduration = values.intertrialinterval
+/ recorddata = false
+/ branch = [trial.choice]
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Reset Round
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial resetround>
+/ ontrialbegin = [values.r_hcurrent=values.r_hstart; values.r_vcurrent=values.r_vstart; 
+	values.g_hcurrent=values.g_hstart; values.g_vcurrent=values.g_vstart; 
+	values.b_hcurrent=values.b_hstart; values.b_vcurrent=values.b_vstart]
+/ ontrialbegin = [values.t_roundstart=0; values.t_firstmove=0; values.t_solution=0;
+	values.subjectmoves=0; values.subjectattempts=values.subjectattempts+1;
+	values.problemscore=0; values.movestring=""; values.choicecount=0]
+/ stimulusframes = [1=background,resetmsg]
+/ validresponse = (anyresponse)
+/ trialduration = values.intertrialinterval
+/ recorddata = false
+/ branch = [trial.choice]
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Select Object
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial choice>
+/ ontrialbegin = [values.ritem=1; values.gitem=1; values.bitem=1]
+/ ontrialbegin = [values.n_in_a=0; values.n_in_b=0; values.n_in_c=0]
+/ ontrialbegin = [if(values.r_hcurrent==values.h1)values.n_in_a=values.n_in_a+1;
+	if(values.r_hcurrent==values.h2)values.n_in_b=values.n_in_b+1;
+	if(values.r_hcurrent==values.h3)values.n_in_c=values.n_in_c+1;
+	if(values.g_hcurrent==values.h1)values.n_in_a=values.n_in_a+1;
+	if(values.g_hcurrent==values.h2)values.n_in_b=values.n_in_b+1;
+	if(values.g_hcurrent==values.h3)values.n_in_c=values.n_in_c+1;
+	if(values.b_hcurrent==values.h1)values.n_in_a=values.n_in_a+1;
+	if(values.b_hcurrent==values.h2)values.n_in_b=values.n_in_b+1;
+	if(values.b_hcurrent==values.h3)values.n_in_c=values.n_in_c+1]
+/ ontrialbegin = [values.choicecount=values.choicecount+1]
+/ ontrialbegin = [if(values.choicecount==1)values.t_roundstart=script.elapsedtime]
+/ ontrialbegin = [values.t_choicestart=script.elapsedtime]
+/ ontrialend = [values.t_choiceend=script.elapsedtime]
+/ ontrialend = [if(values.subjectmoves==0)values.t_firstmove=script.elapsedtime]
+/ ontrialend = [if(trial.choice.response=="R" && values.r_hcurrent==values.h1)
+	values.n_in_a=values.n_in_a-1]
+/ ontrialend = [if(trial.choice.response=="G" && values.g_hcurrent==values.h1)
+	values.n_in_a=values.n_in_a-1]
+/ ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h1)
+	values.n_in_a=values.n_in_a-1]
+/ ontrialend = [if(trial.choice.response=="R" && values.r_hcurrent==values.h2)
+	values.n_in_b=values.n_in_b-1]
+/ ontrialend = [if(trial.choice.response=="G" && values.g_hcurrent==values.h2)
+	values.n_in_b=values.n_in_b-1]
+/ ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h2)
+	values.n_in_b=values.n_in_b-1]
+/ ontrialend = [if(trial.choice.response=="R" && values.r_hcurrent==values.h3)
+	values.n_in_c=values.n_in_c-1]
+/ ontrialend = [if(trial.choice.response=="G" && values.g_hcurrent==values.h3)
+	values.n_in_c=values.n_in_c-1]
+/ ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h3)
+	values.n_in_c=values.n_in_c-1]
+/ ontrialend = [values.movestring=concat(values.movestring, trial.choice.response)]
+/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B,resetround,nextround]
+/ validresponse = (R,G,B,resetround,nextround)
+/ isvalidresponse = [trial.choice.response==expressions.top_in_a || 
+	trial.choice.response==expressions.top_in_b ||
+	trial.choice.response==expressions.top_in_c ||
+	trial.choice.response=="resetround" ||
+	trial.choice.response=="nextround"]
+/ branch = [if(trial.choice.response=="resetround" && values.subjectattempts<values.maxattempts)
+	trial.resetround]
+/ branch = [if(trial.choice.response=="resetround" && values.subjectattempts<=values.maxattempts)
+	trial.stopblock]
+/ branch = [if(trial.choice.response=="nextround")
+	trial.stopblock]
+/ branch = [if(trial.choice.response!="resetround" || trial.choice.response!="nextround")
+	trial.move]
+/ responsemessage = (resetround,clickresetround,250)
+/ responsemessage = (nextround,clicknextround,250)
+/ recorddata = true
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Move Object
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial move>
+/ ontrialbegin = [values.in=0]
+/ ontrialend = [if(trial.choice.response=="R")
+	{values.ritem=2; values.r_hcurrent=expressions.x; values.r_vcurrent=expressions.y}]
+/ ontrialend = [if(trial.choice.response=="G")
+	{values.gitem=2; values.g_hcurrent=expressions.x; values.g_vcurrent=expressions.y}]
+/ ontrialend = [if(trial.choice.response=="B")
+	{values.bitem=2; values.b_hcurrent=expressions.x; values.b_vcurrent=expressions.y}]
+/ ontrialend = [if(expressions.x>5 && expressions.x<35 && expressions.available_a_slots>0)
+	values.in=1]
+/ ontrialend = [if(expressions.x>35 && expressions.x<65 && expressions.available_b_slots>0)
+	values.in=2]
+/ ontrialend = [if(expressions.x>65 && expressions.x<95 && expressions.available_c_slots>0)
+	values.in=3]
+/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B]
+/ numframes = 1
+/ inputdevice = mousekey
+/ validresponse = (mousemove,lbuttondown)
+/ branch = [if(trial.move.response=="mousemove")trial.move else trial.check]
+/ recorddata = false
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Check & Adjust Object's Position
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial check>
+/ ontrialbegin = [if(values.in==1 && trial.choice.response=="R"){
+	values.r_hcurrent=values.h1; values.r_vcurrent=expressions.vnext_a}]
+/ ontrialbegin = [if(values.in==2 && trial.choice.response=="R"){
+	values.r_hcurrent=values.h2; values.r_vcurrent=expressions.vnext_b}]
+/ ontrialbegin = [if(values.in==3 && trial.choice.response=="R"){
+	values.r_hcurrent=values.h3; values.r_vcurrent=expressions.vnext_c}]
+/ ontrialbegin = [if(values.in==1 && trial.choice.response=="G"){
+	values.g_hcurrent=values.h1; values.g_vcurrent=expressions.vnext_a}]
+/ ontrialbegin = [if(values.in==2 && trial.choice.response=="G"){
+	values.g_hcurrent=values.h2; values.g_vcurrent=expressions.vnext_b}]
+/ ontrialbegin = [if(values.in==3 && trial.choice.response=="G"){
+	values.g_hcurrent=values.h3; values.g_vcurrent=expressions.vnext_c}]
+/ ontrialbegin = [if(values.in==1 && trial.choice.response=="B"){
+	values.b_hcurrent=values.h1; values.b_vcurrent=expressions.vnext_a}]
+/ ontrialbegin = [if(values.in==2 && trial.choice.response=="B"){
+	values.b_hcurrent=values.h2; values.b_vcurrent=expressions.vnext_b}]
+/ ontrialbegin = [if(values.in==3 && trial.choice.response=="B"){
+	values.b_hcurrent=values.h3; values.b_vcurrent=expressions.vnext_c}]
+/ ontrialbegin = [if(values.in!=0)values.subjectmoves=values.subjectmoves+1]
+/ ontrialbegin= [if(values.in!=0)values.movestring=concat(values.movestring, values.in)]
+/ validresponse = (anyresponse)
+/ inputdevice = mousekey
+/ trialduration = 0
+/ branch = [if(expressions.targetachieved)trial.feedback]
+/ branch = [if(values.in==0)trial.move else trial.choice]
+/ recorddata = false
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Feedback Trial
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial feedback>
+/ ontrialbegin = [values.ritem=1; values.gitem=1; values.bitem=1]
+/ ontrialbegin = [values.t_solution=script.elapsedtime]
+/ ontrialbegin = [if(expressions.excessmoves==0)
+	values.problemscore=values.maxattempts-(values.subjectattempts-1)]
+/ ontrialbegin = [values.totalscore=values.totalscore+values.problemscore]
+/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B,feedbackmsg]
+/ validresponse = (anyresponse)
+/ trialduration = values.feedbackduration
+/ branch = [if(expressions.excessmoves>0 && values.subjectattempts<values.maxattempts)
+	trial.resetround else trial.stopblock]
+/ recorddata = true
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Stop block if all practice / test items have been completed.
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial stopblock>
+/ ontrialbegin = [if(script.currentblock=="practice" && counter.problemnumber.selectedcount==values.npracticeproblems)
+	values.stopblock=1]
+/ ontrialbegin = [if(counter.problemnumber.unselectedcount==0)
+	values.stopblock=1]
+/ validresponse = (anyresponse)
+/ trialduration = 0
+/ branch = [trial.newround]
+/ recorddata = false
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Stimulus Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Info Areas & Onscreen Messages
+*****************************************************************************************************************
+*****************************************************************************************************************
+<text probleminfo>
+/ items = ("Problem #<%values.problemnumber%>
+Attempt #<%values.subjectattempts%>")
+/ txbgcolor = (transparent)
+/ erase = false
+/ size = (30%,30%)
+/ position = (1%,1%)
+/ hjustify = center
+/ vjustify = center
+/ halign = left
+/ valign = top
+</text>
+
+<text moveinfo>
+/ items = ("Allowed moves: <%values.targetmoves%>
+Performed moves: <%values.subjectmoves%>")
+/ txbgcolor = (transparent)
+/ erase = false
+/ size = (30%,30%)
+/ position = (99%,1%)
+/ hjustify = center
+/ vjustify = center
+/ halign = right
+/ valign = top
+</text>
+
+<text feedbackmsg>
+/ items = ("Correct!", "Too many moves!")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = expressions.feedbackswitch
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+</text>
+
+<text startmsg>
+/ items = ("Get ready...")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = 1
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+</text>
+
+<text resetmsg>
+/ items = ("Resetting...")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = 1
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+</text>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	UI Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+<text resetround>
+/ items = ("Reset")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (black)
+/ txbgcolor = (white)
+/ size = (20%,4%)
+/ position = (35%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+<text clickresetround>
+/ items = ("Reset")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ size = (20%,4%)
+/ position = (35%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+<text nextround>
+/ items = ("Next")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (black)
+/ txbgcolor = (white)
+/ size = (20%,4%)
+/ position = (65%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+<text clicknextround>
+/ items = ("Next")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ size = (20%,4%)
+/ position = (65%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Debug Stuff
+*****************************************************************************************************************
+*****************************************************************************************************************
+<text debug>
+/ items = ("Free (A): <%expressions.available_a_slots%> | Free (B): <%expressions.available_b_slots%> | Free (C): <%expressions.available_c_slots%>
+Top (A): <%expressions.top_in_a%> | Top (B): <%expressions.top_in_b%> | Top (C): <%expressions.top_in_c%>
+Max (A): <%expressions.vmax_a%> | Max (B): <%expressions.vmax_b%> | Max (C): <%expressions.vmax_c%>
+Next (A): <%expressions.vnext_a%> | Next (B): <%expressions.vnext_b%> | Next (C): <%expressions.vnext_c%>
+x=<%expressions.x%> | y=<%expressions.y%> | In: <%values.in%>")
+/ erase = false
+/ size = (40%,10%)
+/ position = (50%, 37%)
+/ vjustify = center
+</text>
+
+<text roundinfo>
+/ items = ("Problem Number: <%values.problemnumber%>
+Attempt Number: <%values.subjectattempts%>
+Target Moves: <%values.targetmoves%>
+Subject Moves: <%values.subjectmoves%>
+Excess Moves: <%expressions.excessmoves%>
+First Move Time: <%expressions.firstmovetime%>
+Solution Time: <%expressions.solutiontime%>
+Execution Time: <%expressions.executiontime%>
+Problem Score: <%values.problemscore%>
+Total Score: <%values.totalscore%>
+Performed Moves: <%values.movestring%>")
+/ erase = false
+/ size = (30%,30%)
+/ position = (1%,1%)
+/ hjustify = left
+/ halign = left
+/ valign = top
+</text>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Background
+*****************************************************************************************************************
+*****************************************************************************************************************
+<shape background>
+/ shape = rectangle
+/ color = (black)
+/ size = (100%, 100%)
+/ erase = false
+</shape>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Base
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture base>
+/ items = ("Base.gif")
+/ erase = false
+/ transparentcolor = (black)
+/ size = (90%, 25%)
+/ position = (50%,100%)
+/ halign = center
+/ valign = bottom
+</picture>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Pegs
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture apeg>
+/ items = pegs
+/ erase = false
+/ transparentcolor = (black)
+/ select = values.n_a_slots
+/ position = (20%,88%)
+/ size = (20%, 50%)
+/ valign = bottom
+</picture>
+
+<picture bpeg>
+/ items = pegs
+/ erase = false
+/ transparentcolor = (black)
+/ select = values.n_b_slots
+/ position = (50%, 88%)
+/ size = (20%, 50%)
+/ valign = bottom
+</picture>
+
+<picture cpeg>
+/ items = pegs
+/ erase = false
+/ transparentcolor = (black)
+/ select = values.n_c_slots
+/ position = (80%, 88%)
+/ size = (20%, 50%)
+/ valign = bottom
+</picture>
+
+<item pegs>
+/ 1 = "N1Peg.gif"
+/ 2 = "N2Peg.gif"
+/ 3 = "N3Peg.gif"
+</item>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Balls
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture R>
+/ items = ("R1.gif", "R2.gif")
+/ select = values.ritem
+/ erase = false
+/ transparentcolor = (black)
+/ hposition = values.r_hcurrent
+/ vposition = values.r_vcurrent
+/ size = (15%, 15%)
+</picture>
+
+<picture G>
+/ items = ("G1.gif", "G2.gif")
+/ select = values.gitem
+/ erase = false
+/ transparentcolor = (black)
+/ hposition = values.g_hcurrent
+/ vposition = values.g_vcurrent
+/ size = (15%, 15%)
+</picture>
+
+<picture B>
+/ items = ("B1.gif", "B2.gif")
+/ select = values.bitem
+/ erase = false
+/ transparentcolor = (black)
+/ hposition = values.b_hcurrent
+/ vposition = values.b_vcurrent
+/ size = (15%, 15%)
+</picture>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Generic Position Counters
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter vpos>
+/ items = (values.v1,values.v2,values.v3)
+/ select = sequence
+</counter>
+
+<counter hpos>
+/ items = (values.h1,values.h2,values.h3)
+/ select = sequence
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Shallice (1982) Problem Set (1 Practice Item, 12 Test Items)
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Problem Number (Ordinal)
+	Note: Problem #0 indicates practice item.
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter problemnumber>
+/ items = (0,1,2,3,4,5,6,7,8,9,10,11,12)
+/ select = sequence
+/ selectionrate = trial
+/ resetinterval = 0
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Number of Target Moves
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter targetmoves>
+/ items = (2,2,2,3,3,4,4,4,4,5,5,5,5)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Red Ball
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter r_htarget>
+/ items = (values.h3,values.h3,values.h2,values.h2,values.h2,values.h1,
+	values.h2,values.h1,values.h2,values.h1,values.h1,values.h2,values.h2)
+/ select = current(problemnumber)
+</counter>
+
+<counter r_vtarget>
+/ items = (values.v1,values.v1,values.v1,values.v1,values.v1,values.v1,
+	values.v1,values.v1,values.v1,values.v1,values.v1,values.v1,values.v1)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Green Ball
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter g_htarget>
+/ items = (values.h1,values.h2,values.h1,values.h1,values.h1,values.h1,
+	values.h2,values.h3,values.h3,values.h1,values.h1,values.h1,values.h3)
+/ select = current(problemnumber)
+</counter>
+
+<counter g_vtarget>
+/ items = (values.v1,values.v2,values.v1,values.v1,values.v1,values.v2,
+	values.v2,values.v1,values.v1,values.v2,values.v3,values.v2,values.v1)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Blue Ball
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter b_htarget>
+/ items = (values.h1,values.h2,values.h3,values.h1,values.h2,values.h2,
+	values.h1,values.h1,values.h2,values.h1,values.h1,values.h1,values.h1)
+/ select = current(problemnumber)
+</counter>
+
+<counter b_vtarget>
+/ items = (values.v2,values.v1,values.v1,values.v2,values.v2,values.v1,
+	values.v1,values.v2,values.v2,values.v3,values.v2,values.v1,values.v1)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Items (Problem Set)
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture targetstate>
+/ items = targetstateitems
+/ select = current(problemnumber)
+/ erase = false
+/ size = (50%,30%)
+/ position = (50%,1%)
+/ valign = top
+</picture>
+
+<item targetstateitems>
+/ 01 = "Problem00.gif"
+/ 02 = "Problem01.gif"
+/ 03 = "Problem02.gif"
+/ 04 = "Problem03.gif"
+/ 05 = "Problem04.gif"
+/ 06 = "Problem05.gif"
+/ 07 = "Problem06.gif"
+/ 08 = "Problem07.gif"
+/ 09 = "Problem08.gif"
+/ 10 = "Problem09.gif"
+/ 11 = "Problem10.gif"
+/ 12 = "Problem11.gif"
+/ 13 = "Problem12.gif"
+</item>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Default Settings
+*****************************************************************************************************************
+*****************************************************************************************************************
+<defaults>
+/ minimumversion = "3.0.4.0"
+/ inputdevice = mouse
+/ screencolor = (black)
+/ fontstyle = ("Verdana", 2.50%, true)
+/ txcolor = (white)
+/ txbgcolor = (black)
+</defaults>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Custom Data Output
+*****************************************************************************************************************
+*****************************************************************************************************************
+<data>
+/ columns = [date,time,subject,trialcode,latency,response,
+	values.problemnumber,values.subjectattempts,values.targetmoves,values.subjectmoves,
+	expressions.excessmoves,values.movestring,expressions.targetachieved,values.problemscore,
+	values.totalscore,expressions.firstmovetime,expressions.executiontime,
+	expressions.solutiontime,values.t_choicestart,values.t_choiceend]
+/ separatefiles = true
+</data>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	End Of File
+*****************************************************************************************************************
+*****************************************************************************************************************
