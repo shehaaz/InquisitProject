@@ -1,0 +1,1881 @@
+<include >
+/ file = "..\InquisitProject\TowerofLondon\TowerOfLondonTaskEng.exp"
+/ file = "..\InquisitProject\TowerofLondon\TowerOfLondonTaskFr.exp"
+/ file = "..\InquisitProject\Closing\Closing.exp"
+</include>
+
+*************************************************
+Change defalut screen colour to Black  (1080,720,0,0) or (800,600,0,0)
+*************************************************
+<defaults >
+/ screencolor = (0,0,0)
+/ displaymode = (800,600,0,0)
+</defaults>
+
+*******************
+Instructions: windowsize set to 100% of the screen and not pixels
+*******************
+<instruct>
+/ fontstyle = ("Verdana", 25pt)
+/ windowsize = (1030,900)
+/ screencolor = (0,0,0)
+/ txcolor = (255, 255, 255)
+/ inputdevice = mouse
+/ prevlabel = "<----"
+/ nextlabel = "---->"
+/ lastlabel = "Continue"
+/ txcolor = yellow
+/ screencolor = black
+/ windowsize = (100%,100%)
+</instruct>
+
+<page InstrucEng>
+^I'm going to ask you to complete several tasks on the computer and on paper.  
+^^If you are not used to computers, don't worry, it will be taken into account and you will have practice exercises. 
+^^Some tasks may seem really easy for you and others may seem difficult. Most people do not answer all the questions or finish every item, but please try to do your best. 
+^^^^Do you have any questions?
+^^^^Are you ready to start?
+</page>
+
+
+<page InstrucFr>
+^Je vais vous demander de compléter plusieurs tâches à l’ordinateur et sur papier.
+^^Si vous n’êtes pas habitué aux ordinateur, ne vous inquiétez pas, nous allons en tenir compte et il y aura des exercices de pratique.  
+^^Certaines tâches vont vous sembler faciles, d’autres difficiles. La plupart des personnes ne répondent pas à toutes les questions ou ne finissent pas tous les items.  S’il vous plait, essayer de faire au mieux. 
+^^^^Avez-vous des questions ?
+^^^^Êtes-vous prêt à commencer ?
+</page>
+
+
+*********************
+Recording Data
+*********************
+<data>
+/ columns = [date,time,subject,blockcode,trialcode,values.TaskNumber,response, latency, 
+correct,values.Score, script.starttime, script.elapsedtime,values.ScoreS7,
+values.Word1,values.Word2,values.Word3,values.Word4,values.Word5,values.Word6,values.Word7,values.Word8,
+values.DigitSpanFwrd,values.DigitSpanBack,values.ScoreAbs,values.Contour,values.Numbers,values.Hands,values.corsiblockspanFwrd,values.corsiblockspanRev,
+values.problemnumber,values.subjectattempts,values.targetmoves,values.subjectmoves,
+	expressions.excessmoves,values.movestring,expressions.targetachieved,values.problemscore,
+	values.totalscoreTOL,expressions.firstmovetime,expressions.executiontime,
+	expressions.solutiontime,values.t_choicestart,values.t_choiceend]
+/format=tab
+/ separatefiles = true
+/ file = ".\data\"
+</data>
+
+
+**********************
+Values
+**********************
+<values >
+/TaskNumber = 0 
+/ blockcolor = blue
+/ tapcolor = yellow
+/ boardcolor = black
+/ blocksize = 30mm
+/ boardwidth = 255mm
+/ boardheight = 205mm
+/ tapcount = 0
+/ highlightedblock = 0
+/ respstring = ""
+/ seqstring = ""
+/ tapinterval = 1000
+/ posttapinterval = 250
+/ skipblock = 0
+/ skiptrial = 0
+/ seqlength = 0
+/ seqlength2 = 0
+/ seqnumber = 0
+/ correct = 0
+/ ncorrecttotal = 0
+/ ncorrectinblock = 0
+/ blockspanFwrd = 0
+/ corsiblockspanFwrd = 0
+/ corsiblockspanRev = 0
+/ totalscore = 0
+/ showscores = true
+/ showfeedback = true
+/ feedbackduration = 1000
+/ClockSwitch1 = 0 
+/ClockSwitch2 = 0 
+/ClockSwitch3 = 0 
+/ClockSwitch4 = 0 
+/ClockSwitch5 = 0 
+/ClockSwitch6 = 0 
+/ShapeScoreCommission2Back = 0
+/ShapeScoreOmission2Back = 0
+/ShapeScoreOmission3Back = 0
+/ShapeScoreCommission3Back = 0
+/ShapeScore2Back = 0
+/ShapeScore3Back = 0
+/Contour = 0
+/Numbers = 0
+/Hands = 0
+/ScoreAbs = 0
+/DigitSpanFwrd = 0
+/DigitSpanBack = 0
+/Fail = 0
+/InitialValueS7Baseline = 90
+/InitialValueS73mo = 90
+/InitialValueS76mo = 80
+/ScoreS7 = 0
+/CounterS7 = 0
+/Score = 0
+/OmissionError = 0
+/CommissionError = 0
+/PercentageCorrect = 0
+/ScoreCommission = 0
+/ScoreOmission = 0
+/ Counter = 0 
+/ switch1 = 0
+/ switch2 = 0
+/ switch3 = 0
+/ switch4 = 0
+/ switch5 = 0
+/ switch6 = 0
+/ switch7 = 0
+/ switch8 = 0
+/ switch9 = 0
+/ switch10 = 0
+/ switch11 = 0
+/ switch12 = 0
+/ switch13 = 0
+/ switch14 = 0
+/ switch15 = 0
+/ switch16 = 0
+/ switch17 = 0
+/ switch18 = 0
+/ switch19 = 0
+/ switch20 = 0
+/ switch21 = 0
+/ switch22 = 0
+/ switch23 = 0
+/ switch24 = 0
+/ Total = 0
+/ Word1 = 0 
+/ Word2 = 0
+/ Word3 = 0
+/ Word4 = 0
+/ Word5 = 0
+/ Word6 = 0
+/ Word7 = 0
+/ Word8 = 0
+/ maxattempts = 3
+/ npracticeproblems = 1
+/ n_a_slots = 3
+/ n_b_slots = 2
+/ n_c_slots = 1
+/ intertrialinterval = 1000
+/ feedbackdurationTOL = 2000
+/ h1 = 20%
+/ h2 = 50%
+/ h3 = 80%
+/ v1 = 80%
+/ v2 = 65%
+/ v3 = 50%
+/ r_hstart = values.h1
+/ r_vstart = values.v2
+/ g_hstart = values.h1
+/ g_vstart = values.v1
+/ b_hstart = values.h2
+/ b_vstart = values.v1
+/ r_hcurrent = 0
+/ r_vcurrent = 0
+/ g_hcurrent = 0
+/ g_vcurrent = 0
+/ b_hcurrent = 0
+/ b_vcurrent = 0
+/ r_htarget = 0
+/ r_vtarget = 0
+/ g_htarget = 0
+/ g_vtarget = 0
+/ b_htarget = 0
+/ b_vtarget = 0
+/ n_in_a = 0
+/ n_in_b = 0
+/ n_in_c = 0
+/ problemnumber = 0
+/ targetmoves = 0
+/ subjectmoves = 0
+/ subjectattempts = 0
+/ problemscore = 0
+/ totalscoreTOL = 0
+/ movestring = ""
+/ stopblock = 0
+/ t_roundstart = 0
+/ t_firstmove = 0
+/ t_solution = 0
+/ in = 0
+/ ritem = 1
+/ gitem = 1
+/ bitem = 1
+/ choicecount = 0
+/ t_choicestart = 0
+/ t_choiceend = 0
+</values>
+
+
+
+*****************
+Experiement
+*****************
+<expt>	
+/ blocks = [1=Language]
+</expt>
+
+*************************
+Language selection
+*************************
+<text English>
+/ items = ("English")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text French>
+/ items = ("French")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<trial Language>
+/ stimulusframes = [1=English, French]
+/ validresponse = (English, French)
+/ inputdevice = mouse
+</trial>
+
+<block Language>
+/ trials = [1=Language]
+/ branch = [block.Session]
+</block>
+
+*******************************
+Session Elements
+*******************************
+<text Baseline>
+/ items = ("Baseline")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,35%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text 3mo>
+/ items = ("3mo")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text 6mo>
+/ items = ("6mo")
+/ fontstyle = ("Arial",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<trial Session>
+/ stimulusframes = [1=Baseline, 3mo, 6mo]
+/ validresponse = (Baseline, 3mo, 6mo)
+/ inputdevice = mouse
+</trial>
+
+<block Session>
+/ trials = [1=Session]
+/ branch = [if(trial.Language.response=="English") block.HandEng else block.HandFr]
+</block>
+
+*************************************
+Handedness
+*************************************
+
+-----------------------------
+Handedness English
+-----------------------------
+
+<block HandEng>
+/ trials = [1=HandEng]
+/ branch = [block.AudioCheckEng]
+</block>
+
+<trial HandEng>
+/ stimulusframes = [1=Left, Right, HandTitle]
+/ validresponse = (Left, Right)
+/ inputdevice = mouse
+</trial>
+
+<text HandTitle>
+/ items = ("In one task, you will have to press the SPACE BAR as quickly as you can. Which hand would be better?")
+/ fontstyle = ("Verdana",25pt,true)
+/ size = (60%, 9%)
+/ position = (50%,20%)
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text Right>
+/ items = ("Right Hand")
+/ fontstyle = ("Verdana",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text Left>
+/ items = ("Left Hand")
+/ fontstyle = ("Verdana",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+---------------------------
+Handedness French
+---------------------------
+
+<block HandFr>
+/ trials = [1=HandFr]
+/ branch = [block.AudioCheckFr]
+</block>
+
+<trial HandFr>
+/ stimulusframes = [1=LeftFr, RightFr, HandTitleFr]
+/ validresponse = (LeftFr, RightFr)
+/ inputdevice = mouse
+</trial>
+
+<text HandTitleFr>
+/ items = ("Avec quelle main est-ce que vous écrivez?  De quelle main est-ce que vous êtes le plus habile ?")
+/ fontstyle = ("Verdana",25pt,true)
+/ size = (60%, 9%)
+/ position = (50%,20%)
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text RightFr>
+/ items = ("Droite")
+/ fontstyle = ("Verdana",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text LeftFr>
+/ items = ("Gauche")
+/ fontstyle = ("Verdana",30pt,true)
+/ size = (60%, 9%)
+/ position = (50%,55%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+
+********************
+Blocks
+********************
+
+<block AudioCheckEng>
+/ preinstructions = (InstrucEng)
+/ trials = [1=LetterEng;2=ArrowEng;3=WordsEng]
+</block>
+
+<block AudioCheckFr>
+/ preinstructions = (instrucFr)
+/ trials = [1=LetterFr;2=ArrowFr;3=WordsFr]
+</block>
+
+**************************
+Trials
+**************************  
+-------------------------
+The Letter
+-------------------------
+<text Continue>
+/ items = ("Continue")
+/ position = (90%,55%)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ txcolor = (black)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+<text TitleLetterEng>
+/ items = ("Let's start with a few checks")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",35)
+/ position = (50,10)
+</text>
+
+<text TitleLetterEng2>
+/ items = ("What is the letter on the screen?")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,25)
+</text>
+
+<text TitleLetterFr>
+/ items = ("Commençons par quelques vérifications")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,10)
+</text>
+
+<text TitleLetterFr2>
+/ items = ("Quelle est la lettre inscrite à l’écran?")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,25)
+</text>
+
+<text Letter>
+/items = ("a")
+/position = (50,50)
+/txbgcolor = (0,0,0)
+/txcolor = (255, 255, 255)
+/fontstyle = ("Arial", 180, true) 
+</text>
+
+<trial LetterEng>
+/ stimulusframes = [1=TitleLetterEng,TitleLetterEng2,Continue, Letter]
+/ validresponse = (Continue)
+/ inputdevice = mouse
+/ recorddata = false
+</trial>
+
+<trial LetterFr>
+/ stimulusframes = [1=TitleLetterFr,TitleLetterFr2,Continue, Letter]
+/ validresponse = (Continue)
+/ inputdevice = mouse
+/ recorddata = false
+</trial>
+
+--------------------------------
+The Arrow
+--------------------------------
+
+<picture Arrow>
+/ items = ("files\CongruentLeft.bmp")
+/ position = (50%,50%)
+</picture>
+
+<text ArrowTitleEng>
+/ items = ("Is the middle arrow pointing right or left?")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,25)
+</text>
+
+<text ArrowTitleFr>
+/ items = ("Est-ce que la flèche du milieu pointe vers la gauche ou vers la droite?")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,25)
+</text>
+
+<trial ArrowEng>
+/ stimulusframes = [1=ArrowTitleEng,Continue, Arrow]
+/ validresponse = (Continue)
+/ inputdevice = mouse
+/ recorddata = false
+</trial>
+
+<trial ArrowFr>
+/ stimulusframes = [1=ArrowTitleFr,Continue, Arrow]
+/ validresponse = (Continue)
+/ inputdevice = mouse
+/ recorddata = false
+</trial>
+
+---------------------------
+Audio Test
+---------------------------
+
+<text AudioTitleEng>
+/ items = ("Can you hear this?")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,25)
+</text>
+
+<text AudioTitleFr>
+/ items = ("Entendez-vous cela?")
+/ txcolor = yellow
+/ txbgcolor = black
+/ fontstyle = ("verdana",30)
+/ position = (50,25)
+</text>
+
+<trial WordsEng>
+/ stimulusframes = [1=WordsEng,AudioTitleEng; 2=Continue, Repeat] 
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.WordsTestEng]
+/ recorddata = false
+</trial>
+
+<trial WordsTestEng>
+/ stimulusframes = [1=Continue, Repeat]
+/ branch = [if (trial.WordsTestEng.response == "Repeat") trial.WordsEng]
+/ skip = [trial.WordsTestEng.response == "Continue"]
+/ validresponse = (Continue, Repeat)
+/ inputdevice = mouse
+/ recorddata = false
+</trial>
+
+
+<trial WordsFr>
+/ stimulusframes = [1=WordsFr,AudioTitleFr;2=Continue, RepeatFr] 
+/ response = noresponse
+/ timeout = 1
+/ branch = [trial.WordsTestFr]
+</trial>
+
+
+<trial WordsTestFr>
+/ stimulusframes = [1=Continue, RepeatFr]
+/ branch = [if (trial.WordsTestFr.response == "RepeatFr") trial.WordsFr]
+/ skip = [trial.WordsTestFr.response == "Continue"]
+/ validresponse = (Continue, RepeatFr)
+/ inputdevice = mouse
+/ recorddata = false
+</trial>
+
+<sound WordsEng>
+/ items = ("files\WelcomeEng.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<sound WordsFr>
+/ items = ("files\WelcomeFr.wav")
+/ select = sequence
+/ volume = 0
+/ playthrough = true
+</sound>
+
+<text Repeat>
+/ items = ("Repeat")
+/ position = (90%,45%)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ txcolor = (black)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+<text RepeatFr>
+/ items = ("Répéter")
+/ position = (90%,45%)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ txcolor = (black)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+*******************************************************************************************************************
+*******************************************************************************************************************
+
+*******************************************************************************************************************
+Digit Span
+*******************************************************************************************************************
+
+<text DS1>
+/ items = ("1")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (90%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text DS2>
+/ items = ("2")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (95%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+******************************
+******************************
+
+
+*******************************************************************************************************************
+Abstraction
+*******************************************************************************************************************
+
+************************
+Instruction
+************************
+<page InstrucAbsEng>
+^^We are going to show you 2 words at the same time on the screen. You must say how they are alike, in what way they are similar.
+</page>
+
+<page InstrucAbsFr>
+^^Nous allons vous présenter 2 mots en même temps à  l'écran. Vous devez dire en quoi ces mots se ressemblent, comment ils sont semblables.
+</page>
+
+*************************************
+1,2 and Continue Buttons
+*************************************
+
+<text Abs1>
+/ items = ("1")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (45%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text Abs2>
+/ items = ("2")
+/ fontstyle = ("Arial",12pt,true)
+/ size = (3%, 3%)
+/ position = (55%,90%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text AbsContinue>
+/ items = ("Continue")
+/ position = (90%,90%)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+
+***************************************************************************************************************************************
+Practice Stimuli
+***************************************************************************************************************************************
+<text APTitleEng1>
+/ items = ("Tell me how an orange and a banana are alike?")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text APTitleEng2>
+/ items = ("Tell me another way in which those items are alike?")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text APTitleEng3>
+/ items = ("Yes, and they are also both fruit")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text TitleEngAbs>
+/ items = ("In what way are these two words similar?")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+*********************************************************************************************************************************
+
+<text APTitleFr1>
+/ items = ("Dites-moi en quoi une orange et une banane sont-elles semblables?")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text APTitleFr2>
+/ items = ("Donnez-moi une autre raison pour laquelle une orange et une banane se ressemblent?")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text APTitleFr3>
+/ items = ("Oui, et elles sont toutes les deux des fruits")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+
+<text TitleFrAbs>
+/ items = ("En quoi est-ce que ces deux mots se ressemblent?")
+/ fontstyle = ("Arial",20pt,true)
+/ size = (60%, 9%)
+/ position = (50%,15%)
+/ valign = bottom
+/ txcolor = yellow
+/ txbgcolor = (0,0,0)
+</text>
+***************************************************************************************************************************
+************************************
+Clock
+************************************
+
+<text ClockC>
+/ items = ("C")
+/ fontstyle = ("Verdana",14pt,true)
+/ valign = bottom
+/ position = (40,35)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<text Clock1>
+/ items = ("1")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (3%, 3%)
+/ position = (55%,35%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text Clock2>
+/ items = ("2")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (3%, 3%)
+/ position = (65%,35%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text ClockN>
+/ items = ("N")
+/ fontstyle = ("Verdana",14pt,true)
+/ valign = bottom
+/ position = (40,50)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<text Clock11>
+/ items = ("1")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (3%, 3%)
+/ position = (55%,50%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text Clock22>
+/ items = ("2")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (3%, 3%)
+/ position = (65%,50%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text ClockH>
+/ items = ("H")
+/ fontstyle = ("Verdana",14pt,true)
+/ valign = bottom
+/ position = (40,65)
+/ txcolor = white
+/ txbgcolor = black
+</text>
+
+<text Clock111>
+/ items = ("1")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (3%, 3%)
+/ position = (55%,65%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text Clock222>
+/ items = ("2")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (3%, 3%)
+/ position = (65%,65%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text Clockdone>
+/ items = ("Done")
+/ position = (60%,80%)
+/ size = (10%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ erase = false
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+*********************************************************************
+
+Verbal fluency & Loria
+**************************
+
+Stimuli
+***********
+
+<picture StopSign>
+/ items = ("..\Loria\files\StopSign.bmp")
+/ position = (50%,50%)
+</picture>
+
+<sound Ding>
+/ items = ("..\Loria\files\Ding.wav")
+</sound>
+
+<text BlankVF>
+/ items = ("")
+/ size = (60%, 9%)
+/ position = (50%,25%)
+/ valign = bottom
+/ txcolor = (255,255,255)
+/ txbgcolor = (0,0,0)
+</text>
+
+<text StartEngVF>
+/ items = ("Start")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (10%, 10%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<text StartFrVF>
+/ items = ("Commencez")
+/ fontstyle = ("Verdana",12pt,true)
+/ size = (10%, 10%)
+/ position = (50%,45%)
+/ valign = bottom
+/ txcolor = black
+/ txbgcolor = grey
+/ vjustify = center
+/ hjustify = center
+</text>
+
+<page InstrucEngVF>
+^I am going to give you a letter of the alphabet.
+^^You must say as many words as possible beginning with that letter.
+^^You will have one minute.
+^^You can say any word, except proper names such as names of places and people. You cannot say "Thomas" or "Toronto".
+^^Do not use the same word twice or a word from the same family, such as "try", "trying", and do not use numbers such as "three", "thirteen" or "thirty". It will only be counted as 1 word.
+^^So, for example, you could say "toy", "take", "tank", "tomato", "true" etc.
+^^Are you ready? 
+</page>
+
+<page InstrucFrVF>
+^Je vais vous donner une lettre de l'alphabet.
+^^Vous devez dire le plus de mots possibles commençant par cette lettre.
+^^Vous aurez une minute.
+^^Vous pouvez dire n'importe quel mot, sauf les noms propres comme les noms de lieux et de personnes. Vous ne pouvez pas dire "Thomas" ou "Toronto".
+^^N'utilisez pas le même mot plusieurs fois ou des mots de la même famille, comme "tri", "trier", "triage", et n'employez pas de chiffres comme trois, treize, trente. Ils ne seront comptès que comme un seul mot.
+^^Donc, par exemple, vous pouvez dire "taire", "tulipe", "toit", "tomate", "talon" etc.
+^^êtes-vous prêt?
+</page>
+
+
+****************************************
+Corsi Tapping
+****************************************
+
+****************
+Counter Elements
+****************
+<counter seqnumber>
+/ items = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+/ select = current(seqlength)
+</counter>
+
+<counter seqlength>
+/ items = (2,3,4,5,6,7,8,9)
+/ select = sequence
+</counter>
+
+<counter seqlength2>
+/ items = (2,3,4,5,6,7,8,9)
+/ select = current(seqlength)
+</counter>
+
+<counter blockseq>
+/ items = (1,2,3,4,5,6,7,8,9)
+/ select = noreplacenorepeat
+/ resetinterval = 0
+</counter>
+
+<counter seqnumberRev>
+/ items = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)
+/ select = current(seqlengthRev)
+</counter>
+
+<counter seqlengthRev>
+/ items = (2,3,4,5,6,7,8,9)
+/ select = sequence
+</counter>
+
+<counter seqlength2Rev>
+/ items = (2,3,4,5,6,7,8,9)
+/ select = current(seqlengthRev)
+</counter>
+
+<counter blockseqRev>
+/ items = (1,2,3,4,5,6,7,8,9)
+/ select = noreplacenorepeat
+/ resetinterval = 0
+</counter>
+
+
+*******************
+Stimulus Elements
+- Square BLOCKS
+*******************
+<text 1>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 20
+/ vposition = 10
+</text>
+
+<text 2>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 45
+/ vposition = 25
+</text>
+
+<text 3>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 20
+/ vposition =  50
+</text>
+
+<text 4>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 40
+/ vposition = 55
+</text>
+
+<text 5>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 50
+/ vposition = 70
+</text>
+
+<text 6>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 35
+/ vposition = 75
+</text>
+
+<text 7>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 70
+/ vposition = 30
+</text>
+
+<text 8>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 75
+/ vposition = 60
+</text>
+
+<text 9>
+/ items = (" ")
+/ size = (values.blocksize, values.blocksize)
+/ hjustify = center
+/ vjustify = center
+/ erase = true(transparent)
+/ hposition = 80
+/ vposition = 10
+</text>
+
+****************************************
+Messages: Ready, Reset, Done, feedbackmsg
+****************************************
+
+<text getreadyCorsiEng>
+/ items = ("Get ready!")
+/ fontstyle = ("Verdana", 4.00%, true)
+/ erase = false
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ size = (100%,100%)
+/ halign = center
+/ valign = center
+/ hjustify = center
+/ vjustify = center
+</text>
+
+<text resetCorsiEng>
+/ items = ("Reset")
+/ fontstyle = ("Verdana", 4.00%, true)
+/ position = (35%,99.5%)
+/ size = (20%,4%)
+/ erase = false
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+<text doneCorsiEng>
+/ items = ("Done")
+/ fontstyle = ("Verdana", 4.00%, true)
+/ position = (65%,99.5%)
+/ size = (20%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ erase = false
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+
+<text getreadyCorsiFr>
+/ items = ("êtes-vous prêt?")
+/ fontstyle = ("Verdana", 4.00%, true)
+/ erase = false
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ size = (100%,100%)
+/ halign = center
+/ valign = center
+/ hjustify = center
+/ vjustify = center
+</text>
+
+<text resetCorsiFr>
+/ items = ("REFAIRE")
+/ position = (35%,99.5%)
+/ size = (20%,4%)
+/ erase = false
+/ fontstyle = ("Verdana", 3.00%, true)
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+<text doneCorsiFr>
+/ items = ("COMPLETÉ")
+/ position = (65%,99.5%)
+/ size = (20%,4%)
+/ fontstyle = ("Verdana", 3.00%, true)
+/ erase = false
+/ txbgcolor = (white)
+/ vjustify = center
+/ halign = center
+/ valign = bottom
+</text>
+
+<text feedbackmsgFr>
+/ items = ("Essayons une autre fois!", "Bon!")
+/ fontstyle = ("Verdana", 4.00%, true)
+/ select = values.correct+1
+/ erase = false
+/ size = (100%,100%)
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ halign = center
+/ valign = center
+/ hjustify = center
+/ vjustify = center
+</text>
+
+<text feedbackmsgEng>
+/ items = ("Let's try again!", "Correct!")
+/ fontstyle = ("Verdana", 4.00%, true)
+/ select = values.correct+1
+/ erase = false
+/ size = (100%,100%)
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ halign = center
+/ valign = center
+/ hjustify = center
+/ vjustify = center
+</text>
+
+**************************************************************************************************************
+**************************************************************************************************************
+	Show Feedback
+**************************************************************************************************************
+**************************************************************************************************************
+<trial showfeedbackFr>
+/ skip = [values.showfeedback==false]
+/ stimulusframes = [1=board, feedbackmsgFr]
+/ validresponse = (noresponse)
+/ trialduration = values.feedbackduration
+/ recorddata = false
+</trial>
+
+<trial showfeedbackEng>
+/ skip = [values.showfeedback==false]
+/ stimulusframes = [1=board, feedbackmsgEng]
+/ validresponse = (noresponse)
+/ trialduration = values.feedbackduration
+/ recorddata = false
+</trial>
+
+
+************************
+Background
+************************
+<shape board>
+/ shape = rectangle
+/ color = (black)
+/ erase = false
+/ position = (50%, 50%)
+/ halign = center
+/ valign = center
+/ size = (values.boardwidth, values.boardheight)
+</shape>
+
+
+*****************************************************************************************************************
+TOWER OF LONDON
+*****************************************************************************************************************
+	
+*****************************************************************************************************************
+	Trial Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Start Round / Get Problem
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial newround>
+/ ontrialbegin = [values.t_roundstart=0; values.t_firstmove=0; values.t_solution=0;
+	values.subjectattempts=1; values.subjectmoves=0; values.problemscore=0; values.movestring="";
+	values.choicecount=0]
+/ ontrialbegin = [values.problemnumber=counter.problemnumber.selectedvalue; values.targetmoves=counter.targetmoves.selectedvalue; 
+	values.r_htarget=counter.r_htarget.selectedvalue; values.r_vtarget=counter.r_vtarget.selectedvalue;
+	values.g_htarget=counter.g_htarget.selectedvalue; values.g_vtarget=counter.g_vtarget.selectedvalue;
+	values.b_htarget=counter.b_htarget.selectedvalue; values.b_vtarget=counter.b_vtarget.selectedvalue;
+	values.r_hcurrent=values.r_hstart; values.r_vcurrent=values.r_vstart; 
+	values.g_hcurrent=values.g_hstart; values.g_vcurrent=values.g_vstart; 
+	values.b_hcurrent=values.b_hstart; values.b_vcurrent=values.b_vstart]
+/ stimulusframes = [1=background,startmsg]
+/ validresponse = (anyresponse)
+/ trialduration = values.intertrialinterval
+/ recorddata = false
+/ branch = [trial.choice]
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Reset Round
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial resetround>
+/ ontrialbegin = [values.r_hcurrent=values.r_hstart; values.r_vcurrent=values.r_vstart; 
+	values.g_hcurrent=values.g_hstart; values.g_vcurrent=values.g_vstart; 
+	values.b_hcurrent=values.b_hstart; values.b_vcurrent=values.b_vstart]
+/ ontrialbegin = [values.t_roundstart=0; values.t_firstmove=0; values.t_solution=0;
+	values.subjectmoves=0; values.subjectattempts=values.subjectattempts+1;
+	values.problemscore=0; values.movestring=""; values.choicecount=0]
+/ stimulusframes = [1=background,resetmsg]
+/ validresponse = (anyresponse)
+/ trialduration = values.intertrialinterval
+/ recorddata = false
+/ branch = [trial.choice]
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Select Object
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial choice>
+/ ontrialbegin = [values.ritem=1; values.gitem=1; values.bitem=1]
+/ ontrialbegin = [values.n_in_a=0; values.n_in_b=0; values.n_in_c=0]
+/ ontrialbegin = [if(values.r_hcurrent==values.h1)values.n_in_a=values.n_in_a+1;
+	if(values.r_hcurrent==values.h2)values.n_in_b=values.n_in_b+1;
+	if(values.r_hcurrent==values.h3)values.n_in_c=values.n_in_c+1;
+	if(values.g_hcurrent==values.h1)values.n_in_a=values.n_in_a+1;
+	if(values.g_hcurrent==values.h2)values.n_in_b=values.n_in_b+1;
+	if(values.g_hcurrent==values.h3)values.n_in_c=values.n_in_c+1;
+	if(values.b_hcurrent==values.h1)values.n_in_a=values.n_in_a+1;
+	if(values.b_hcurrent==values.h2)values.n_in_b=values.n_in_b+1;
+	if(values.b_hcurrent==values.h3)values.n_in_c=values.n_in_c+1]
+/ ontrialbegin = [values.choicecount=values.choicecount+1]
+/ ontrialbegin = [if(values.choicecount==1)values.t_roundstart=script.elapsedtime]
+/ ontrialbegin = [values.t_choicestart=script.elapsedtime]
+/ ontrialend = [values.t_choiceend=script.elapsedtime]
+/ ontrialend = [if(values.subjectmoves==0)values.t_firstmove=script.elapsedtime]
+/ ontrialend = [if(trial.choice.response=="R" && values.r_hcurrent==values.h1)
+	values.n_in_a=values.n_in_a-1]
+/ ontrialend = [if(trial.choice.response=="G" && values.g_hcurrent==values.h1)
+	values.n_in_a=values.n_in_a-1]
+/ ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h1)
+	values.n_in_a=values.n_in_a-1]
+/ ontrialend = [if(trial.choice.response=="R" && values.r_hcurrent==values.h2)
+	values.n_in_b=values.n_in_b-1]
+/ ontrialend = [if(trial.choice.response=="G" && values.g_hcurrent==values.h2)
+	values.n_in_b=values.n_in_b-1]
+/ ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h2)
+	values.n_in_b=values.n_in_b-1]
+/ ontrialend = [if(trial.choice.response=="R" && values.r_hcurrent==values.h3)
+	values.n_in_c=values.n_in_c-1]
+/ ontrialend = [if(trial.choice.response=="G" && values.g_hcurrent==values.h3)
+	values.n_in_c=values.n_in_c-1]
+/ ontrialend = [if(trial.choice.response=="B" && values.b_hcurrent==values.h3)
+	values.n_in_c=values.n_in_c-1]
+/ ontrialend = [values.movestring=concat(values.movestring, trial.choice.response)]
+/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B,resetround,nextround]
+/ validresponse = (R,G,B,resetround,nextround)
+/ isvalidresponse = [trial.choice.response==expressions.top_in_a || 
+	trial.choice.response==expressions.top_in_b ||
+	trial.choice.response==expressions.top_in_c ||
+	trial.choice.response=="resetround" ||
+	trial.choice.response=="nextround"]
+/ branch = [if(trial.choice.response=="resetround" && values.subjectattempts<values.maxattempts)
+	trial.resetround]
+/ branch = [if(trial.choice.response=="resetround" && values.subjectattempts<=values.maxattempts)
+	trial.stopblock]
+/ branch = [if(trial.choice.response=="nextround")
+	trial.stopblock]
+/ branch = [if(trial.choice.response!="resetround" || trial.choice.response!="nextround")
+	trial.move]
+/ responsemessage = (resetround,clickresetround,250)
+/ responsemessage = (nextround,clicknextround,250)
+/ recorddata = true
+/inputdevice = mouse
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Move Object
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial move>
+/ ontrialbegin = [values.in=0]
+/ ontrialend = [if(trial.choice.response=="R")
+	{values.ritem=2; values.r_hcurrent=expressions.x; values.r_vcurrent=expressions.y}]
+/ ontrialend = [if(trial.choice.response=="G")
+	{values.gitem=2; values.g_hcurrent=expressions.x; values.g_vcurrent=expressions.y}]
+/ ontrialend = [if(trial.choice.response=="B")
+	{values.bitem=2; values.b_hcurrent=expressions.x; values.b_vcurrent=expressions.y}]
+/ ontrialend = [if(expressions.x>5 && expressions.x<35 && expressions.available_a_slots>0)
+	values.in=1]
+/ ontrialend = [if(expressions.x>35 && expressions.x<65 && expressions.available_b_slots>0)
+	values.in=2]
+/ ontrialend = [if(expressions.x>65 && expressions.x<95 && expressions.available_c_slots>0)
+	values.in=3]
+/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B]
+/ numframes = 1
+/ inputdevice = mousekey
+/ validresponse = (mousemove,lbuttondown)
+/ branch = [if(trial.move.response=="mousemove")trial.move else trial.check]
+/ recorddata = false
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Check & Adjust Object's Position
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial check>
+/ ontrialbegin = [if(values.in==1 && trial.choice.response=="R"){
+	values.r_hcurrent=values.h1; values.r_vcurrent=expressions.vnext_a}]
+/ ontrialbegin = [if(values.in==2 && trial.choice.response=="R"){
+	values.r_hcurrent=values.h2; values.r_vcurrent=expressions.vnext_b}]
+/ ontrialbegin = [if(values.in==3 && trial.choice.response=="R"){
+	values.r_hcurrent=values.h3; values.r_vcurrent=expressions.vnext_c}]
+/ ontrialbegin = [if(values.in==1 && trial.choice.response=="G"){
+	values.g_hcurrent=values.h1; values.g_vcurrent=expressions.vnext_a}]
+/ ontrialbegin = [if(values.in==2 && trial.choice.response=="G"){
+	values.g_hcurrent=values.h2; values.g_vcurrent=expressions.vnext_b}]
+/ ontrialbegin = [if(values.in==3 && trial.choice.response=="G"){
+	values.g_hcurrent=values.h3; values.g_vcurrent=expressions.vnext_c}]
+/ ontrialbegin = [if(values.in==1 && trial.choice.response=="B"){
+	values.b_hcurrent=values.h1; values.b_vcurrent=expressions.vnext_a}]
+/ ontrialbegin = [if(values.in==2 && trial.choice.response=="B"){
+	values.b_hcurrent=values.h2; values.b_vcurrent=expressions.vnext_b}]
+/ ontrialbegin = [if(values.in==3 && trial.choice.response=="B"){
+	values.b_hcurrent=values.h3; values.b_vcurrent=expressions.vnext_c}]
+/ ontrialbegin = [if(values.in!=0)values.subjectmoves=values.subjectmoves+1]
+/ ontrialbegin= [if(values.in!=0)values.movestring=concat(values.movestring, values.in)]
+/ validresponse = (anyresponse)
+/ inputdevice = mousekey
+/ trialduration = 0
+/ branch = [if(expressions.targetachieved)trial.feedback]
+/ branch = [if(values.in==0)trial.move else trial.choice]
+/ recorddata = false
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Feedback Trial
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial feedback>
+/ ontrialbegin = [values.ritem=1; values.gitem=1; values.bitem=1]
+/ ontrialbegin = [values.t_solution=script.elapsedtime]
+/ ontrialbegin = [if(expressions.excessmoves==0)
+	values.problemscore=values.maxattempts-(values.subjectattempts-1)]
+/ ontrialbegin = [values.totalscoreTOL=values.totalscoreTOL+values.problemscore]
+/ stimulusframes = [1=background,probleminfo,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B,feedbackmsg]
+/ validresponse = (anyresponse)
+/ trialduration = values.feedbackdurationTOL
+/ branch = [if(expressions.excessmoves>0 && values.subjectattempts<values.maxattempts)
+	trial.resetround else trial.stopblock]
+/ recorddata = true
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Stop block if all practice / test items have been completed.
+*****************************************************************************************************************
+*****************************************************************************************************************
+<trial stopblock>
+/ ontrialbegin = [if((script.currentblock=="practiceTOLENG" || script.currentblock=="practiceTOLFr") && counter.problemnumber.selectedcount==values.npracticeproblems)
+	values.stopblock=1]
+/ ontrialbegin = [if(counter.problemnumber.unselectedcount==0)
+	values.stopblock=1]
+/ validresponse = (anyresponse)
+/ trialduration = 0
+/ branch = [trial.newround]
+/ recorddata = false
+</trial>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Stimulus Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Info Areas & Onscreen Messages
+*****************************************************************************************************************
+*****************************************************************************************************************
+<text probleminfo>
+/ items = ("Problem #<%values.problemnumber%>
+Attempt #<%values.subjectattempts%>")
+/ txbgcolor = (transparent)
+/ erase = false
+/ size = (30%,30%)
+/ position = (1%,1%)
+/ hjustify = center
+/ vjustify = center
+/ halign = left
+/ valign = top
+/ txcolor = (white)
+</text>
+
+<text moveinfo>
+/ items = ("Allowed moves: <%values.targetmoves%>
+Performed moves: <%values.subjectmoves%>")
+/ txbgcolor = (transparent)
+/ erase = false
+/ size = (30%,30%)
+/ position = (99%,1%)
+/ hjustify = center
+/ vjustify = center
+/ halign = right
+/ valign = top
+/ txcolor = (white)
+</text>
+
+<text feedbackmsg>
+/ items = ("Correct!", "Too many moves!")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = expressions.feedbackswitch
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+/ txcolor = (white)
+</text>
+
+<text startmsg>
+/ items = ("Get ready...")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = 1
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+/ txcolor = (white)
+</text>
+
+<text resetmsg>
+/ items = ("Resetting...")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = 1
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+/ txcolor = (white)
+</text>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	UI Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+<text resetround>
+/ items = ("Reset")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (black)
+/ txbgcolor = (white)
+/ size = (20%,4%)
+/ position = (35%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+<text clickresetround>
+/ items = ("Reset")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ size = (20%,4%)
+/ position = (35%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+<text nextround>
+/ items = ("Next")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (black)
+/ txbgcolor = (white)
+/ size = (20%,4%)
+/ position = (65%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+<text clicknextround>
+/ items = ("Next")
+/ fontstyle = ("Verdana", 2.50%, true)
+/ vjustify = center
+/ txcolor = (white)
+/ txbgcolor = (black)
+/ size = (20%,4%)
+/ position = (65%,98%)
+/ valign = bottom
+/ erase = false
+</text>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Debug Stuff
+*****************************************************************************************************************
+*****************************************************************************************************************
+<text debug>
+/ items = ("Free (A): <%expressions.available_a_slots%> | Free (B): <%expressions.available_b_slots%> | Free (C): <%expressions.available_c_slots%>
+Top (A): <%expressions.top_in_a%> | Top (B): <%expressions.top_in_b%> | Top (C): <%expressions.top_in_c%>
+Max (A): <%expressions.vmax_a%> | Max (B): <%expressions.vmax_b%> | Max (C): <%expressions.vmax_c%>
+Next (A): <%expressions.vnext_a%> | Next (B): <%expressions.vnext_b%> | Next (C): <%expressions.vnext_c%>
+x=<%expressions.x%> | y=<%expressions.y%> | In: <%values.in%>")
+/ erase = false
+/ size = (40%,10%)
+/ position = (50%, 37%)
+/ vjustify = center
+</text>
+
+<text roundinfo>
+/ items = ("Problem Number: <%values.problemnumber%>
+Attempt Number: <%values.subjectattempts%>
+Target Moves: <%values.targetmoves%>
+Subject Moves: <%values.subjectmoves%>
+Excess Moves: <%expressions.excessmoves%>
+First Move Time: <%expressions.firstmovetime%>
+Solution Time: <%expressions.solutiontime%>
+Execution Time: <%expressions.executiontime%>
+Problem Score: <%values.problemscore%>
+Total Score: <%values.totalscoreTOL%>
+Performed Moves: <%values.movestring%>")
+/ erase = false
+/ size = (30%,30%)
+/ position = (1%,1%)
+/ hjustify = left
+/ halign = left
+/ valign = top
+</text>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Background
+*****************************************************************************************************************
+*****************************************************************************************************************
+<shape background>
+/ shape = rectangle
+/ color = (black)
+/ size = (100%, 100%)
+/ erase = false
+</shape>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Base
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture base>
+/ items = ("..\TowerofLondon\Base.gif")
+/ erase = false
+/ transparentcolor = (black)
+/ size = (90%, 25%)
+/ position = (50%,100%)
+/ halign = center
+/ valign = bottom
+</picture>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Pegs
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture apeg>
+/ items = pegs
+/ erase = false
+/ transparentcolor = (black)
+/ select = values.n_a_slots
+/ position = (20%,88%)
+/ size = (20%, 50%)
+/ valign = bottom
+</picture>
+
+<picture bpeg>
+/ items = pegs
+/ erase = false
+/ transparentcolor = (black)
+/ select = values.n_b_slots
+/ position = (50%, 88%)
+/ size = (20%, 50%)
+/ valign = bottom
+</picture>
+
+<picture cpeg>
+/ items = pegs
+/ erase = false
+/ transparentcolor = (black)
+/ select = values.n_c_slots
+/ position = (80%, 88%)
+/ size = (20%, 50%)
+/ valign = bottom
+</picture>
+
+<item pegs>
+/ 1 = "..\TowerofLondon\N1Peg.gif"
+/ 2 = "..\TowerofLondon\N2Peg.gif"
+/ 3 = "..\TowerofLondon\N3Peg.gif"
+</item>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Balls
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture R>
+/ items = ("..\TowerofLondon\R1.gif", "..\TowerofLondon\R2.gif")
+/ select = values.ritem
+/ erase = false
+/ transparentcolor = (black)
+/ hposition = values.r_hcurrent
+/ vposition = values.r_vcurrent
+/ size = (15%, 15%)
+</picture>
+
+<picture G>
+/ items = ("..\TowerofLondon\G1.gif", "..\TowerofLondon\G2.gif")
+/ select = values.gitem
+/ erase = false
+/ transparentcolor = (black)
+/ hposition = values.g_hcurrent
+/ vposition = values.g_vcurrent
+/ size = (15%, 15%)
+</picture>
+
+<picture B>
+/ items = ("..\TowerofLondon\B1.gif", "..\TowerofLondon\B2.gif")
+/ select = values.bitem
+/ erase = false
+/ transparentcolor = (black)
+/ hposition = values.b_hcurrent
+/ vposition = values.b_vcurrent
+/ size = (15%, 15%)
+</picture>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Generic Position Counters
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter vpos>
+/ items = (values.v1,values.v2,values.v3)
+/ select = sequence
+</counter>
+
+<counter hpos>
+/ items = (values.h1,values.h2,values.h3)
+/ select = sequence
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Shallice (1982) Problem Set (1 Practice Item, 12 Test Items)
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Problem Number (Ordinal)
+	Note: Problem #0 indicates practice item.
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter problemnumber>
+/ items = (0,1,2,3,4,5,6,7,8,9,10,11,12)
+/ select = sequence
+/ selectionrate = trial
+/ resetinterval = 0
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Number of Target Moves
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter targetmoves>
+/ items = (2,2,2,3,3,4,4,4,4,5,5,5,5)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Red Ball
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter r_htarget>
+/ items = (values.h3,values.h3,values.h2,values.h2,values.h2,values.h1,
+	values.h2,values.h1,values.h2,values.h1,values.h1,values.h2,values.h2)
+/ select = current(problemnumber)
+</counter>
+
+<counter r_vtarget>
+/ items = (values.v1,values.v1,values.v1,values.v1,values.v1,values.v1,
+	values.v1,values.v1,values.v1,values.v1,values.v1,values.v1,values.v1)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Green Ball
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter g_htarget>
+/ items = (values.h1,values.h2,values.h1,values.h1,values.h1,values.h1,
+	values.h2,values.h3,values.h3,values.h1,values.h1,values.h1,values.h3)
+/ select = current(problemnumber)
+</counter>
+
+<counter g_vtarget>
+/ items = (values.v1,values.v2,values.v1,values.v1,values.v1,values.v2,
+	values.v2,values.v1,values.v1,values.v2,values.v3,values.v2,values.v1)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Blue Ball
+*****************************************************************************************************************
+*****************************************************************************************************************
+<counter b_htarget>
+/ items = (values.h1,values.h2,values.h3,values.h1,values.h2,values.h2,
+	values.h1,values.h1,values.h2,values.h1,values.h1,values.h1,values.h1)
+/ select = current(problemnumber)
+</counter>
+
+<counter b_vtarget>
+/ items = (values.v2,values.v1,values.v1,values.v2,values.v2,values.v1,
+	values.v1,values.v2,values.v2,values.v3,values.v2,values.v1,values.v1)
+/ select = current(problemnumber)
+</counter>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Items (Problem Set)
+*****************************************************************************************************************
+*****************************************************************************************************************
+<picture targetstate>
+/ items = targetstateitems
+/ select = current(problemnumber)
+/ erase = false
+/ size = (50%,30%)
+/ position = (50%,1%)
+/ valign = top
+</picture>
+
+<item targetstateitems>
+/ 01 = "..\TowerofLondon\Problem00.gif"
+/ 02 = "..\TowerofLondon\Problem01.gif"
+/ 03 = "..\TowerofLondon\Problem02.gif"
+/ 04 = "..\TowerofLondon\Problem03.gif"
+/ 05 = "..\TowerofLondon\Problem04.gif"
+/ 06 = "..\TowerofLondon\Problem05.gif"
+/ 07 = "..\TowerofLondon\Problem06.gif"
+/ 08 = "..\TowerofLondon\Problem07.gif"
+/ 09 = "..\TowerofLondon\Problem08.gif"
+/ 10 = "..\TowerofLondon\Problem09.gif"
+/ 11 = "..\TowerofLondon\Problem10.gif"
+/ 12 = "..\TowerofLondon\Problem11.gif"
+/ 13 = "..\TowerofLondon\Problem12.gif"
+</item>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Default Settings
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Custom Data Output
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	End Of File
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+
+
+

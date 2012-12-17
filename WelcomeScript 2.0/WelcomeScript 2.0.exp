@@ -107,7 +107,7 @@ Recording Data
 / columns = [date,time,subject,blockcode,trialcode,values.TaskNumber,response, latency, 
 correct,values.Score, script.starttime, script.elapsedtime,values.ScoreS7,
 values.Word1,values.Word2,values.Word3,values.Word4,values.Word5,values.Word6,values.Word7,values.Word8,
- values.DigitSpanFwrd,values.DigitSpanBack,values.ScoreAbs,values.Contour,values.Numbers,values.Hands,values.corsiblockspanFwrd,values.corsiblockspanRev]
+values.DigitSpanFwrd,values.DigitSpanBack,values.ScoreAbs,values.Contour,values.Numbers,values.Hands,values.corsiblockspanFwrd,values.corsiblockspanRev]
 /format=tab
 / separatefiles = true
 / file = ".\data\"
@@ -418,6 +418,7 @@ The Letter
 / size = (10%,4%)
 / fontstyle = ("Verdana", 3.00%, true)
 / txbgcolor = (white)
+/ txcolor = (black)
 / vjustify = center
 / halign = center
 / valign = bottom
@@ -591,6 +592,7 @@ Audio Test
 / size = (10%,4%)
 / fontstyle = ("Verdana", 3.00%, true)
 / txbgcolor = (white)
+/ txcolor = (black)
 / vjustify = center
 / halign = center
 / valign = bottom
@@ -602,6 +604,7 @@ Audio Test
 / size = (10%,4%)
 / fontstyle = ("Verdana", 3.00%, true)
 / txbgcolor = (white)
+/ txcolor = (black)
 / vjustify = center
 / halign = center
 / valign = bottom
@@ -1252,7 +1255,6 @@ Background
 / valign = center
 / size = (values.boardwidth, values.boardheight)
 </shape>
-
 
 
 

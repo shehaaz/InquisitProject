@@ -1,4 +1,0 @@
-date	time	subject	blockcode	trialcode	values.TaskNumber	response	latency	correct	values.Score	script.starttime	script.elapsedtime	values.ScoreS7	values.Word1	values.Word2	values.Word3	values.Word4	values.Word5	values.Word6	values.Word7	values.Word8	values.DigitSpanFwrd	values.DigitSpanBack	values.ScoreAbs	values.Contour	values.Numbers	values.Hands	values.corsiblockspanFwrd	values.corsiblockspanRev
-102112	18:05:38	12334	Language	Language	0	French	1764	0	0	18:05:38	2074	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-102112	18:05:38	12334	Session	Session	0	6mo	23527	0	0	18:05:38	25821	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
-102112	18:05:38	12334	HandFr	HandFr	0	0	69058	1	0	18:05:38	95044	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

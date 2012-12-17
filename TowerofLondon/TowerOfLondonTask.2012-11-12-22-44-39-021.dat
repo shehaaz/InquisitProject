@@ -1,0 +1,15 @@
+date	time	subject	trialcode	latency	response	values.problemnumber	values.subjectattempts	values.targetmoves	values.subjectmoves	expressions.excessmoves	values.movestring	expressions.targetachieved	values.problemscore	values.totalscore	expressions.firstmovetime	expressions.executiontime	expressions.solutiontime	values.t_choicestart	values.t_choiceend
+111212	17:44:38	1	choice	4358	R	0	1	2	0	-2	R	0	0	0	4425	0	0	78407	82832
+111212	17:44:38	1	choice	3057	B	0	1	2	1	-1	R3B	0	0	0	4425	0	0	85932	89030
+111212	17:44:38	1	feedback	3	0	0	1	2	2	0	R3B1	1	3	3	4425	8809	13234	85932	89030
+111212	17:44:38	1	choice	4311	R	1	1	2	0	-2	R	0	0	0	4357	0	0	128574	132931
+111212	17:44:38	1	choice	1753	G	1	1	2	1	-1	R3G	0	0	0	4357	0	0	135602	137390
+111212	17:44:38	1	feedback	115	0	1	1	2	2	0	R3G2	1	3	3	4357	5663	10020	135602	137390
+111212	17:44:38	1	choice	3598	B	2	1	2	0	-2	B	0	0	3	3643	0	0	141605	145248
+111212	17:44:38	1	choice	1276	R	2	1	2	1	-1	B3R	0	0	3	3643	0	0	146463	147791
+111212	17:44:38	1	feedback	45	0	2	1	2	2	0	B3R2	1	3	6	3643	4064	7707	146463	147791
+111212	17:44:38	1	choice	5661	R	3	1	3	0	-3	R	0	0	6	5704	0	0	152323	158027
+111212	17:44:38	1	choice	1284	B	3	1	3	1	-2	R3B	0	0	6	5704	0	0	160196	161533
+111212	17:44:38	1	choice	1250	R	3	1	3	2	-1	R3B1R	0	0	6	5704	0	0	164179	165479
+111212	17:44:38	1	feedback	46	0	3	1	3	3	0	R3B1R2	1	3	9	5704	9050	14754	164179	165479
+111212	17:44:38	1	choice	1515	0	4	1	3	0	-3	0	0	0	9	1550	0	0	170086	171636
