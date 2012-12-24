@@ -1368,8 +1368,8 @@ TOWER OF LONDON
 	values.n_in_c=values.n_in_c-1]
 / ontrialend = [values.movestring=concat(values.movestring, trial.choice.response)]
 / stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
-	R,G,B]
-/ validresponse = (R,G,B)
+	R,G,B,nextround]
+/ validresponse = (R,G,B,nextround)
 / isvalidresponse = [trial.choice.response==expressions.top_in_a || 
 	trial.choice.response==expressions.top_in_b ||
 	trial.choice.response==expressions.top_in_c ||
@@ -1525,8 +1525,8 @@ Attempt #<%values.subjectattempts%>")
 </text>
 
 <text moveinfo>
-/ items = ("Allowed moves: <%values.targetmoves%>
-Performed moves: <%values.subjectmoves%>")
+/ items = (" Allowed moves / Mouvements autorisés: <%values.targetmoves%>
+ Performed moves / Mouvements effectués: <%values.subjectmoves%>")
 / txbgcolor = (transparent)
 / erase = false
 / size = (30%,30%)
@@ -1628,7 +1628,7 @@ Performed moves: <%values.subjectmoves%>")
 </text>
 
 <text nextround>
-/ items = ("Next")
+/ items = ("Next/Prochaine")
 / fontstyle = ("Verdana", 2.50%, true)
 / vjustify = center
 / txcolor = (black)
@@ -1640,7 +1640,7 @@ Performed moves: <%values.subjectmoves%>")
 </text>
 
 <text clicknextround>
-/ items = ("Next")
+/ items = ("Next/Prochaine")
 / fontstyle = ("Verdana", 2.50%, true)
 / vjustify = center
 / txcolor = (white)
@@ -1828,7 +1828,7 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter targetmoves>
-/ items = (2,2,2,3,3,4,4,4,4,5,5,5,5)
+/ items = (2,2,3,4,5)
 / select = current(problemnumber)
 </counter>
 
@@ -1838,14 +1838,12 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter r_htarget>
-/ items = (values.h3,values.h3,values.h2,values.h2,values.h2,values.h1,
-	values.h2,values.h1,values.h2,values.h1,values.h1,values.h2,values.h2)
+/ items = (values.h3,values.h3,values.h2,values.h1,values.h1)
 / select = current(problemnumber)
 </counter>
 
 <counter r_vtarget>
-/ items = (values.v1,values.v1,values.v1,values.v1,values.v1,values.v1,
-	values.v1,values.v1,values.v1,values.v1,values.v1,values.v1,values.v1)
+/ items = (values.v1,values.v1,values.v1,values.v1,values.v1)
 / select = current(problemnumber)
 </counter>
 
@@ -1855,14 +1853,12 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter g_htarget>
-/ items = (values.h1,values.h2,values.h1,values.h1,values.h1,values.h1,
-	values.h2,values.h3,values.h3,values.h1,values.h1,values.h1,values.h3)
+/ items = (values.h1,values.h2,values.h1,values.h1,values.h1)
 / select = current(problemnumber)
 </counter>
 
 <counter g_vtarget>
-/ items = (values.v1,values.v2,values.v1,values.v1,values.v1,values.v2,
-	values.v2,values.v1,values.v1,values.v2,values.v3,values.v2,values.v1)
+/ items = (values.v1,values.v2,values.v1,values.v2,values.v2)
 / select = current(problemnumber)
 </counter>
 
@@ -1872,14 +1868,12 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter b_htarget>
-/ items = (values.h1,values.h2,values.h3,values.h1,values.h2,values.h2,
-	values.h1,values.h1,values.h2,values.h1,values.h1,values.h1,values.h1)
+/ items = (values.h1,values.h2,values.h1,values.h2,values.h1)
 / select = current(problemnumber)
 </counter>
 
 <counter b_vtarget>
-/ items = (values.v2,values.v1,values.v1,values.v2,values.v2,values.v1,
-	values.v1,values.v2,values.v2,values.v3,values.v2,values.v1,values.v1)
+/ items = (values.v2,values.v1,values.v2,values.v1,values.v3)
 / select = current(problemnumber)
 </counter>
 
@@ -1900,17 +1894,9 @@ Performed Moves: <%values.movestring%>")
 <item targetstateitems>
 / 01 = "..\TowerofLondon\Problem00.gif"
 / 02 = "..\TowerofLondon\Problem01.gif"
-/ 03 = "..\TowerofLondon\Problem02.gif"
-/ 04 = "..\TowerofLondon\Problem03.gif"
-/ 05 = "..\TowerofLondon\Problem04.gif"
-/ 06 = "..\TowerofLondon\Problem05.gif"
-/ 07 = "..\TowerofLondon\Problem06.gif"
-/ 08 = "..\TowerofLondon\Problem07.gif"
-/ 09 = "..\TowerofLondon\Problem08.gif"
-/ 10 = "..\TowerofLondon\Problem09.gif"
-/ 11 = "..\TowerofLondon\Problem10.gif"
-/ 12 = "..\TowerofLondon\Problem11.gif"
-/ 13 = "..\TowerofLondon\Problem12.gif"
+/ 03 = "..\TowerofLondon\Problem03.gif"
+/ 04 = "..\TowerofLondon\Problem05.gif"
+/ 05 = "..\TowerofLondon\Problem09.gif"
 </item>
 
 *****************************************************************************************************************

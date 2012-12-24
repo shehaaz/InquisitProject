@@ -1,0 +1,6 @@
+date	time	subject	blockcode	trialcode	values.TaskNumber	response	latency	correct	values.Score	script.starttime	script.elapsedtime	values.ScoreS7	values.Word1	values.Word2	values.Word3	values.Word4	values.Word5	values.Word6	values.Word7	values.Word8	values.DigitSpanFwrd	values.DigitSpanBack	values.ScoreAbs	values.Contour	values.Numbers	values.Hands	values.corsiblockspanFwrd	values.corsiblockspanRev	values.problemnumber	values.subjectattempts	values.targetmoves	values.subjectmoves	expressions.excessmoves	values.movestring	expressions.targetachieved	values.problemscore	values.totalscoreTOL	expressions.firstmovetime	expressions.executiontime	expressions.solutiontime	values.t_choicestart	values.t_choiceend
+122412	18:03:54	1	Language	Language	0	French	1239	0	0	18:03:54	1365	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	18:03:54	1	Session	Session	0	3mo	1519	0	0	18:03:54	2966	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	18:03:54	1	HandFr	HandFr	0	RightFr	713	0	0	18:03:54	3750	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	18:03:54	1	AudioCheckFr	WordsFr	0	0	0	0	0	18:03:54	12381	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	18:03:54	1	practiceTOLFR	choice	0	background	7163	1	0	18:03:54	30867	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	0	-2	background	0	0	0	7236	0	0	23631	30867

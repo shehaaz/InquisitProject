@@ -1,0 +1,15 @@
+date	time	subject	blockcode	trialcode	values.TaskNumber	response	latency	correct	values.Score	script.starttime	script.elapsedtime	values.ScoreS7	values.Word1	values.Word2	values.Word3	values.Word4	values.Word5	values.Word6	values.Word7	values.Word8	values.DigitSpanFwrd	values.DigitSpanBack	values.ScoreAbs	values.Contour	values.Numbers	values.Hands	values.corsiblockspanFwrd	values.corsiblockspanRev	values.problemnumber	values.subjectattempts	values.targetmoves	values.subjectmoves	expressions.excessmoves	values.movestring	expressions.targetachieved	values.problemscore	values.totalscoreTOL	expressions.firstmovetime	expressions.executiontime	expressions.solutiontime	values.t_choicestart	values.t_choiceend
+122412	14:39:37	1	Language	Language	0	French	1928	0	0	14:39:37	1991	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	14:39:37	1	Session	Session	0	6mo	794	0	0	14:39:37	2859	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	14:39:37	1	HandFr	HandFr	0	LeftFr	991	0	0	14:39:37	3927	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	14:39:37	1	AudioCheckFr	WordsFr	0	0	0	0	0	14:39:37	12539	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1	0	0	0	0	0	0	0
+122412	14:39:37	1	practiceTOLFR	choice	0	R	4060	0	0	14:39:37	24771	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	0	-2	R	0	0	0	4124	0	0	20646	24770
+122412	14:39:37	1	practiceTOLFR	choice	0	B	1026	0	0	14:39:37	27092	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	1	-1	R3B	0	0	0	4124	0	0	26056	27092
+122412	14:39:37	1	practiceTOLFR	feedbackFR	0	0	2000	0	0	14:39:37	30232	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	2	2	0	R3B1	1	3	3	4124	3455	7579	26056	27092
+122412	14:39:37	1	testTOLFR	choice	0	R	6059	0	0	14:39:37	40617	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	2	0	-2	R	0	0	0	6090	0	0	34527	40617
+122412	14:39:37	1	testTOLFR	choice	0	nextround	3679	0	0	14:39:37	45314	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	1	2	1	-1	R2nextround	0	0	0	6090	0	0	41353	45314
+122412	14:39:37	1	testTOLFR	choice	0	B	9725	0	0	14:39:37	56078	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	1	3	0	-3	B	0	0	0	9759	0	0	46319	56078
+122412	14:39:37	1	testTOLFR	choice	0	R	2119	0	0	14:39:37	59033	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	1	3	1	-2	B3R	0	0	0	9759	0	0	56896	59033
+122412	14:39:37	1	testTOLFR	choice	0	B	1351	0	0	14:39:37	61284	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	1	3	2	-1	B3R2B	0	0	0	9759	0	0	59920	61284
+122412	14:39:37	1	testTOLFR	feedbackFR	0	0	2000	0	0	14:39:37	64429	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	3	1	3	3	0	B3R2B1	1	3	3	9759	6341	16100	59920	61284
+122412	14:39:37	1	testTOLFR	choice	0	background	4602	1	0	14:39:37	70074	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	5	1	4	0	-4	background	0	0	3	4638	0	0	65436	70074

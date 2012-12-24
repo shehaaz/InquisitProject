@@ -1,0 +1,2 @@
+date	time	subject	trialcode	latency	response	values.problemnumber	values.subjectattempts	values.targetmoves	values.subjectmoves	expressions.excessmoves	values.movestring	expressions.targetachieved	values.problemscore	values.totalscore	expressions.firstmovetime	expressions.executiontime	expressions.solutiontime	values.t_choicestart	values.t_choiceend
+122412	08:09:00	1	choice	4966	background	0	1	2	0	-2	background	0	0	0	5047	0	0	89380	94427
