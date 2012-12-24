@@ -1,4 +1,5 @@
 <include >
+
 / file = "..\InquisitProject\TowerofLondon\TowerOfLondonTaskEng.exp"
 / file = "..\InquisitProject\TowerofLondon\TowerOfLondonTaskFr.exp"
 / file = "..\InquisitProject\Closing\Closing.exp"
@@ -1350,8 +1351,8 @@ TOWER OF LONDON
 	values.n_in_c=values.n_in_c-1]
 / ontrialend = [values.movestring=concat(values.movestring, trial.choice.response)]
 / stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
-	R,G,B,nextround]
-/ validresponse = (R,G,B,nextround)
+	R,G,B]
+/ validresponse = (R,G,B)
 / isvalidresponse = [trial.choice.response==expressions.top_in_a || 
 	trial.choice.response==expressions.top_in_b ||
 	trial.choice.response==expressions.top_in_c ||
@@ -1759,7 +1760,7 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter problemnumber>
-/ items = (0,1,2,3,4,5,6,7,8,9,10,11,12)
+/ items = (0,1,3,5,9)
 / select = sequence
 / selectionrate = trial
 / resetinterval = 0
