@@ -1272,7 +1272,7 @@ TOWER OF LONDON
 	Start Round / Get Problem
 *****************************************************************************************************************
 *****************************************************************************************************************
-<trial newround>
+<trial newroundENG>
 / ontrialbegin = [values.t_roundstart=0; values.t_firstmove=0; values.t_solution=0;
 	values.subjectattempts=1; values.subjectmoves=0; values.problemscore=0; values.movestring="";
 	values.choicecount=0]
@@ -1283,13 +1283,30 @@ TOWER OF LONDON
 	values.r_hcurrent=values.r_hstart; values.r_vcurrent=values.r_vstart; 
 	values.g_hcurrent=values.g_hstart; values.g_vcurrent=values.g_vstart; 
 	values.b_hcurrent=values.b_hstart; values.b_vcurrent=values.b_vstart]
-/ stimulusframes = [1=background,startmsg]
+/ stimulusframes = [1=background,startmsgENG]
 / validresponse = (anyresponse)
 / trialduration = values.intertrialinterval
 / recorddata = false
 / branch = [trial.choice]
 </trial>
 
+<trial newroundFR>
+/ ontrialbegin = [values.t_roundstart=0; values.t_firstmove=0; values.t_solution=0;
+	values.subjectattempts=1; values.subjectmoves=0; values.problemscore=0; values.movestring="";
+	values.choicecount=0]
+/ ontrialbegin = [values.problemnumber=counter.problemnumber.selectedvalue; values.targetmoves=counter.targetmoves.selectedvalue; 
+	values.r_htarget=counter.r_htarget.selectedvalue; values.r_vtarget=counter.r_vtarget.selectedvalue;
+	values.g_htarget=counter.g_htarget.selectedvalue; values.g_vtarget=counter.g_vtarget.selectedvalue;
+	values.b_htarget=counter.b_htarget.selectedvalue; values.b_vtarget=counter.b_vtarget.selectedvalue;
+	values.r_hcurrent=values.r_hstart; values.r_vcurrent=values.r_vstart; 
+	values.g_hcurrent=values.g_hstart; values.g_vcurrent=values.g_vstart; 
+	values.b_hcurrent=values.b_hstart; values.b_vcurrent=values.b_vstart]
+/ stimulusframes = [1=background,startmsgFR]
+/ validresponse = (anyresponse)
+/ trialduration = values.intertrialinterval
+/ recorddata = false
+/ branch = [trial.choice]
+</trial>
 *****************************************************************************************************************
 *****************************************************************************************************************
 	Reset Round
@@ -1429,7 +1446,8 @@ TOWER OF LONDON
 / validresponse = (anyresponse)
 / inputdevice = mousekey
 / trialduration = 0
-/ branch = [if(expressions.targetachieved)trial.feedback]
+/ branch = [if(expressions.targetachieved && trial.Language.response != "English") trial.feedbackFR]
+/ branch = [if(expressions.targetachieved && trial.Language.response == "English") trial.feedbackENG]
 / branch = [if(values.in==0)trial.move else trial.choice]
 / recorddata = false
 </trial>
@@ -1439,14 +1457,14 @@ TOWER OF LONDON
 	Feedback Trial
 *****************************************************************************************************************
 *****************************************************************************************************************
-<trial feedback>
+<trial feedbackENG>
 / ontrialbegin = [values.ritem=1; values.gitem=1; values.bitem=1]
 / ontrialbegin = [values.t_solution=script.elapsedtime]
 / ontrialbegin = [if(expressions.excessmoves==0)
 	values.problemscore=values.maxattempts-(values.subjectattempts-1)]
 / ontrialbegin = [values.totalscoreTOL=values.totalscoreTOL+values.problemscore]
 / stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
-	R,G,B,feedbackmsg]
+	R,G,B,feedbackmsgTOLENG]
 / validresponse = (anyresponse)
 / trialduration = values.feedbackdurationTOL
 / branch = [if(expressions.excessmoves>0 && values.subjectattempts<values.maxattempts)
@@ -1454,19 +1472,33 @@ TOWER OF LONDON
 / recorddata = true
 </trial>
 
+<trial feedbackFR>
+/ ontrialbegin = [values.ritem=1; values.gitem=1; values.bitem=1]
+/ ontrialbegin = [values.t_solution=script.elapsedtime]
+/ ontrialbegin = [if(expressions.excessmoves==0)
+	values.problemscore=values.maxattempts-(values.subjectattempts-1)]
+/ ontrialbegin = [values.totalscoreTOL=values.totalscoreTOL+values.problemscore]
+/ stimulusframes = [1=background,moveinfo,targetstate,base,apeg,bpeg,cpeg,
+	R,G,B,feedbackmsgTOLFR]
+/ validresponse = (anyresponse)
+/ trialduration = values.feedbackdurationTOL
+/ branch = [if(expressions.excessmoves>0 && values.subjectattempts<values.maxattempts)
+	trial.resetround else trial.stopblock]
+/ recorddata = true
+</trial>
 *****************************************************************************************************************
 *****************************************************************************************************************
 	Stop block if all practice / test items have been completed.
 *****************************************************************************************************************
 *****************************************************************************************************************
 <trial stopblock>
-/ ontrialbegin = [if((script.currentblock=="practiceTOLENG" || script.currentblock=="practiceTOLFr") && counter.problemnumber.selectedcount==values.npracticeproblems)
+/ ontrialbegin = [if((script.currentblock=="practiceTOLENG" || script.currentblock=="practiceTOLFR") && counter.problemnumber.selectedcount==values.npracticeproblems)
 	values.stopblock=1]
 / ontrialbegin = [if(counter.problemnumber.unselectedcount==0)
 	values.stopblock=1]
 / validresponse = (anyresponse)
 / trialduration = 0
-/ branch = [trial.newround]
+/ branch = [if(trial.Language.response == "English") trial.newroundENG else trial.newroundFR]
 / recorddata = false
 </trial>
 
@@ -1506,7 +1538,7 @@ Performed moves: <%values.subjectmoves%>")
 / txcolor = (white)
 </text>
 
-<text feedbackmsg>
+<text feedbackmsgTOLENG>
 / items = ("Correct!", "Too many moves!")
 / fontstyle = ("Verdana", 3.50%, true)
 / txbgcolor = (transparent)
@@ -1518,8 +1550,32 @@ Performed moves: <%values.subjectmoves%>")
 / txcolor = (white)
 </text>
 
-<text startmsg>
+<text feedbackmsgTOLFR>
+/ items = ("Vous l'avez eu!", "Trop de mouvement!")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = expressions.feedbackswitch
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+/ txcolor = (white)
+</text>
+
+<text startmsgENG>
 / items = ("Get ready...")
+/ fontstyle = ("Verdana", 3.50%, true)
+/ txbgcolor = (transparent)
+/ erase = false
+/ select = 1
+/ position = (50%,40%)
+/ hjustify = center
+/ vjustify = center
+/ txcolor = (white)
+</text>
+
+<text startmsgFR>
+/ items = ("Préparez vous...")
 / fontstyle = ("Verdana", 3.50%, true)
 / txbgcolor = (transparent)
 / erase = false

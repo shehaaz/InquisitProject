@@ -235,13 +235,13 @@
 / preinstructions = (practiceTOLENG)
 / onblockend = [values.stopblock=0]
 / stop = [values.stopblock==1]
-/ trials = [1=newround]
+/ trials = [1=newroundENG]
 </block>
 
 <block testTOLENG>
 / preinstructions = (testTOLENG)
 / onblockbegin = [values.totalscoreTOL=0]
 / stop = [values.stopblock==1]
-/ trials = [1=newround]
+/ trials = [1=newroundENG]
 </block>
 
