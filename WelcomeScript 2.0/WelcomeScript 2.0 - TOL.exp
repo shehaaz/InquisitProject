@@ -1816,7 +1816,7 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter problemnumber>
-/ items = (0,1,3,5,9)
+/ items = (0,2,4,7,10)
 / select = sequence
 / selectionrate = trial
 / resetinterval = 0
@@ -1838,7 +1838,7 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter r_htarget>
-/ items = (values.h3,values.h3,values.h2,values.h1,values.h1)
+/ items = (values.h3,values.h2,values.h2,values.h1,values.h1)
 / select = current(problemnumber)
 </counter>
 
@@ -1853,12 +1853,12 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter g_htarget>
-/ items = (values.h1,values.h2,values.h1,values.h1,values.h1)
+/ items = (values.h1,values.h1,values.h1,values.h3,values.h1)
 / select = current(problemnumber)
 </counter>
 
 <counter g_vtarget>
-/ items = (values.v1,values.v2,values.v1,values.v2,values.v2)
+/ items = (values.v1,values.v1,values.v1,values.v1,values.v3)
 / select = current(problemnumber)
 </counter>
 
@@ -1868,12 +1868,12 @@ Performed Moves: <%values.movestring%>")
 *****************************************************************************************************************
 *****************************************************************************************************************
 <counter b_htarget>
-/ items = (values.h1,values.h2,values.h1,values.h2,values.h1)
+/ items = (values.h1,values.h3,values.h2,values.h1,values.h1)
 / select = current(problemnumber)
 </counter>
 
 <counter b_vtarget>
-/ items = (values.v2,values.v1,values.v2,values.v1,values.v3)
+/ items = (values.v2,values.v1,values.v2,values.v2,values.v2)
 / select = current(problemnumber)
 </counter>
 
@@ -1893,10 +1893,10 @@ Performed Moves: <%values.movestring%>")
 
 <item targetstateitems>
 / 01 = "..\TowerofLondon\Problem00.gif"
-/ 02 = "..\TowerofLondon\Problem01.gif"
-/ 03 = "..\TowerofLondon\Problem03.gif"
-/ 04 = "..\TowerofLondon\Problem05.gif"
-/ 05 = "..\TowerofLondon\Problem09.gif"
+/ 02 = "..\TowerofLondon\Problem02.gif"
+/ 03 = "..\TowerofLondon\Problem04.gif"
+/ 04 = "..\TowerofLondon\Problem07.gif"
+/ 05 = "..\TowerofLondon\Problem10.gif"
 </item>
 
 *****************************************************************************************************************
