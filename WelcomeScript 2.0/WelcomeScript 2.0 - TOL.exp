@@ -40,11 +40,11 @@ Instructions: windowsize set to 100% of the screen and not pixels
 
 
 <page InstrucFr>
-^Je vais vous demander de complÃ©ter plusieurs tÃ¢ches Ã  lâ€™ordinateur et sur papier.
-^^Si vous nâ€™Ãªtes pas habituÃ© aux ordinateur, ne vous inquiÃ©tez pas, nous allons en tenir compte et il y aura des exercices de pratique.  
-^^Certaines tÃ¢ches vont vous sembler faciles, dâ€™autres difficiles. La plupart des personnes ne rÃ©pondent pas Ã  toutes les questions ou ne finissent pas tous les items.  Sâ€™il vous plait, essayer de faire au mieux. 
+^Je vais vous demander de compléter plusieurs tâches à l’ordinateur et sur papier.
+^^Si vous n’êtes pas habitué aux ordinateur, ne vous inquiétez pas, nous allons en tenir compte et il y aura des exercices de pratique.  
+^^Certaines tâches vont vous sembler faciles, d’autres difficiles. La plupart des personnes ne répondent pas à toutes les questions ou ne finissent pas tous les items.  S’il vous plait, essayer de faire au mieux. 
 ^^^^Avez-vous des questions ?
-^^^^ÃŠtes-vous prÃªt Ã  commencer ?
+^^^^Êtes-vous prêt à commencer ?
 </page>
 
 
@@ -445,7 +445,7 @@ The Letter
 </text>
 
 <text TitleLetterFr>
-/ items = ("CommenÃ§ons par quelques vÃ©rifications")
+/ items = ("Commençons par quelques vérifications")
 / txcolor = yellow
 / txbgcolor = black
 / fontstyle = ("verdana",30)
@@ -453,7 +453,7 @@ The Letter
 </text>
 
 <text TitleLetterFr2>
-/ items = ("Quelle est la lettre inscrite Ã  lâ€™Ã©cran?")
+/ items = ("Quelle est la lettre inscrite à l’écran?")
 / txcolor = yellow
 / txbgcolor = black
 / fontstyle = ("verdana",30)
@@ -500,7 +500,7 @@ The Arrow
 </text>
 
 <text ArrowTitleFr>
-/ items = ("Est-ce que la flÃ¨che du milieu pointe vers la gauche ou vers la droite?")
+/ items = ("Est-ce que la flèche du milieu pointe vers la gauche ou vers la droite?")
 / txcolor = yellow
 / txbgcolor = black
 / fontstyle = ("verdana",30)
@@ -603,7 +603,7 @@ Audio Test
 </text>
 
 <text RepeatFr>
-/ items = ("RÃ©pÃ©ter")
+/ items = ("Répéter")
 / position = (90%,45%)
 / size = (10%,4%)
 / fontstyle = ("Verdana", 3.00%, true)
@@ -1575,7 +1575,7 @@ Attempt #<%values.subjectattempts%>")
 </text>
 
 <text startmsgFR>
-/ items = ("PrÃ©parez vous...")
+/ items = ("Préparez vous...")
 / fontstyle = ("Verdana", 3.50%, true)
 / txbgcolor = (transparent)
 / erase = false
