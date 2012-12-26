@@ -367,7 +367,7 @@ Handedness French
 </trial>
 
 <text HandTitleFr>
-/ items = ("Avec quelle main est-ce que vous Ã©crivez?  De quelle main est-ce que vous Ãªtes le plus habile ?")
+/ items = ("Avec quelle main est-ce que vous écrivez?  De quelle main est-ce que vous êtes le plus habile ?")
 / fontstyle = ("Verdana",25pt,true)
 / size = (60%, 9%)
 / position = (50%,20%)
