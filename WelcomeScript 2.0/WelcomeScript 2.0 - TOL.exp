@@ -40,11 +40,11 @@ Instructions: windowsize set to 100% of the screen and not pixels
 
 
 <page InstrucFr>
-^Je vais vous demander de compléter plusieurs tâches à l’ordinateur et sur papier.
-^^Si vous n’êtes pas habitué aux ordinateur, ne vous inquiétez pas, nous allons en tenir compte et il y aura des exercices de pratique.  
-^^Certaines tâches vont vous sembler faciles, d’autres difficiles. La plupart des personnes ne répondent pas à toutes les questions ou ne finissent pas tous les items.  S’il vous plait, essayer de faire au mieux. 
+^Je vais vous demander de complÃ©ter plusieurs tÃ¢ches Ã  lâ€™ordinateur et sur papier.
+^^Si vous nâ€™Ãªtes pas habituÃ© aux ordinateur, ne vous inquiÃ©tez pas, nous allons en tenir compte et il y aura des exercices de pratique.  
+^^Certaines tÃ¢ches vont vous sembler faciles, dâ€™autres difficiles. La plupart des personnes ne rÃ©pondent pas Ã  toutes les questions ou ne finissent pas tous les items.  Sâ€™il vous plait, essayer de faire au mieux. 
 ^^^^Avez-vous des questions ?
-^^^^Êtes-vous prêt à commencer ?
+^^^^ÃŠtes-vous prÃªt Ã  commencer ?
 </page>
 
 
@@ -367,7 +367,7 @@ Handedness French
 </trial>
 
 <text HandTitleFr>
-/ items = ("Avec quelle main est-ce que vous écrivez?  De quelle main est-ce que vous êtes le plus habile ?")
+/ items = ("Avec quelle main est-ce que vous Ã©crivez?  De quelle main est-ce que vous Ãªtes le plus habile ?")
 / fontstyle = ("Verdana",25pt,true)
 / size = (60%, 9%)
 / position = (50%,20%)
@@ -445,7 +445,7 @@ The Letter
 </text>
 
 <text TitleLetterFr>
-/ items = ("Commençons par quelques vérifications")
+/ items = ("CommenÃ§ons par quelques vÃ©rifications")
 / txcolor = yellow
 / txbgcolor = black
 / fontstyle = ("verdana",30)
@@ -453,7 +453,7 @@ The Letter
 </text>
 
 <text TitleLetterFr2>
-/ items = ("Quelle est la lettre inscrite à l’écran?")
+/ items = ("Quelle est la lettre inscrite Ã  lâ€™Ã©cran?")
 / txcolor = yellow
 / txbgcolor = black
 / fontstyle = ("verdana",30)
@@ -500,7 +500,7 @@ The Arrow
 </text>
 
 <text ArrowTitleFr>
-/ items = ("Est-ce que la flèche du milieu pointe vers la gauche ou vers la droite?")
+/ items = ("Est-ce que la flÃ¨che du milieu pointe vers la gauche ou vers la droite?")
 / txcolor = yellow
 / txbgcolor = black
 / fontstyle = ("verdana",30)
@@ -603,7 +603,7 @@ Audio Test
 </text>
 
 <text RepeatFr>
-/ items = ("Répéter")
+/ items = ("RÃ©pÃ©ter")
 / position = (90%,45%)
 / size = (10%,4%)
 / fontstyle = ("Verdana", 3.00%, true)
@@ -660,7 +660,7 @@ Instruction
 </page>
 
 <page InstrucAbsFr>
-^^Nous allons vous prÃ©senter 2 mots en mÃªme temps Ã Â  l'Ã©cran. Vous devez dire en quoi ces mots se ressemblent, comment ils sont semblables.
+^^Nous allons vous prÃ©senter 2 mots en mÃªme temps Ã  l'Ã©cran. Vous devez dire en quoi ces mots se ressemblent, comment ils sont semblables.
 </page>
 
 *************************************
@@ -1575,7 +1575,7 @@ Attempt #<%values.subjectattempts%>")
 </text>
 
 <text startmsgFR>
-/ items = ("Préparez vous...")
+/ items = ("PrÃ©parez vous...")
 / fontstyle = ("Verdana", 3.50%, true)
 / txbgcolor = (transparent)
 / erase = false
