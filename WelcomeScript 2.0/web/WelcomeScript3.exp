@@ -1,5 +1,59 @@
 <include >
-
+/ file = "http://www.millisecond.com/myaccount/scripts/como/Cube/Cube.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/RTExperimentEng/RTExperimentEng.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/RTExperimentEng/RTExperimentFR.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/NBackLetters/N-BackLetters.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Memory.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Loria.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Trails.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Serial7Eng-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Serial7Eng-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Serial7Eng-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Serial7Fr-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Serial7Fr-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/Serial7Fr-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/CorsiBlockTappingEngFwrd/Corsi%20Block%20TappingFr%20-%20Rev.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/CorsiBlockTappingEngFwrd/Corsi%20Block%20TappingFr%20-%20Fwrd.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/CorsiBlockTappingEngFwrd/Corsi%20Block%20TappingEng%20-%20Rev.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/CorsiBlockTappingEngFwrd/Corsi%20Block%20TappingEng%20-%20Fwrd.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/MemoryRecallEng-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/MemoryRecallEng-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/MemoryRecallEng-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/MemoryRecallFR-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/MemoryRecallFR-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/WelcomeScript/MemoryRecallFR-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackFr3mo/DigitSpanFwrdFr-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackFr3mo/DigitSpanFwrdFr-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackFr3mo/DigitSpanFwrdFr-3mo.exp" 
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackEng3mo/DigitSpanFwrdEng-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackEng3mo/DigitSpanFwrdEng-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackEng3mo/DigitSpanFwrdEng-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackFr3mo/DigitSpanBackFr-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackFr3mo/DigitSpanBackFr-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackFr3mo/DigitSpanBackFr-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackEng3mo/DigitSpanBackEng-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackEng3mo/DigitSpanBackEng-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/DigitSpanBackEng3mo/DigitSpanBackEng-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/Flanker2/Flanker2.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/AbstractionEng3mo/AbstractionEng3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/AbstractionEng3mo/AbstractionEng6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/AbstractionEng3mo/AbstractionEngBaseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/AbstractionEng3mo/AbstractionFr3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/AbstractionEng3mo/AbstractionFr6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/AbstractionEng3mo/AbstractionFrBaseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/2backshapes/2-back-shapes.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/ClockEng3mo/ClockEng%20-%203mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/ClockEng3mo/ClockEng%20-%206mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/ClockEng3mo/ClockEng%20-%20Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/ClockEng3mo/ClockFr%20-%20Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/ClockEng3mo/ClockFr%20-%206mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/ClockEng3mo/ClockFr%20-%203mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/VerbalFluencyEng3mo/VerbalFluencyEng-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/VerbalFluencyEng3mo/VerbalFluencyEng-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/VerbalFluencyEng3mo/VerbalFluencyEng-6mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/VerbalFluencyEng3mo/VerbalFluencyFr-Baseline.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/VerbalFluencyEng3mo/VerbalFluencyFr-3mo.exp"
+/ file = "http://www.millisecond.com/myaccount/scripts/como/VerbalFluencyEng3mo/VerbalFluencyFr-6mo.exp"
 / file = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/TowerOfLondonTaskEng.exp"
 / file = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/TowerOfLondonTaskFr.exp"
 / file = "http://www.millisecond.com/myaccount/scripts/como/Closing/Closing.exp"
@@ -62,7 +116,6 @@ values.problemnumber,values.subjectattempts,values.targetmoves,values.subjectmov
 	expressions.solutiontime,values.t_choicestart,values.t_choiceend]
 /format=tab
 / separatefiles = true
-/ file = ".\data\"
 </data>
 
 
@@ -1260,7 +1313,6 @@ Background
 / size = (values.boardwidth, values.boardheight)
 </shape>
 
-
 *****************************************************************************************************************
 TOWER OF LONDON
 *****************************************************************************************************************
@@ -1898,26 +1950,6 @@ Performed Moves: <%values.movestring%>")
 / 04 = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/Problem07.gif"
 / 05 = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/Problem10.gif"
 </item>
-
-*****************************************************************************************************************
-*****************************************************************************************************************
-	Default Settings
-*****************************************************************************************************************
-*****************************************************************************************************************
-
-
-*****************************************************************************************************************
-*****************************************************************************************************************
-	Custom Data Output
-*****************************************************************************************************************
-*****************************************************************************************************************
-
-
-*****************************************************************************************************************
-*****************************************************************************************************************
-	End Of File
-*****************************************************************************************************************
-*****************************************************************************************************************
 
 
 
