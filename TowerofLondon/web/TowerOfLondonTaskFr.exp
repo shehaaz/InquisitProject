@@ -1,0 +1,247 @@
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Tower of London Task (TOL) -- Krikorian et al. (1994) Version
+*****************************************************************************************************************
+*****************************************************************************************************************
+	This script implements the 'Tower of London' task originally described in:
+	Shallice, T. (1982). Specifc impairments of planning. Philosophical Transactions of the Royal 
+	Society of London, Biology, 298, 199-209.
+
+	Procedural details were adapted from:
+	Krikorian, R., Bartok, J., & Gay, N. (1994). Tower of London procedure: A standard method 
+	and developmental data. Journal of Clinical and Experimental Neuropsychology, 16, 840-850.
+	
+	Task instructions were adapted from:
+	Anderson, P., Anderson, V., & Lajoie, G. (1996). The Tower of London test: Validation and 
+	standardization for pediatric populations. The Clinical Neuropsychologist, 10, 54-65.
+
+	Further references:	
+	Berg, W. K. & Byrd, D. L. (2002). The Tower of London spatial problem-solving task:
+	Enhancing clinical and research implementation. Journal of Clinical and Experimental 
+	Neuropsychology, 24(5), 586-604.
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Script Version:	0.9a (Beta)
+	Last Modified:	10-06-2010 at 06:28 PM (GMT+1)
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+	Meticulously handcrafted from the finest code by:
+	David Nitz (nitz.david@gmail.com)
+	for Millisecond Software, LLC.
+
+	This script requires Inquisit 3.0.4.0 or greater.
+	Copyright (c) 2010 by Millisecond Software, LLC.
+	http://www.millisecond.com/
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Values
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Configurable Task Parameters
+*****************************************************************************************************************
+*****************************************************************************************************************
+	maxattempts						Allowed number of attempts to solve any given problem with
+											minimum amount of moves. Default is 3.
+	npracticeproblems				Number of practice problems. By default, the task contains 1
+											practice problem and 12 test problems. Default is 1. 
+	n_a_slots							Capacity of peg 1 (left). Default is 3.
+	n_b_slots							Capacity of peg 2 (center). Default is 2.
+	n_c_slots							Capacity of peg 3 (right). Default is 1.
+	feedbackdurationL				Duration of performance feedback in ms. Default is 2000.
+	h1 -> h3								Horizontal coordinates of pegs 1, 2 and 3 in screen percentages.
+											Defaults are 20%, 50% and 80%.
+	v1 -> v3								Available vertical coordinates for the three balls in screen 
+											percentages. Defaults are 80%, 65%, 50%.
+	r_hstart, r_vstart				Determines the red ball's start position (horizontal, vertical).
+	g_hstart, g_vstart				Determines the green ball's start position (horizontal, vertical).
+	b_hstart, b_vstart				Determines the blue ball's start position (horizontal, vertical).
+	r_hcurrent, r_vcurrent			Stores the red ball's current position (horizontal, vertical).
+	g_hcurrent, g_vcurrent		Stores the green ball's current position (horizontal, vertical).
+	b_hcurrent, b_vcurrent		Stores the blue ball's current position (horizontal, vertical).
+	r_htarget, r_vtarget			Stores the red ball's target position (horizontal, vertical).
+	g_htarget, g_vtarget			Stores the green ball's target position (horizontal, vertical).
+	b_htarget, b_vtarget			Stores the blue ball's target position (horizontal, vertical).
+	n_in_a								The number of balls currently placed on peg 1 (left).
+	n_in_b								The number of balls currently placed on peg 2 (center).
+	n_in_c								The number of balls currently placed on peg 3 (right).
+	problemnumber					Current problem number. By default the task consists of 1 practice
+											problem and 12 test problems presented sequentially. 0 indicates 
+											a practice problem.
+	targetmoves						Number of prescribed moves for the current problem.
+	subjectmoves						Number of subject-performed moves for the current problem.
+	subjectattempts					Number of current attempts to solve the given problem.
+	problemscore						Score awarded for solving the current problem. See Krikorian et
+											al. (1994) for details.
+	totalscoreTOL							Score achieved across the whole set of test problems. Computed
+											as the sum of individual problem scores. Maximum is 36 in the 
+											standard version.
+	movestring							Text string containing a record of performed moves. E.g. "B2R3"
+											indicates that the blue ball (B) was moved to peg 2 (center) and 
+											the red ball (R) was moved to peg 3 (right).
+	stopblock							Pseudo-boolean switch to stop the current practice or test block
+											once all problems have been completed.
+	t_roundstart						Absolute start time for the current round / attempt. Used to 
+											compute first move time, solution time and execution time
+											(expressions.firstmovetime, expressions.solutiontime, 
+											expressions.executiontime).
+	t_firstmove						Absolute time the first move was initiated for the current round /
+											attempt. Used to determine planning time.
+											(expressions.firstmovetime).
+	t_solution							Absolute time when target state was achieved for the current 
+											round / attempt. Used to determine solution and execution time
+											(expressions.solutiontime, expressions.executiontime).
+	in										Indicates where a ball was positioned by the subject (1=left peg; 
+											2=center peg; 3=right peg). A value of 0 indicates that the 
+											subject tried to place the ball in an illegal position (e.g. full peg).
+	t_choicestart						Absolute start time for trial.choice in ms. May be used to derive
+											additional measures during data analysis (e.g. mean move time).
+	t_choiceend						Absolute end time for trial.choice in ms. May be used to derive
+											additional measures during data analysis (e.g. mean move time).
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Expressions
+*****************************************************************************************************************
+*****************************************************************************************************************
+	available_a_slots					Returns the number of free slots for peg 1 (left).
+	available_b_slots					Returns the number of free slots for peg 2 (center).
+	available_c_slots					Returns the number of free slots for peg 3 (right).
+	vmax_a								Returns the maximum vertical position (slot) currently
+											occupied for peg 1 (left). Returns 0 (false) if peg is empty.
+	vmax_b								Returns the maximum vertical position (slot) currently
+											occupied for peg 2 (center). Returns 0 (false) if peg is empty.
+	vmax_c								Returns the maximum vertical position (slot) currently
+											occupied for peg 3 (right). Returns 0 (false) if peg is empty.
+	vnext_a								Returns the next available vertical position (slot) for peg 1 (left).
+										 	Returns 0 (false) if peg is full.
+	vnext_b								Returns the next available vertical position (slot) for peg 2 (center).
+										 	Returns 0 (false) if peg is full.
+	vnext_b								Returns the next available vertical position (slot) for peg 3 (right).
+										 	Returns 0 (false) if peg is full.
+	top_in_a (-> top_in_a3)		Returns the object (R,G,B) currently inhabiting the top position 
+											on peg 1 (left). Returns 'none' if peg is empty. Used to determine
+											valid responses in 'trial.choice'.
+	top_in_b (-> top_in_b3)		Returns the object (R,G,B) currently inhabiting the top position 
+											on peg 2 (center). Returns 'none' if peg is empty. Used to determine
+											valid responses in 'trial.choice'.
+	top_in_c (-> top_in_c3	)		Returns the object (R,G,B) currently inhabiting the top position 
+											on peg 3 (right). Returns 'none' if peg is empty. Used to determine
+											valid responses in 'trial.choice'.
+	firstmovetime						Returns the time (in ms) elapsed between initial presentation of 
+											the target configuration and the initialization of the subject's first
+											move. Sometimes also referred to as "planning time" or simply
+											"latency". Note: Measure is computed separately for each attempt.
+	solutiontime						Returns the time (in ms) elapsed between initial presentation of
+											the target configuration and a subject's successful solution.
+											Note: Measure is computed separately for each attempt.
+	executiontime					Computed as solutiontime - firstmovetime. Note: Measure is 
+											computed separately for each attempt.
+	excessmoves						Returns the difference between number of moves performed by
+											the subject and the number of target moves for a given problem.
+	targetachieved					Returns true as soon as the subject has successfully reached a given
+											problem's target / goal state. Otherwise false.
+*****************************************************************************************************************
+*****************************************************************************************************************
+<expressions>
+/ x = 100pct*(trial.move.responsex/display.width)
+/ y = 100pct*(trial.move.responsey/display.height)
+/ available_a_slots = (values.n_a_slots-values.n_in_a)
+/ available_b_slots = (values.n_b_slots-values.n_in_b)
+/ available_c_slots = (values.n_c_slots-values.n_in_c)
+/ vmax_a = if(values.n_in_a>0)getitem(counter.vpos,values.n_in_a) else false
+/ vmax_b = if(values.n_in_b>0)getitem(counter.vpos,values.n_in_b) else false
+/ vmax_c = if(values.n_in_c>0)getitem(counter.vpos,values.n_in_c) else false
+/ vnext_a = if(expressions.available_a_slots>0)getitem(counter.vpos,values.n_in_a+1) else false
+/ vnext_b = if(expressions.available_b_slots>0)getitem(counter.vpos,values.n_in_b+1) else false
+/ vnext_c = if(expressions.available_c_slots>0)getitem(counter.vpos,values.n_in_c+1) else false
+/ top_in_a = if(values.r_hcurrent==values.h1 && values.r_vcurrent==expressions.vmax_a)"R"
+	else expressions.top_in_a2
+/ top_in_a2 = if(values.g_hcurrent==values.h1 && values.g_vcurrent==expressions.vmax_a)"G"
+	else expressions.top_in_a3
+/ top_in_a3 = if(values.b_hcurrent==values.h1 && values.b_vcurrent==expressions.vmax_a)"B"
+	else "none"
+/ top_in_b = if(values.r_hcurrent==values.h2 && values.r_vcurrent==expressions.vmax_b)"R"
+	else expressions.top_in_b2
+/ top_in_b2 = if(values.g_hcurrent==values.h2 && values.g_vcurrent==expressions.vmax_b)"G"
+	else expressions.top_in_b3
+/ top_in_b3 = if(values.b_hcurrent==values.h2 && values.b_vcurrent==expressions.vmax_b)"B"
+	else "none"
+/ top_in_c = if(values.r_hcurrent==values.h3 && values.r_vcurrent==expressions.vmax_c)"R"
+	else expressions.top_in_c2
+/ top_in_c2 = if(values.g_hcurrent==values.h3 && values.g_vcurrent==expressions.vmax_c)"G"
+	else expressions.top_in_c3
+/ top_in_c3 = if(values.b_hcurrent==values.h3 && values.b_vcurrent==expressions.vmax_c)"B"
+	else "none"
+/ firstmovetime = if(values.t_firstmove>0)values.t_firstmove-values.t_roundstart
+	else 0
+/ solutiontime = if(values.t_solution>0)values.t_solution-values.t_roundstart
+	else 0
+/ executiontime = if(expressions.solutiontime>0)expressions.solutiontime-expressions.firstmovetime
+	else 0
+/ excessmoves = values.subjectmoves-values.targetmoves
+/ targetachieved = if(values.r_hcurrent==values.r_htarget && values.r_vcurrent==values.r_vtarget
+	&& values.g_hcurrent==values.g_htarget && values.g_vcurrent==values.g_vtarget
+	&& values.b_hcurrent==values.b_htarget && values.b_vcurrent==values.b_vtarget)
+	true else false
+/ feedbackswitch = if(values.subjectmoves<=values.targetmoves)1 else 2
+</expressions>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Task Instructions
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+
+<htmlpage introTOLFR>
+/ file = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/introFr.html"
+</htmlpage>
+
+<htmlpage practiceTOLFR>
+/ file = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/practiceFr.html"
+</htmlpage>
+
+<htmlpage testTOLFR>
+/ file = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/testFr.html"
+</htmlpage>
+
+<htmlpage endTOLFR>
+/ file = "http://www.millisecond.com/myaccount/scripts/como/TowerOfLondonTaskEng/end.html"
+</htmlpage>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Experiment Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+<expt S2>
+/ preinstructions = (introTOLFR)
+/ skip = [trial.Language.response != "French"]
+/ blocks = [1=practiceTOLFR; 2=testTOLFR]
+</expt>
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+	Block Elements
+*****************************************************************************************************************
+*****************************************************************************************************************
+<block practiceTOLFR>
+/ preinstructions = (practiceTOLFR)
+/ onblockend = [values.stopblock=0]
+/ stop = [values.stopblock==1]
+/ trials = [1=newroundFR]
+</block>
+
+<block testTOLFR>
+/ preinstructions = (testTOLFR)
+/ onblockbegin = [values.totalscoreTOL=0]
+/ stop = [values.stopblock==1]
+/ trials = [1=newroundFR]
+</block>
+
