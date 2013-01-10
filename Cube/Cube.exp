@@ -47,7 +47,7 @@ Stimuli
 
 
 <text TitleFr>
-/ items = ("S'il vous plaÃ®t, copiez ce dessin le plus prÃ©cisÃ©ment possible sur la feuille de papier")
+/ items = ("S'il vous plaît, copiez ce dessin le plus précisément possible sur la feuille de papier")
 / vposition = 25%
 / hposition = 50%
 / area = (800,100)
