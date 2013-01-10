@@ -568,7 +568,7 @@ French Block
 
 <trial MemoryBaseline>
 / stimulusframes = [1=AudioBaseline] 
-/ pretrialpause = 1000
+/ pretrialpause = 1500
 / response = noresponse
 / timeout = 1
 / recorddata = false
@@ -576,7 +576,7 @@ French Block
 
 <trial Memory3mo>
 / stimulusframes = [1=Audio3mo] 
-/ pretrialpause = 1000
+/ pretrialpause = 1500
 / response = noresponse
 / timeout = 1
 / recorddata = false
@@ -585,7 +585,7 @@ French Block
 
 <trial Memory6mo>
 / stimulusframes = [1=Audio6mo] 
-/ pretrialpause = 1000
+/ pretrialpause = 1500
 / response = noresponse
 / timeout = 1
 / recorddata = false
@@ -593,7 +593,7 @@ French Block
 
 <trial MemoryBaselineFr>
 / stimulusframes = [1=AudioBaselineFr] 
-/ pretrialpause = 1000
+/ pretrialpause = 1500
 / response = noresponse
 / timeout = 1
 / recorddata = false
@@ -601,7 +601,7 @@ French Block
 
 <trial Memory3moFr>
 / stimulusframes = [1=Audio3moFr] 
-/ pretrialpause = 1000
+/ pretrialpause = 1500
 / response = noresponse
 / timeout = 1
 / recorddata = false
@@ -610,7 +610,7 @@ French Block
 
 <trial Memory6moFr>
 / stimulusframes = [1=Audio6moFr] 
-/ pretrialpause = 1000
+/ pretrialpause = 1500
 / response = noresponse
 / timeout = 1
 / recorddata = false
