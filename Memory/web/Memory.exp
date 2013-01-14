@@ -433,21 +433,21 @@ English Blocks
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "Baseline"]
 / preinstructions = (Instruc1)
-/ trials = [1-8=MemoryBaseline;9=Score]
+/ trials = [1-8=MemoryBaselineGate;9=Score]
 </block>
 
 <block Memory2RBaseline>
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "Baseline"]
 / preinstructions = (Instruc2)
-/ trials = [1-8=MemoryBaseline;9=Score2]
+/ trials = [1-8=MemoryBaselineGate;9=Score2]
 </block>
 
 <block Memory3RBaseline>
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "Baseline"]
 / preinstructions = (Instruc3)
-/ trials = [1-8=MemoryBaseline;9=Score3]
+/ trials = [1-8=MemoryBaselineGate;9=Score3]
 / postinstructions = (Instruc4)
 </block>
 -----------------------------------------------------------------------------
@@ -455,21 +455,21 @@ English Blocks
 / skip = [trial.Language.response == "French"]
 / skip = [trial.Session.response != "3mo"]
 / preinstructions = (Instruc1)
-/ trials = [1-8=Memory3mo;9=Score]
+/ trials = [1-8=Memory3moGate;9=Score]
 </block>
 
 <block Memory2R3mo>
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "3mo"]
 / preinstructions = (Instruc2)
-/ trials = [1-8=Memory3mo;9=Score2]
+/ trials = [1-8=Memory3moGate;9=Score2]
 </block>
 
 <block Memory3R3mo>
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "3mo"]
 / preinstructions = (Instruc3)
-/ trials = [1-8=Memory3mo;9=Score3]
+/ trials = [1-8=Memory3moGate;9=Score3]
 / postinstructions = (Instruc4)
 </block>
 ---------------------------------------------------------------------------------
@@ -477,21 +477,21 @@ English Blocks
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "6mo"]
 / preinstructions = (Instruc1)
-/ trials = [1-8=Memory6mo;9=Score]
+/ trials = [1-8=Memory6moGate;9=Score]
 </block>
 
 <block Memory2R6mo>
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "6mo"]
 / preinstructions = (Instruc2)
-/ trials = [1-8=Memory6mo;9=Score2]
+/ trials = [1-8=Memory6moGate;9=Score2]
 </block>
 
 <block Memory3R6mo>
 / skip = [trial.Language.response == "French"]
 /skip = [trial.Session.response != "6mo"]
 / preinstructions = (Instruc3)
-/ trials = [1-8=Memory6mo;9=Score3]
+/ trials = [1-8=Memory6moGate;9=Score3]
 / postinstructions = (Instruc4)
 </block>
 
@@ -502,21 +502,21 @@ French Block
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "6mo"]
 / preinstructions = (Instruc1Fr)
-/ trials = [1-8=Memory6moFr;9=ScoreFr]
+/ trials = [1-8=Memory6moFrGate;9=ScoreFr]
 </block>
 
 <block Memory2R6moFr>
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "6mo"]
 / preinstructions = (Instruc2Fr)
-/ trials = [1-8=Memory6moFr;9=ScoreFr2]
+/ trials = [1-8=Memory6moFrGate;9=ScoreFr2]
 </block>
 
 <block Memory3R6moFr>
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "6mo"]
 / preinstructions = (Instruc3Fr)
-/ trials = [1-8=Memory6moFr;9=ScoreFr3]
+/ trials = [1-8=Memory6moFrGate;9=ScoreFr3]
 / postinstructions = (Instruc4Fr)
 </block>
 ----------------------------------------------------------------------------------------------------------------------
@@ -524,21 +524,21 @@ French Block
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "3mo"]
 / preinstructions = (Instruc1Fr)
-/ trials = [1-8=Memory3moFr;9=ScoreFr]
+/ trials = [1-8=Memory3moFrGate;9=ScoreFr]
 </block>
 
 <block Memory2R3moFr>
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "3mo"]
 / preinstructions = (Instruc2Fr)
-/ trials = [1-8=Memory3moFr;9=ScoreFr2]
+/ trials = [1-8=Memory3moFrGate;9=ScoreFr2]
 </block>
 
 <block Memory3R3moFr>
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "3mo"]
 / preinstructions = (Instruc3Fr)
-/ trials = [1-8=Memory3moFr;9=ScoreFr3]
+/ trials = [1-8=Memory3moFrGate;9=ScoreFr3]
 / postinstructions = (Instruc4Fr)
 </block>
 ---------------------------------------------------------------------------------------------------------------------
@@ -546,71 +546,100 @@ French Block
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "Baseline"]
 / preinstructions = (Instruc1Fr)
-/ trials = [1-8=MemoryBaselineFr;9=ScoreFr]
+/ trials = [1-8=MemoryBaselineFrGate;9=ScoreFr]
 </block>
 
 <block Memory2RBaselineFr>
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "Baseline"]
 / preinstructions = (Instruc2Fr)
-/ trials = [1-8=MemoryBaselineFr;9=ScoreFr2]
+/ trials = [1-8=MemoryBaselineFrGate;9=ScoreFr2]
 </block>
 
 <block Memory3RBaselineFr>
 / skip = [trial.Language.response == "English"]
 /skip = [trial.Session.response != "Baseline"]
 / preinstructions = (Instruc3Fr)
-/ trials = [1-8=MemoryBaselineFr;9=ScoreFr3]
+/ trials = [1-8=MemoryBaselineFrGate;9=ScoreFr3]
 / postinstructions = (Instruc4Fr)
 </block>
 ********************************************************************************************
-**make the trial timeout after 1 second, but set audio to /playthrough=true**
+Trials
+********************************************************************************************
+**The Gate Makes it pause before earch word**
+<trial MemoryBaselineGate>
+/ recorddata = false
+/ branch = [Trial.MemoryBaseline]
+/ timeout = 1500
+</trial>
 
 <trial MemoryBaseline>
 / stimulusframes = [1=AudioBaseline] 
-/ pretrialpause = 2000
 / response = noresponse
 / timeout = 1
 / recorddata = false
+</trial>
+
+<trial Memory3moGate>
+/ recorddata = false
+/ branch = [Trial.Memory3mo]
+/ timeout = 1500
 </trial>
 
 <trial Memory3mo>
 / stimulusframes = [1=Audio3mo] 
-/ pretrialpause = 2000
 / response = noresponse
 / timeout = 1
 / recorddata = false
 </trial>
 
+<trial Memory6moGate>
+/ recorddata = false
+/ branch = [Trial.Memory6mo]
+/ timeout = 1500
+</trial>
 
 <trial Memory6mo>
 / stimulusframes = [1=Audio6mo] 
-/ pretrialpause = 2000
 / response = noresponse
 / timeout = 1
 / recorddata = false
+</trial>
+
+<trial MemoryBaselineFrGate>
+/ recorddata = false
+/ branch = [Trial.MemoryBaselineFr]
+/ timeout = 1500
 </trial>
 
 <trial MemoryBaselineFr>
 / stimulusframes = [1=AudioBaselineFr] 
-/ pretrialpause = 2000
 / response = noresponse
 / timeout = 1
 / recorddata = false
+</trial>
+
+<trial Memory3moFrGate>
+/ recorddata = false
+/ branch = [Trial.Memory3moFr]
+/ timeout = 1500
 </trial>
 
 <trial Memory3moFr>
 / stimulusframes = [1=Audio3moFr] 
-/ pretrialpause = 2000
 / response = noresponse
 / timeout = 1
 / recorddata = false
 </trial>
 
+<trial Memory6moFrGate>
+/ recorddata = false
+/ branch = [Trial.Memory6moFr]
+/ timeout = 1500
+</trial>
 
 <trial Memory6moFr>
 / stimulusframes = [1=Audio6moFr] 
-/ pretrialpause = 2000
 / response = noresponse
 / timeout = 1
 / recorddata = false
